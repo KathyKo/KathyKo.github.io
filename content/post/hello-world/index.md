@@ -1,20 +1,30 @@
 ---
-title: Test
-description: Test
+title: Google OCR
+description: Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.
 slug: Test
-date: 2024-04-02 00:00:00+0000
+date: 2023-10-02 00:00:00+0000
 image: cover.jpg
 categories:
     - AI
 tags:
-    - OpenAI
-    - Chatbot
+    - AI
+    - OCR
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
+## Introduction
 
-For more information about this theme, check the documentation: https://stack.jimmycai.com/
+Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.
 
 
-> Photo by [Pawel Czerwinski](https://unsplash.com/@pawel_czerwinski) on [Unsplash](https://unsplash.com/)
+### 1.Document Processing:
+
+> ### Document AI API:  
+> Document AI API focuses on processing structured documents, such as PDFs and OCR 
+> documents. Its primary functionalities include text extraction, table recognition
+> page identification, entity recognition (e.g., identifying dates and amounts in 
+> contracts), and more. This makes it suitable for handling business documents like
+> contracts, invoices, reports, and others.
+ 
+
+
