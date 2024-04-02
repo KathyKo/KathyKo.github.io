@@ -19,7 +19,7 @@ subtitle = "Hi there👋  Welcome to my page"
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/kc.jpg"
+src = "img/kc.png"
 
 [article]
 math = false
