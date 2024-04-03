@@ -206,3 +206,11 @@ if __name__ == "__main__":
 
 
 
+> Through exploring these APIs, I learned about their 
+> specific applications in handling structured documents and images, and the 
+> potential for automating tasks in business and image analysis contexts. 
+> Looking ahead, these insights could be applied in developing more efficient 
+> document management systems, enhancing data extraction from documents, and 
+> improving image-based search and analysis in various industries.
+
+
