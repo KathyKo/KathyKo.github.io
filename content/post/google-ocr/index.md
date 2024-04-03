@@ -46,10 +46,10 @@ Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud s
 
 ### Code Demo
 
-####  Cloud Vision
+#####  Cloud Vision
 *  Recognize text in pictures
-    * Detect online images
 ```python
+#Detect online images
 from google.cloud import vision
 def detect_document_text_uri(uri):
     """Detects document text in the file located in Google Cloud Storage or on the Web."""
@@ -71,9 +71,8 @@ def detect_document_text_uri(uri):
 detect_document_text_uri('https://i.redd.it/2aby2h2mhtpb1.jpg')
 ```
 
-    * Detect local images
 ```python
-
+#Detect local images
 def detect_text(path):
     """Detects text in the file."""
     from google.cloud import vision
@@ -94,11 +93,18 @@ def detect_text(path):
 detect_text("profile path")
 ```
 
+Click ▶ to expand the examples
+
 <details open>
 <summary>Example & Result (online images)</summary>
 
-* Vegetables
-* Fruits
-* Fish
+![Image 1](1.jpg) ![Image 2](2.jpg)
+
+</details>
+
+<details open>
+<summary>Example & Result (local images)</summary>
+
+![Image 3](3.jpg) ![Image 4](4.jpg)
 
 </details>
