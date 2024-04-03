@@ -39,17 +39,16 @@ Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud s
 > large volume of structured documents, such as contracts, invoices, and medical 
 > records.
 
-> c API: 
+> * Vision API: 
 > The Vision API is well-suited for applications that require processing images and
 > photos, such as image analysis and image search.
 
 
 ### Code Demo
 
-#### * Cloud Vision
-##### *  Recognize text in pictures
-
-* * Detect online images
+####  Cloud Vision
+*  Recognize text in pictures
+    * Detect online images
 ```python
 from google.cloud import vision
 def detect_document_text_uri(uri):
@@ -72,7 +71,7 @@ def detect_document_text_uri(uri):
 detect_document_text_uri('https://i.redd.it/2aby2h2mhtpb1.jpg')
 ```
 
-* * Detect local images
+    * Detect local images
 ```python
 
 def detect_text(path):
@@ -94,6 +93,12 @@ def detect_text(path):
 
 detect_text("profile path")
 ```
-<detail>
-Example & Result (online images)
- </detail>
+
+<details open>
+<summary>Example & Result (online images)</summary>
+
+* Vegetables
+* Fruits
+* Fish
+
+</details>
