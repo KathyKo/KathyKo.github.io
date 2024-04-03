@@ -71,6 +71,7 @@ def detect_document_text_uri(uri):
 detect_document_text_uri('https://i.redd.it/2aby2h2mhtpb1.jpg')
 ```
 
+
 ```python
 #Detect local images
 def detect_text(path):
@@ -95,14 +96,14 @@ detect_text("profile path")
 
 Click ▶ to expand the examples
 
-<details open>
+<details>
 <summary>Example & Result (online images)</summary>
 
 ![Image 1](1.jpg) ![Image 2](2.jpg)
 
 </details>
 
-<details open>
+<details>
 <summary>Example & Result (local images)</summary>
 
 ![Image 3](3.jpg) ![Image 4](4.jpg)
