@@ -99,13 +99,13 @@ Click ▶ to expand the examples
 <details>
 <summary>Example & Result (online images)</summary>
 
-![Image 1](1.jpg) ![Image 2](2.jpg)
+![input file](1.png) ![result](2.png)
 
 </details>
 
 <details>
 <summary>Example & Result (local images)</summary>
 
-![Image 3](3.jpg) ![Image 4](4.jpg)
+![input file](3.jpeg) ![result](4.png)
 
 </details>
