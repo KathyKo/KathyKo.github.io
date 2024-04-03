@@ -3,7 +3,7 @@ title: AWS PartyRock
 description: PartyRock is an interactive platform by AWS that lets users create no-code AI-generated applications.
 slug: PartyRock
 date: 2024-04-02 00:00:00+0000
-image: cover.jpg
+image: cover.png
 categories:
     - AI
 tags:
@@ -28,3 +28,4 @@ How to use AWS PartyRock? How does it works?
 > prompts so that they connect to each other and accomplish different things.
 > 3. Take the next steps and publish your PartyRock app and share it with others.
 
+![1](1.png)
