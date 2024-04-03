@@ -9,7 +9,7 @@ categories:
 tags:
     - AI
     - AWS
-weight: 2       # You can add weight to some posts to override the default sorting (date descending)
+weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 ### Introduction
@@ -49,9 +49,13 @@ weight: 2       # You can add weight to some posts to override the default sorti
 
 #### Types of widgets
 > * 3 AI-powered widgets: Image generation, Chatbot, and Text generation. 
+
 > You can edit AI-powered widgets to connect them to other widgets and make their 
 > output change.
 > * 2 other widgets: User input and Static text. 
+
 > The user input widget allow users to change output when you connect it to 
 > AI-powered widgets. 
 > The static text widget provides a place for text descriptions.
+
+![widgets](2.png)
