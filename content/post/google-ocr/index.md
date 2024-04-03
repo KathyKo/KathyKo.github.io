@@ -17,7 +17,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.
 
 
-#### 1.Document Processing:
+1.Document Processing:
 
 > * Document AI API:  
 > Document AI API focuses on processing structured documents, such as PDFs and OCR 
@@ -33,7 +33,7 @@ Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud s
 > This makes it suitable for image processing applications like image search, facial
 > recognition, and automated image analysis.
  
-#### 2.Application Scenario:
+2.Application Scenario:
 > * Document AI API: 
 > The Document AI API is suitable for business scenarios that involve processing a 
 > large volume of structured documents, such as contracts, invoices, and medical 
@@ -46,7 +46,7 @@ Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud s
 
 ### Code Demo
 
-#####  Cloud Vision
+☁️ Cloud Vision
 *  Recognize text in pictures
 ```python
 #Detect online images
@@ -95,7 +95,6 @@ detect_text("profile path")
 ```
 
 Click ▶ to expand the examples
-
 <details>
 <summary>Example & Result (online images)</summary>
 
@@ -109,3 +108,101 @@ Click ▶ to expand the examples
 ![input file](3.jpeg) ![result](4.png)
 
 </details>
+
+*  Recognize handwriting in pictures
+
+```python
+#Detect text in online images
+def detect_document_uri(uri):
+    """Detects document features in the file located at the given URL."""
+    from google.cloud import vision_v1
+
+    client = vision_v1.ImageAnnotatorClient()
+
+    image = vision_v1.Image()
+    image.source.image_uri = uri
+
+    response = client.document_text_detection(image=image)
+
+    for page in response.full_text_annotation.pages:
+        for block in page.blocks:
+            for paragraph in block.paragraphs:
+                for word in paragraph.words:
+                    word_text = "".join([symbol.text for symbol in word.symbols])
+                    print(word_text)
+
+    if response.error.message:
+        raise Exception(
+            "{}\nFor more info on error messages, check: "
+            "https://cloud.google.com/apis/design/errors".format(response.error.message)
+        )
+
+detect_document_uri('https://ocr-demo.abtosoftware.com/uploads/handwritten3.jpg')
+```
+
+<details>
+<summary>Example & Result (local images)</summary>
+
+![input file](5.png) ![result](6.png)
+
+</details>
+
+<details>
+<summary>Example & Result (online images)</summary>
+
+![input file](7.png) ![result](8.png)
+
+</details>
+
+
+📃 Document AI
+```python
+from typing import Optional
+from google.api_core.client_options import ClientOptions
+from google.cloud import documentai
+
+def process_document_sample() -> None:
+    # Specify Google Cloud ID & other parameters
+    project_id = "your project id"
+    location = "us"
+    processor_id = "your processor id"
+    mime_type = "application/pdf"
+    field_mask = "text,entities,pages.pageNumber"  
+    processor_version_id = None  # Do not use a specific processor version
+
+    #Input file path
+    file_path = input("Please enter the path to the PDF file you want to process: ")
+
+    # Initialize Document AI client
+    client = documentai.DocumentProcessorServiceClient()
+
+    if processor_version_id:
+        name = client.processor_version_path(
+            project=project_id, location=location, processor=processor_id, processor_version=processor_version_id
+        )
+    else:
+        name = client.processor_path(project=project_id, location=location, processor=processor_id)
+
+    
+    with open(file_path, "rb") as image:
+        image_content = image.read()
+    
+    raw_document = documentai.RawDocument(content=image_content, mime_type=mime_type)
+
+    request = documentai.ProcessRequest(
+        name=name,
+        raw_document=raw_document,
+        field_mask=field_mask
+    )
+
+    result = client.process_document(request=request)
+    document = result.document
+
+    print(document.text)
+
+if __name__ == "__main__":
+    process_document_sample()
+```
+
+
+
