@@ -17,7 +17,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.
 
 
-### 1.Document Processing:
+#### 1.Document Processing:
 
 > * Document AI API:  
 > Document AI API focuses on processing structured documents, such as PDFs and OCR 
@@ -33,14 +33,67 @@ Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud s
 > This makes it suitable for image processing applications like image search, facial
 > recognition, and automated image analysis.
  
-### 2.Application Scenario:
+#### 2.Application Scenario:
 > * Document AI API: 
 > The Document AI API is suitable for business scenarios that involve processing a 
 > large volume of structured documents, such as contracts, invoices, and medical 
 > records.
 
-> * Vision API: 
+> c API: 
 > The Vision API is well-suited for applications that require processing images and
 > photos, such as image analysis and image search.
 
 
+### Code Demo
+
+#### * Cloud Vision
+##### *  Recognize text in pictures
+
+* * Detect online images
+```python
+from google.cloud import vision
+def detect_document_text_uri(uri):
+    """Detects document text in the file located in Google Cloud Storage or on the Web."""
+    client = vision.ImageAnnotatorClient()
+    image = vision.Image()
+    image.source.image_uri = uri
+
+    response = client.document_text_detection(image=image)
+    document = response.full_text_annotation
+    
+    print(document.text)
+
+    if response.error.message:
+        raise Exception(
+            "{}\nFor more info on error messages, check: "
+            "https://cloud.google.com/apis/design/errors".format(response.error.message)
+        )
+
+detect_document_text_uri('https://i.redd.it/2aby2h2mhtpb1.jpg')
+```
+
+* * Detect local images
+```python
+
+def detect_text(path):
+    """Detects text in the file."""
+    from google.cloud import vision
+
+    client = vision.ImageAnnotatorClient()
+
+    with open(path, "rb") as image_file:
+        content = image_file.read()
+
+    image = vision.Image(content=content)
+
+    response = client.text_detection(image=image)
+    texts = response.text_annotations
+    
+    if texts:
+        print(texts[0].description)
+
+detect_text("profile path")
+```
+<detail>
+Example & Result (online images)
+ </detail>
