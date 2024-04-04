@@ -1,6 +1,6 @@
 ---
 title: AWS PartyRock
-description: PartyRock is an interactive platform by AWS that lets users create no-code AI-generated applications.
+description: Why not jazz up the digital life with AWS PartyRock? It's ur no-code gateway to crafting AI apps, minus headahce 💽
 slug: PartyRock
 date: 2024-04-02 00:00:00+0000
 image: cover.png
@@ -49,7 +49,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 #### Types of widgets
 * 3 AI-powered widgets: Image generation, Chatbot, and Text generation. 
-  You can edit AI-powered widgets to connect them to other widgets and make their output change.
+    You can edit AI-powered widgets to connect them to other widgets and make their output change.
 * 2 other widgets: User input and Static text. 
   * The user input widget allow users to change output when you connect it to     AI-powered widgets. 
   * The static text widget provides a place for text descriptions.
