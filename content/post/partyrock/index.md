@@ -55,3 +55,6 @@ weight: 1       # You can add weight to some posts to override the default sorti
   * The static text widget provides a place for text descriptions.
 
 ![widgets](2.png)
+![AI-powered widgets](3.png)
+![2 other widgets](4.png)
+
