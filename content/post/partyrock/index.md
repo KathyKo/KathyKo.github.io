@@ -99,7 +99,7 @@ I putted `@Workout Duration` into the prompt, allowing the LLM to dynamically re
 
 After completing the edits, you can click `Make Public and Share` in the top right corner of the page to publish your created app!
 
-![make public & share](11.jpeg) ![publish](12.png)
+![make public & share](11.png) ![publish](12.png)
 
 
 
