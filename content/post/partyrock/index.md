@@ -14,13 +14,13 @@ tags:
 weight: 1       # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-### Introduction
+### `Introduction`
 #### What is PartyRock?
 > Amazon PartyRock is an environment that allows users to experiment with and build
 > generative AI-powered applications without any coding, focusing on skills like 
 > prompt engineering. It’s a fast and fun way to learn about generative AI 🕹️
 
-#### How to use AWS PartyRock?  How does it works?
+#### `How to use AWS PartyRock?  How does it works?`
 > PartyRock uses foundation models from Amazon Bedrock to turn your ideas into 
 > working PartyRock apps. The platform then uses this description to create the 
 > application, providing widgets and tools based on the entered prompt.
@@ -32,7 +32,7 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 ![apps example](1.png)
 
-### Building the app
+### `Building the app`
 #### How does the PartyRock create an app?
 > The app builder is a generative AI tool within PartyRock that can make different 
 > apps for you through a process called inference. 
@@ -43,13 +43,13 @@ weight: 1       # You can add weight to some posts to override the default sorti
 > * Customization: In the app editor, users can customize by adjusting widget sizes
 > positions, and functions to fulfill the intended app purpose.
 
-#### What is a widget?
+#### `What is a widget?`
 > Widgets in PartyRock are UI elements that can interact, display content, and 
 > process input. They can be linked to create complex outputs, like text or images,
 > using AI-driven prompts and data from other widgets. These AI-powered widgets 
 > leverage foundation models for content generation.
 
-#### Types of widgets
+#### `Types of widgets`
 * 3 AI-powered widgets: Image generation, Chatbot, and Text generation. 
     You can edit AI-powered widgets to connect them to other widgets and make their output change.
 * 2 other widgets: User input and Static text. 
@@ -62,9 +62,9 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 ![2 other widgets](4.png)
 
-### Let's start!
+### `Let's start!`
 
-#### Enter the prompt
+#### `Enter the prompt`
 Enter the prompt that you want your app to do
 
 ![start from empty app](5.png)
@@ -75,7 +75,7 @@ After entering the prompt and clicking 'Create', you will receive an initial sim
 
 ![initial app](7.png)
 
-#### Settings
+#### `Settings`
 Each widget can be resized and repositioned freely; clicking the settings button in the top right corner allows for editing and configuring options such as widget name, model used, temperature, etc.
 
 ![edit widget](8.png)

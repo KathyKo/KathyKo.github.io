@@ -11,11 +11,14 @@ tags:
 weight: 3  # You can add weight to some posts to override the default sorting (date descending)
 ---
 
-### Conceptualization
+### `Conceptualization`
 As an undergraduate student in the Taiwanese literature department, after completing the Introduction to Computing course, I began to contemplate how I could integrate coding skills with my major studies. Thus, I embarked on this small project, hoping to apply it within my field of study.
 
 
 Users can choose from five songs to translate, allowing them to listen to music while learning Taiwanese simultaneously.
+
+
+### `Code`
 
 
 
