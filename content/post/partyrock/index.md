@@ -64,14 +64,18 @@ weight: 1       # You can add weight to some posts to override the default sorti
 
 #### Enter the prompt
 Enter the prompt that you want your app to do
+
 ![start from empty app](5.png)
+
 ![enter the prompt of the app that you wanna create](6.png)
 
 After entering the prompt and clicking 'Create', you will receive an initial simple app.
+
 ![initial app](7.png)
 
 #### Settings
 Each widget can be resized and repositioned freely; clicking the settings button in the top right corner allows for editing and configuring options such as widget name, model used, temperature, etc.
+
 ![edit widget](8.png)
 
 Also, you can click the 'Create Widget' on the canva to create new widgets.
