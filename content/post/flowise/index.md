@@ -11,3 +11,7 @@ tags:
     - LangChain
 weight: 1  # You can add weight to some posts to override the default sorting (date descending)
 ---
+
+### `Introduction`
+#### What is Flowise?
+Flowise uses low-code approach that enable developers to manage the whole lifecycle of building LLMs apps in production. From protoyping, evaluation, to iterations.
