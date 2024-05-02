@@ -9,7 +9,7 @@ categories:
 tags:
     - Flowise
     - LangChain
-weight: 1  # You can add weight to some posts to override the default sorting (date descending)
+weight: 2  # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 ### `Introduction`
@@ -45,4 +45,6 @@ npx flowise start
 ```
 3. Open http://localhost:3000 in the browser.
 
-Enter `npm update -g flows to update` to latest version!
+Enter `npm update -g flows` to update to latest version!
+
+
