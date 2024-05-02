@@ -28,3 +28,21 @@ API, SDK, Embed: Extend functionality and integrate with existing applications t
     * LlamaIndex
 
 ![Flowise features](1.png)
+
+### `Getting Started`
+
+#### Prerequisite
+Latest ([NodeJS](https://nodejs.org/en/download))installed
+
+#### ⚡ Quick Start
+1. Install Flowise
+``` bash
+npm install -g flowise
+```
+2. Start Flowise
+``` bash
+npx flowise start
+```
+3. Open http://localhost:3000 in the browser.
+
+Enter `npm update -g flows to update` to latest version!
