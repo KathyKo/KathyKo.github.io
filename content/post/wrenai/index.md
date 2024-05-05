@@ -29,7 +29,21 @@ WrenAI is consist of three core services
 
 ### Getting Start!
 #### Installation
-##### Prerequisites
+`Prerequisites`
 1. Install Docker Desktop on local computer
 2. Prepare an OpenAI API key
 
+`Using WrenAI Launcher`
+* Mac OSX
+Execute following commands in the terminal
+``` bash
+curl -L https://github.com/Canner/WrenAI/releases/latest/download/wren-launcher-darwin.tar.gz | tar -xz && ./wren-launcher-darwin
+```
+
+1. Run the program
+2. Enter OpenAI API key
+3. Wait for the installation to finish.
+Program will setup docker containers for you and open the application URL in the browser for you after installation.
+4. Open [localhost:3000](http://localhost:3000) to start using if the launcher program doesn't open the URL 
+
+![getting start](start.png)

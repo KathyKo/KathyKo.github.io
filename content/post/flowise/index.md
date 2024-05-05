@@ -43,7 +43,7 @@ npm install -g flowise
 ``` bash
 npx flowise start
 ```
-3. Open http://localhost:3000 in the browser.
+3. Open [http://localhost:3000](http://localhost:3000) in the browser.
 
 Enter `npm update -g flows` to update to latest version!
 
