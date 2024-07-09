@@ -1,0 +1,33 @@
+# Configure main menu and social menu
+#[[main]]
+#identifier = "home"
+#name = "Home"
+#url = "/"
+#[main.params]
+#icon = "home"
+#newtab = true
+
+[[social]]
+identifier = "github"
+name = "GitHub"
+url = "https://github.com/KathyKo"
+
+[social.params]
+icon = "brand-github"
+
+[[social]]
+identifier = "linkedin"
+name = "LinkedIn"
+url = "https://www.linkedin.com/in/hungchiko/"
+
+[social.params]
+icon = "brand-linkedin"
+
+
+[[social]]
+identifier = "mail"
+name = "Mail"
+url = "mailto: kohchi921@gmail.com"
+
+[social.params]
+icon = "mail"
