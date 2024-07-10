@@ -45,7 +45,6 @@ curl -L https://github.com/Canner/WrenAI/releases/latest/download/wren-launcher-
 3. Wait for the installation to finish.
 Program will setup docker containers for you and open the application URL in the browser for you after installation.
 4. Open [localhost:3000](http://localhost:3000) to start using if the launcher program doesn't open the URL 
-
 ![getting start](start.png)
 
 #### Start with sample data
@@ -69,3 +68,5 @@ Choose "What is the average score of reviews submitted for orders placed by cust
 View the SQL plan description, data preview and the SQL statements in each step based on the selected result
 ![result](5.png)
 ![result](6.png)
+
+
