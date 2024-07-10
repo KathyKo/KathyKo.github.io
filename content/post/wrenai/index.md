@@ -45,12 +45,14 @@ curl -L https://github.com/Canner/WrenAI/releases/latest/download/wren-launcher-
 3. Wait for the installation to finish.
 Program will setup docker containers for you and open the application URL in the browser for you after installation.
 4. Open [localhost:3000](http://localhost:3000) to start using if the launcher program doesn't open the URL 
+
 ![getting start](start.png)
 
 #### Start with sample data
 Wren AI offers 2 sample datasets:
 * [E-commerce](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
 * NBA (2022 NBA playoff games)
+
 Take E-commerce dataset for example to show following steps:
 1. Click on the E-commerce option
 ![start](2.png)
