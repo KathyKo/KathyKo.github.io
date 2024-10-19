@@ -10,4 +10,34 @@ tags:
     - Python
 weight: 1  # You can add weight to some posts to override the default sorting (date descending)
 ---
-Text-to-SQL is a task in natural language processing (NLP) where the goal is to automatically generate SQL queries from natural language text. The task involves converting the text input into a structured representation and then using this representation to generate a semantically correct SQL query that can be executed on a database.
+Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁有龐大的開發者社群提供各種函式庫、框架以及教學課程，相對容易學習上手，適合新手入門學習的程式語言。
+
+程式碼的可讀性高，語法接近英文，相較其它的程式語言，例如：C++或Java，Python 指令撰寫較簡潔，可以用更少的程式碼即能達到同樣的結果(當然Java, C都有其存在的必要性)
+
+同時Python應用範圍非常廣泛，也是市場上工作機會需求最大的程式語言之一。
+
+### 有了AI，為何還要學python?
+> 在資料分析的過程中，的確有很多工具可以幫助我們進行數據處理、分析和視覺化，
+> 甚至透過AI，可以不需要寫程式，只靠指令就能達到目的
+> Python作為資料分析領域中最常用的程式語言之一，今天不僅僅是學一個工具，學習過程一種「思考和解決問題的> 方式」。當你用 Python 進行資料分析時，你實際上是在鍛煉自己的邏輯思維和問題拆解能力。AI 可能能幫你建> 立模型，但只有人能找出為什麼模型結果不如預期，或者數據處理出現錯誤的根本原因。
+> 我們需要的不是更多的工具，而是對數據和邏輯的深入理解，並有能力去拆解問題、排查錯誤，找到解決辦法。
+> Python 幫助你透過程式碼來一步一步進行分析、偵錯，這是一個 AI 無法完全取代的過程。
+> 我會認為學習 不論是Python或是日後課堂的工具， 並不是為了讓你比 AI 工具更強，而是為了讓你能在面對
+> 錯誤、困境時，有能力拆解問題，還有切入問題的方式和工具，找到解決方案💪
+
+### 變數
+![](https://i0.wp.com/utrustcorp.com/wp-content/uploads/2023/07/%E8%AE%8A%E6%95%B8%E6%A6%82%E5%BF%B5.png?resize=1024%2C576&ssl=1)
+> 1. 程式語言中**等號**的意思是，將等號右邊的值傳給左邊的變數。
+
+> 2. 命名首字需要用英文可搭配數字，基本上命變數還是建議用「 **<font color = red>駝峰式命名</font>**
+」，在程式碼閱讀上會較為方便，也可以將不同單字用下底線分開ex:DAC_Class，變數名稱不能出現_以外的符號
+
+** 駝峰式命名: 變數名稱由多個單詞組成，第一個單詞的首字母小寫，後面每個單詞的首字母都大寫，這樣名稱就像駱駝的駝峰一樣。e.g.:TotalScore
+
+> **變數命名規則**：
+在 Python 中，變數名稱有一些基本規則：
+> * 變數名稱可以包含字母、數字和底線（_）。例如：age、student_name
+> * 變數名稱不能以數字開頭。例如：2name 是不合格的變數，但 name2 是合格的
+> * 變數名稱區分大小寫。例如：Age 和 age 是兩個不同的變數
+> * 避免使用 Python 的關鍵字作為變數名稱（例如：if、else、for 等）
+![]("C:\Users\Kitty\Desktop\KathyKo.github.io-master\content\python basic\1.png")
