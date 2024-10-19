@@ -639,7 +639,7 @@ print("你的 BMI 是：", bmi)
 # **邏輯判斷**
 ## **邏輯運算子**
 Python 中有三個主要的邏輯運算子，它們用來處理布林值並進行邏輯判斷：
-![](8.png)
+![BMI](8.png)
 
 ```python
 a = True
@@ -728,7 +728,7 @@ if score >= 60:
 else:
     print("抱歉，你沒有及格。")
 ```
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Ftimcanpy1024%2Fstatus%2F1518840267276644352&psig=AOvVaw0eDqGWD5yNoAccQgaAERac&ust=1729444565973000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjCppz5mokDFQAAAAAdAAAAABAE)
+![score meme](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Ftimcanpy1024%2Fstatus%2F1518840267276644352&psig=AOvVaw0eDqGWD5yNoAccQgaAERac&ust=1729444565973000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjCppz5mokDFQAAAAAdAAAAABAE)
 
 ## **條件表達式（三元運算子）**
 * 條件表達式允許我們在一行中寫出簡單的條件判斷
@@ -748,15 +748,15 @@ print(status)
 > 設計一個簡單的「調酒推薦系統」，根據使用者的口味偏好，推薦一款適合的調酒：
 > 
 > 使用者會回答三個問題來表達他們的口味偏好：
-* 基酒選擇：Gin、Whiskey、Vodka
-* 酒感：輕 or 重
+> * 基酒選擇：Gin、Whiskey、Vodka
+> * 酒感：輕 or 重
 > 根據這三個問題的回答，推薦以下調酒：
-* Gin Tonic：gin/輕
-* Old Fashioned：whiskey/重
-* Cosmopolitan：vodka/輕
-* Whiskey Sour：whiskey/輕
-* Vodka Martini：vodka/重
-* Negroni：gin/重
+> * Gin Tonic：gin/輕
+> * Old Fashioned：whiskey/重
+> * Cosmopolitan：vodka/輕
+> * Whiskey Sour：whiskey/輕
+> * Vodka Martini：vodka/重
+> * Negroni：gin/重
 > 系統根據使用者的選擇推薦合適的調酒。
 
 ``` python
@@ -780,3 +780,63 @@ elif base_liquor == "vodka" and strength == "重":
 else:
     print("無法提供推薦，請檢查您的輸入。")
 ```
+
+# **Try-Except-Finally**
+## Try-Except
+在發生錯誤時提供提示，而不是讓程式崩潰  
+Python常見的錯誤類型:  
+* ZeroDivisionError：除以零的錯誤。
+* ValueError：當變量的類型不符合操作時，例如試圖將字串轉換為數字。
+* TypeError：當不同類型之間進行非法操作時。
+* IndexError：當試圖訪問超出範圍的列表索引時。
+* KeyError：當在字典中查找不存在的鍵時。  
+基本語法結構：
+```python
+try:
+    # 可能會發生錯誤的code
+except:
+    # 如果發生錯誤，這裡的code會被執行
+```
+
+```python
+try:
+    number = int(input("請輸入一個數字："))
+    result = 10 / number
+    print(f"結果是：{result}")
+except ZeroDivisionError:
+    print("錯誤：除數不能為 0")
+except ValueError:
+    print("錯誤：請輸入有效的數字")
+```
+請輸入一個數字：0  
+錯誤：除數不能為 0
+
+## **finally - 確保一定會執行的代碼**
+finally 區塊中的代碼會無論是否發生錯誤都會被執行，用於釋放資源或清理工作。
+```python
+try:
+    # 嘗試執行的code
+except:
+    # 處理錯誤
+finally:
+    # 總是會執行的code
+```
+
+```python
+try:
+    # 嘗試進行簡單的除法運算
+    num1 = float(input("請輸入第一個數字："))
+    num2 = float(input("請輸入第二個數字："))
+    result = num1 / num2
+    print(f"結果是：{result}")
+except ZeroDivisionError:
+    print("錯誤：除數不能為 0")
+except ValueError:
+    print("錯誤：請輸入有效的數字")
+finally:
+    print("無論是否發生錯誤，這段代碼都會執行。，謝謝使用")
+```
+請輸入第一個數字：cool  
+錯誤：請輸入有效的數字  
+無論是否發生錯誤，這段代碼都會執行。
+
