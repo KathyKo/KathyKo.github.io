@@ -624,6 +624,7 @@ print(f"a + 3 是否大於 b？{result}")
 ```
 
 ## **數值和關係運算綜合練習**
+
 BMI（Body Mass Index）是一個常見的健康指標，用來衡量一個人的體重是否在正常範圍內。
 ![計算公式](7,png)
 ```python
@@ -728,6 +729,7 @@ if score >= 60:
 else:
     print("抱歉，你沒有及格。")
 ```
+
 ![score meme](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Ftimcanpy1024%2Fstatus%2F1518840267276644352&psig=AOvVaw0eDqGWD5yNoAccQgaAERac&ust=1729444565973000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjCppz5mokDFQAAAAAdAAAAABAE)
 
 ## **條件表達式（三元運算子）**
@@ -840,3 +842,243 @@ finally:
 錯誤：請輸入有效的數字  
 無論是否發生錯誤，這段代碼都會執行。
 
+# **迴圈**
+## **For Loop**
+for 迴圈用於遍歷序列（如列表、字串或範圍）。每次迴圈執行時，會依次取得序列中的每個元素，直到所有元素都被處理完畢。
+
+基本語法：
+```python
+for 變數 in 序列:
+    # 要執行的code
+```
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for i in fruits:
+    print(i)
+```
+有一個裝有水果名稱的列表 ["apple", "banana", "cherry"]。我們希望能夠一次輸出這些水果的名稱。  
+i就是迴圈中的一個臨時變數。每次迴圈從 fruits 列表中取出一個水果，把這個水果的值存進 i 這個變數裡，然後印出來。第一圈時，fruit 是 "apple"，第二圈時是 "banana"，最後一圈是 "cherry"。
+
+```python
+word = "python"
+
+for letter in word: #這邊letter 使用 i 也可以
+    print(letter)
+```
+p  
+y  
+t  
+h  
+o  
+n  
+
+```python
+for i in range(5):  # 產生 0 到 4 的數字
+    print(i)
+# 告訴迴圈，對於 range(5) 生成的每一個數字，都把它賦值給 i，然後印出來。
+# 所以這個程式會從 0 一直印到 4。
+```
+0  
+1  
+2  
+3  
+4
+
+### **巢狀迴圈 Nested For Loop**
+aka For loop 中還有 For loop
+
+```python
+sum = 0
+for n in range(10, 20):
+    for z in range(2,3):
+        result = n + z
+        print(f'{n} + {z} = {result}')  # 列出每個 n + z 的結果
+        sum += result
+print('數列總和為:', sum)  # 最後列出 sum 的總和
+```
+10 + 2 = 12  
+11 + 2 = 13  
+12 + 2 = 14  
+13 + 2 = 15  
+14 + 2 = 16  
+15 + 2 = 17  
+16 + 2 = 18  
+17 + 2 = 19  
+18 + 2 = 20  
+19 + 2 = 21  
+數列總和為: 165  
+
+**99乘法表**
+```python
+# 99 乘法表
+for i in range(1, 10):  # 外層迴圈，控制乘數
+    for j in range(1, 10):  # 內層迴圈，控制被乘數
+        print(f"{i} * {j} = {i * j}", end="\t")
+    print()  # 換行
+```
+
+![](9.png)
+
+### **For Loop進階應用- Break**
+* 如果有東西在for loop計算過程中已經滿足了，可以提前結束迴圈
+* 例如，找資料、計算目標答案等，不想看到7的99乘法表
+
+```python
+# 99 乘法表
+for i in range(1, 10):  # 外層迴圈，控制乘數
+    for j in range(1, i + 1):  # 內層迴圈，控制被乘數
+        if j > 6:  # 當被乘數大於6時，跳出內層迴圈
+            break
+        print(f'{j} * {i} = {i * j}', end='\t')
+    print()
+```
+
+![](10.png)
+
+### **For Loop進階應用- Continue**
+當你的 for loop 要 skip 某些東西的時候可以用
+```python
+# 99 乘法表
+for i in range (60):
+  if i % 2==0:
+   continue
+  print(i,end=',')
+
+# 當 i 是偶數時，我們跳過印出的動作，這樣就只會印出奇數。
+```
+1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,
+
+## **While Loop**
+while 迴圈的作用是「當某個條件成立的時候，就一直進行某種操作」。這個條件必須是一個布林值（True 或 False），當條件變為 False 時，while 迴圈就會停止，不再繼續執行。也就是說，while 迴圈每次運行都會先檢查這個條件，只有當條件為 True 時，才會進入迴圈，否則就跳過它。  
+**一定要確定會停止!!!避免無窮迴圈!!!**
+
+基本語法：
+```python
+while 條件(只有True/False):
+    # 要執行的code
+```
+
+```python
+count = 0
+
+while count < 5:
+    print(f"目前計數：{count}")
+    count += 1
+```
+目前計數：0  
+目前計數：1  
+目前計數：2  
+目前計數：3  
+目前計數：4  
+設定了一個變數 count，初始值是 0。然後我們告訴程式：只要 count 小於 5，就一直執行 while 迴圈，並且每次執行時，count 的值會自動增加 1。當 count 到達 5 時，條件變成 False，迴圈就停止了。
+
+### **While Loop進階應用**
+* **break**：提前結束迴圈
+當迴圈中遇到break時，迴圈會立刻結束，並跳出迴圈的執行。
+
+* **continue**：跳過本次迴圈，進入下一次迴圈
+當迴圈中遇到continue時，會跳過本次迴圈的剩餘部分，直接進入下一次迴圈。
+
+```python
+# break
+number = 0
+while number < 10:
+    if number == 5:
+        break  # 遇到數字 5 時終止迴圈
+    print(number)
+    number += 1
+```
+0  
+1  
+2  
+3  
+4  
+5  
+
+```python
+# continue
+number = 0
+while number < 5:
+    if number == 2:
+        number += 1  # 注意：在 continue 前必須手動更新 number，避免無限迴圈
+        continue  # 當數字是 2 時跳過這次迴圈
+    print(number)
+    number += 1
+```
+0  
+1  
+3  
+4  
+
+### **Loop 課堂練習1**
+
+練習利用迴圈來計算 n!總和
+
+* 輸入:任意數字n
+* 輸出:n!的結果
+
+階乘定義：
+* 階乘（factorial）是所有從 1 到 n 的整數相乘的結果，記作 n!。
+* 例如：5! = 5 * 4 * 3 * 2 * 1 = 120
+* 注意：0! = 1
+
+```python
+n = int(input("請輸入 n: "))
+factorial = 1
+count = 1
+
+# 使用 while 迴圈計算 n!
+while count <= n:
+    factorial *= count
+    count += 1
+
+# 輸出結果
+print(f"{n}! = {factorial}")
+```
+請輸入 n: 7  
+7! = 5040
+
+### **Loop 課堂練習2**
+
+**數字猜猜樂**
+
+設計一個數字猜測遊戲，要求如下：
+
+* 電腦會隨機生成一個 1 到 100 的數字。
+* 使用者最多可以猜測 5 次。
+* 每次猜測時，電腦會提示數字是「太大了」或「太小了」。
+* 如果使用者猜對了，遊戲立即結束並顯示「猜對了！」。
+* 如果 5 次都沒猜對，顯示正確答案並結束遊戲。
+
+hint: 生成隨機數可用套件random
+
+```python
+import random
+
+# 1. 生成隨機數
+secret_number = random.randint(1, 100)
+
+# 2. 最多猜 5 次
+for attempt in range(1, 6):
+    # 3. 提示使用者輸入數字
+    guess = int(input(f"請輸入你的猜測（第 {attempt} 次，1-100）："))
+
+    # 4. 使用 while 檢查是否輸入有效範圍內的數字
+    while guess < 1 or guess > 100:
+        print("數字必須在 1 到 100 之間！")
+        guess = int(input(f"請重新輸入你的猜測（第 {attempt} 次，1-100）："))
+
+    # 5. 比較使用者的猜測與隨機數
+    if guess < secret_number:
+        print("太小了！")
+    elif guess > secret_number:
+        print("太大了！")
+    else:
+        print(f"恭喜你猜對了！答案是 {secret_number}")
+        break  # 結束迴圈
+else:
+    # 如果 5 次內沒猜對
+    print(f"很遺憾，正確答案是 {secret_number}")
+```
