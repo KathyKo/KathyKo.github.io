@@ -626,7 +626,9 @@ print(f"a + 3 是否大於 b？{result}")
 ## **數值和關係運算綜合練習**
 
 BMI（Body Mass Index）是一個常見的健康指標，用來衡量一個人的體重是否在正常範圍內。
-![計算公式](7,png)
+
+![計算公式](7.png)
+
 ```python
 # 輸入身高和體重
 weight = float(input("請輸入你的體重（公斤）："))
@@ -730,7 +732,7 @@ else:
     print("抱歉，你沒有及格。")
 ```
 
-![score meme](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwitter.com%2Ftimcanpy1024%2Fstatus%2F1518840267276644352&psig=AOvVaw0eDqGWD5yNoAccQgaAERac&ust=1729444565973000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjCppz5mokDFQAAAAAdAAAAABAE)
+![score meme](11.jpg)
 
 ## **條件表達式（三元運算子）**
 * 條件表達式允許我們在一行中寫出簡單的條件判斷
