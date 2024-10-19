@@ -371,9 +371,9 @@ print(animals.count('cat')) #cat總共出現幾次
 2  
 cat和Cat為不同元素
 
-### Tuple(元組)
-Tuple是一個值不可變、可重複、存放有順序性的資料結構。⭢ **給定元素後不能改變**  
-使用 ( ) 表示
+### Tuple (元組)
+Tuple是一個值不可變、可重複、存放有順序性的資料結構。使用 ( ) 表示    
+⭢ **給定元素後不能改變**  
 
 ```python
 animals = ('bear', 'cat', 'dog', 'elephant', 'cat')
@@ -386,6 +386,62 @@ cat
 ```python
 animals[0] = "peoele"
 ```
-TypeError: 'tuple' object does not support item assignment  
+TypeError: 'tuple' object does not support item assignment    
 建立了一個名為 animals 的tuple，和list一樣可以用索引取值，但是不能像list一樣去改變內容。如果嘗試更改tuple的值，會報錯。
+
+### **Set (集合)**
+Set和List最大的不同在於它**沒有順序**，也**不允許有重複的元素**。  
+這就像是我們在統計數據時，希望去掉重複的部分，只保留獨一無二的資料。
+
+* Set是一個值可變、不可重複、存放沒有順序性的資料結構。用大括號 { } 表示
+* 值重複時，僅會保留一個
+* 只有元素值(value)，沒有鍵值(key)。
+
+```python
+set1 = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 1}
+print(set1)
+```
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+#### **常用函數**
+* add( )：新增資料
+* remove( )：刪除資料
+* len( )： 回傳長度
+* sum( )： 回傳總和
+* max( )： 回傳最大值
+* min( )： 回傳最小值
+
+```python
+set2 = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 1}
+#新增10, 刪除5
+set2.add(100)
+set2.remove(5)
+
+print(set2)
+```
+{1, 2, 3, 4, 6, 7, 8, 9, 100}
+
+```python
+set2 = {1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 11, 11}
+
+print("長度: %d " %len(set2))  #回傳長度
+print("總和: %d " %sum(set2))  #總和
+print("最大值: %d " %max(set2)) #最大值
+print("最小值: %d " %min(set2)) #最小值
+```
+長度: 10   
+總和: 56   
+最大值: 11   
+最小值: 1   
+
+
+
+
+
+
+
+
+
+
+
 
