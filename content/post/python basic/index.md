@@ -13,7 +13,7 @@ weight: 1  # You can add weight to some posts to override the default sorting (d
 
 Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁有龐大的開發者社群提供各種函式庫、框架以及教學課程，相對容易學習上手，適合新手入門學習的程式語言。
 
-程式碼的可讀性高，語法接近英文，相較其它的程式語言，例如：C++或Java，Python 指令撰寫較簡潔，可以用更少的程式碼即能達到同樣的結果
+程式碼的可讀性高，語法接近英文，相較其它的程式語言，例如：C++或Java，Python 指令撰寫較簡潔，可以用更少的程式碼即能達到同樣的結果  
 (當然Java, C都有其存在的必要性)
 
 同時Python應用範圍非常廣泛，也是市場上工作機會需求最大的程式語言之一。
@@ -184,7 +184,8 @@ print(word[-1])  # 最後一個字元
 P  
 H
 ##### 2. 字元 character (chr)
-字元就是組成字串的元素。 例如在字串 Python 中， 'p', 'y', 't', 'h', 'o', 'n' 每個字母都是一個字元。
+字元就是組成字串的元素。 例如在字串 Python 中，   
+'p', 'y', 't', 'h', 'o', 'n' 每個字母都是一個字元。
 
 ##### 型態轉換
 ![型態轉換關係](https://i0.wp.com/utrustcorp.com/wp-content/uploads/2023/07/%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B.png?resize=1024%2C578&ssl=1)
@@ -258,19 +259,19 @@ print("科學記號法表示：%e" % large_number)
 
 #### 容器型態(Container Datatypes)
 Python 的容器型態，也就是能夠用來存放多個資料的結構。  
-這些結構讓我們可以更方便地組織和管理大量的數據。主要有四種常見的容器型態：  
+這些結構讓我們可以更方便地組織和管理大量的數據。主要有四種常見容器型態：  
 * List(串列)
 * Tuple(元組)
 * Set(集合)
 * Dictionary(字典)
 
-##### List(列表)
+##### **List(列表)**
 * list是一個值可變、可重複、存放**有順序性**的資料結構。使用 [ ] 表示
 * index從0開始。列表中的元素可以被修改、添加或刪除
 
 > 列表可以儲存很多不同的東西，像是數字、字串，甚至是其他列表。
 > 
-> 它的特點是有順序，也就是說，可以依據編號（索引）來取出列表中的每個元素。
+> 它的特點是有順序，也就是說，可以依據編號（索引）來取出列表中每個元素。
 > 
 > 索引從 0 開始，意味著列表的第一個元素索引是 0，第二個是 1，以此類推。
 
@@ -284,3 +285,88 @@ print(student_score[0])
 ```
 Cony  
 100
+
+###### **新增/刪除/修改list的值**
+* append：從List尾端新增一個元素
+* insert：在List的任何位置插入元素
+* remove: 將List中某個數值刪除
+* pop(): 將List尾端的元素刪除
+* del: 將List該位置的值刪除
+
+建立一個List
+```python
+animals = ["bear", "cat", "dog", "elephant"]
+```
+
+```python
+animals.append("fox") #新增一個元素"fox"
+print(animals)
+```
+['bear', 'cat', 'dog', 'elephant', 'fox']
+
+```python
+animals.pop() #括號內不需放值，會自動刪除最後一個
+print(animals)
+```
+['bear', 'cat', 'dog', 'elephant']
+
+```python
+animals.insert(2,"panda") #List的第二個元素在"cat"插入後變成"panda"
+print(animals)
+```
+['bear', 'panda', 'bird', 'cat', 'dog', 'elephant']
+
+```python
+animals.remove("dog") # 刪除"dog"
+print(animals)
+```
+['bear', 'bird', 'bird', 'cat', 'elephant']
+
+###### **取得長度**
+使用 **len(list)**
+```python
+student = ['Amy', 'Bill', 'Cony', 'Dora', "Ellie"]
+print(len(student))
+```
+5
+
+###### **常用位置函數**
+* sort()：List排序
+* reverse()：反轉List的順序
+* index()：某值在List第一次出現的索引位置
+* count()：某值在List出現的次數
+
+建立兩個list
+```python
+animals = ['bear', 'cat', 'dog', 'elephant', 'cat']
+num = [21, 32, 43, 54, 65, 23, 34, 35]
+```
+
+```python
+#在sort中可以加入reverse參數調整升降(默認是升序)
+#reverse = True 降序， reverse = False 升序
+#都沒打就是默認reverse = False
+
+animals.sort() #排序方法按照字母順序
+num.sort()     #數字會按照數字小到大
+
+print(animals)
+print(num)
+
+animals.sort(reverse = True) #排序方法按照字母順序
+num.sort(reverse = True)
+
+print(animals)
+print(num)
+```
+['bear', 'cat', 'cat', 'dog', 'elephant']  
+[21, 23, 32, 34, 35, 43, 54, 65]  
+['elephant', 'dog', 'cat', 'cat', 'bear']  
+[65, 54, 43, 35, 34, 32, 23, 21]  
+
+```python
+animals = ['bear', 'cat', 'dog', 'elephant', 'cat', "Cat"]
+print(animals.count('cat')) #cat總共出現幾次
+```
+2  
+cat和Cat為不同元素

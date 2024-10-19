@@ -20,7 +20,7 @@ subtitle = "Welcome to my space 🫧  A twist in the tale, from Taiwanese lit. t
 [sidebar.avatar]
 enabled = true
 local = true
-src = "img/kk.jpg"
+src = "img/kc.png"
 
 [article]
 math = false
