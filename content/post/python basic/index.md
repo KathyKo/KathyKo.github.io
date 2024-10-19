@@ -44,7 +44,8 @@ Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁�
 > * 變數名稱不能以數字開頭。例如：2name 是不合格的變數，但 name2 是合格的
 > * 變數名稱區分大小寫。例如：Age 和 age 是兩個不同的變數
 > * 避免使用 Python 的關鍵字作為變數名稱（例如：if、else、for 等）
-![]("C:\Users\Kitty\Desktop\KathyKo.github.io-master\content\python basic\1.png")
+
+![避免使用](1.png)
 
 #### 基礎輸入與輸出
 > * 輸出：使用 print() 函數將訊息顯示在執行結果。
@@ -55,14 +56,15 @@ Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁�
 ```python
 print("Hello, World!")
 ```
-> Hello, World!
+Hello, World!
 
 ```python
 name = input("請輸入你的名字：")
 print("你好，" , name)
 ```
-> 請輸入你的名字：abc
-> 你好，abc
+請輸入你的名字：abc
+
+你好，abc
 
 
 ### 資料型態
@@ -76,3 +78,42 @@ print("你好，" , name)
 * 整數（int）：沒有小數點的數字，例如：1、100、-50。
 * 浮點數（float）：帶有小數點的數字，例如：3.14、-0.001。
 * 布林值(boolean) : 決定邏輯判斷，**True** 或 **False**
+
+```python
+# int 整數
+x = 1
+print(x)
+print(type(x))
+```
+1
+
+<class 'int'>
+
+```python
+# int 整數
+# float 浮點數
+y = 1.5
+print(y)
+print(type(y))
+```
+1.5
+
+<class 'float'>
+```python
+# bool 布林值 True False
+a = True
+print(a)
+print(type(a))
+```
+True
+
+<class 'bool'>
+```python
+# 布林值通常是一個運算的結果
+a = 1
+b = 1
+print(a==b)
+```
+True
+
+其中 a==b 是一個運算結果，會回傳 a 是否等於 b。 因為 a 的值是 1、b的值是 2，所以 a 不會等於 b。 a==b 這個布林值的值就會是 False 。
