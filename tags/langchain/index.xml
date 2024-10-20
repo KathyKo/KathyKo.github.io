@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LangChain on Kathy's Portfolio</title><link>https://KathyKo.github.io/tags/langchain/</link><description>Recent content in LangChain on Kathy's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 20 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://KathyKo.github.io/tags/langchain/index.xml" rel="self" type="application/rss+xml"/><item><title>Flowise AI</title><link>https://KathyKo.github.io/p/flowsie-ai/</link><pubDate>Sat, 20 Apr 2024 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/flowsie-ai/</guid><description>&lt;img src="https://KathyKo.github.io/p/flowsie-ai/flowise.png" alt="Featured image of post Flowise AI" />&lt;h3 id="introduction">&lt;code>Introduction&lt;/code>
+&lt;/h3>&lt;h4 id="what-is-flowise">What is Flowise?
+&lt;/h4>&lt;p>Flowise uses low-code approach that enable developers to manage the whole lifecycle of building LLMs apps in production. From protoyping, evaluation, to iterations.&lt;/p>
+&lt;p>Built on the foundation of LangChain.js, Flowise offers advanced features to enhance the development process. From LLM orchestration and agent creation to seamless integration via APIs, SDKs, and Embedded Chat, Flowise provides a comprehensive toolkit for building dynamic AI-driven solutions.&lt;/p>
+&lt;h4 id="key-features-of-flowise">Key Features of Flowise
+&lt;/h4>&lt;ul>
+&lt;li>LLM Orchestration: Seamlessly connect LLMs with various components such as memory, data loaders, cache, and moderation tools.&lt;/li>
+&lt;li>Agents &amp;amp; Companions: Develop autonomous agents capable of executing diverse tasks.
+API, SDK, Embed: Extend functionality and integrate with existing applications through APIs, SDKs, and Embedded Chat.&lt;/li>
+&lt;li>Open Source LLMs: Run applications in air-gapped environments with local LLMs, embeddings, and vector databases.&lt;/li>
+&lt;li>Supported LLM Frameworks:
+&lt;ul>
+&lt;li>LangChain&lt;/li>
+&lt;li>LlamaIndex&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/flowsie-ai/1.png"
+width="1314"
+height="742"
+srcset="https://KathyKo.github.io/p/flowsie-ai/1_hu5717456326519253701.png 480w, https://KathyKo.github.io/p/flowsie-ai/1_hu11445897439611056451.png 1024w"
+loading="lazy"
+alt="Flowise features"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="425px"
+>&lt;/p>
+&lt;h3 id="getting-started">&lt;code>Getting Started&lt;/code>
+&lt;/h3>&lt;h4 id="prerequisite">Prerequisite
+&lt;/h4>&lt;p>Latest (&lt;a class="link" href="https://nodejs.org/en/download" target="_blank" rel="noopener"
+>NodeJS&lt;/a>)installed&lt;/p>
+&lt;h4 id="-quick-start">⚡ Quick Start
+&lt;/h4>&lt;ol>
+&lt;li>Install Flowise&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npm install -g flowise
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="2">
+&lt;li>Start Flowise&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">npx flowise start
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol start="3">
+&lt;li>Open &lt;a class="link" href="http://localhost:3000" target="_blank" rel="noopener"
+>http://localhost:3000&lt;/a> in the browser.&lt;/li>
+&lt;/ol>
+&lt;p>Enter &lt;code>npm update -g flows&lt;/code> to update to latest version!&lt;/p>
+&lt;h4 id="build-your-first-app">Build your first app
+&lt;/h4>&lt;ol>
+&lt;li>Create new chat flow by clicking on &lt;code>Add New&lt;/code> and this will give us blank canva where we can create an AI application.&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/flowsie-ai/2.png"
+width="1740"
+height="724"
+srcset="https://KathyKo.github.io/p/flowsie-ai/2_hu4588034354249384988.png 480w, https://KathyKo.github.io/p/flowsie-ai/2_hu4470370839691092244.png 1024w"
+loading="lazy"
+alt="add new"
+class="gallery-image"
+data-flex-grow="240"
+data-flex-basis="576px"
+>&lt;/p></description></item></channel></rss>

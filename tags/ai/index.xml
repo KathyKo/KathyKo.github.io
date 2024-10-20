@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on Kathy's Portfolio</title><link>https://KathyKo.github.io/tags/ai/</link><description>Recent content in AI on Kathy's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://KathyKo.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS PartyRock</title><link>https://KathyKo.github.io/p/partyrock/</link><pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/partyrock/</guid><description>&lt;img src="https://KathyKo.github.io/p/partyrock/cover.png" alt="Featured image of post AWS PartyRock" />&lt;h3 id="introduction">&lt;code>Introduction&lt;/code>
+&lt;/h3>&lt;h4 id="what-is-partyrock">What is PartyRock?
+&lt;/h4>&lt;blockquote>
+&lt;p>Amazon PartyRock is an environment that allows users to experiment with and build
+generative AI-powered applications without any coding, focusing on skills like
+prompt engineering. It’s a fast and fun way to learn about generative AI 🕹️&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="how-to-use-aws-partyrock--how-does-it-works">&lt;code>How to use AWS PartyRock? How does it works?&lt;/code>
+&lt;/h4>&lt;blockquote>
+&lt;p>PartyRock uses foundation models from Amazon Bedrock to turn your ideas into
+working PartyRock apps. The platform then uses this description to create the
+application, providing widgets and tools based on the entered prompt.
+To get the most out of the PartyRock experience, you can do the following:&lt;/p>
+&lt;ol>
+&lt;li>Get started by creating a PartyRock app.&lt;/li>
+&lt;li>Build the app by editing UI elements called widgets. You can change widget
+prompts so that they connect to each other and accomplish different things.&lt;/li>
+&lt;li>Take the next steps and publish your PartyRock app and share it with others.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/1.png"
+width="1384"
+height="782"
+srcset="https://KathyKo.github.io/p/partyrock/1_hu9856921075343158230.png 480w, https://KathyKo.github.io/p/partyrock/1_hu12700567354456048114.png 1024w"
+loading="lazy"
+alt="apps example"
+class="gallery-image"
+data-flex-grow="176"
+data-flex-basis="424px"
+>&lt;/p>
+&lt;h3 id="building-the-app">&lt;code>Building the app&lt;/code>
+&lt;/h3>&lt;h4 id="how-does-the-partyrock-create-an-app">How does the PartyRock create an app?
+&lt;/h4>&lt;blockquote>
+&lt;p>The app builder is a generative AI tool within PartyRock that can make different
+apps for you through a process called inference.&lt;/p>
+&lt;ul>
+&lt;li>App Creation: PartyRock uses a generative AI tool to create applications based
+on user descriptions, leveraging Amazon Bedrock&amp;rsquo;s foundation models.&lt;/li>
+&lt;li>Widget Assembly: It generates instructions for app construction, detailing
+necessary components and UI elements like text boxes and buttons.&lt;/li>
+&lt;li>Customization: In the app editor, users can customize by adjusting widget sizes
+positions, and functions to fulfill the intended app purpose.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h4 id="what-is-a-widget">&lt;code>What is a widget?&lt;/code>
+&lt;/h4>&lt;blockquote>
+&lt;p>Widgets in PartyRock are UI elements that can interact, display content, and
+process input. They can be linked to create complex outputs, like text or images,
+using AI-driven prompts and data from other widgets. These AI-powered widgets
+leverage foundation models for content generation.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="types-of-widgets">&lt;code>Types of widgets&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>3 AI-powered widgets: Image generation, Chatbot, and Text generation.
+You can edit AI-powered widgets to connect them to other widgets and make their output change.&lt;/li>
+&lt;li>2 other widgets: User input and Static text.
+&lt;ul>
+&lt;li>The user input widget allow users to change output when you connect it to AI-powered widgets.&lt;/li>
+&lt;li>The static text widget provides a place for text descriptions.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/2.png"
+width="2772"
+height="514"
+srcset="https://KathyKo.github.io/p/partyrock/2_hu1914646785867835997.png 480w, https://KathyKo.github.io/p/partyrock/2_hu13346693861347310347.png 1024w"
+loading="lazy"
+alt="widgets"
+class="gallery-image"
+data-flex-grow="539"
+data-flex-basis="1294px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/3.png"
+width="2806"
+height="852"
+srcset="https://KathyKo.github.io/p/partyrock/3_hu16506364187233499226.png 480w, https://KathyKo.github.io/p/partyrock/3_hu14639602409298195747.png 1024w"
+loading="lazy"
+alt="AI-powered widgets"
+class="gallery-image"
+data-flex-grow="329"
+data-flex-basis="790px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/4.png"
+width="1870"
+height="934"
+srcset="https://KathyKo.github.io/p/partyrock/4_hu1974802419824924481.png 480w, https://KathyKo.github.io/p/partyrock/4_hu9635601580904269197.png 1024w"
+loading="lazy"
+alt="2 other widgets"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
+&lt;h3 id="lets-start">&lt;code>Let's start!&lt;/code>
+&lt;/h3>&lt;h4 id="enter-the-prompt">&lt;code>Enter the prompt&lt;/code>
+&lt;/h4>&lt;p>Enter the prompt that you want your app to do&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/5.png"
+width="1414"
+height="782"
+srcset="https://KathyKo.github.io/p/partyrock/5_hu579275727677716043.png 480w, https://KathyKo.github.io/p/partyrock/5_hu4792283451623312333.png 1024w"
+loading="lazy"
+alt="start from empty app"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="433px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/6.png"
+width="1258"
+height="692"
+srcset="https://KathyKo.github.io/p/partyrock/6_hu14666357234704072831.png 480w, https://KathyKo.github.io/p/partyrock/6_hu15982805401568717623.png 1024w"
+loading="lazy"
+alt="enter the prompt of the app that you wanna create"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="436px"
+>&lt;/p>
+&lt;p>After entering the prompt and clicking &amp;lsquo;Create&amp;rsquo;, you will receive an initial simple app.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/7.png"
+width="2222"
+height="1198"
+srcset="https://KathyKo.github.io/p/partyrock/7_hu13431867856705880103.png 480w, https://KathyKo.github.io/p/partyrock/7_hu14595160630130249142.png 1024w"
+loading="lazy"
+alt="initial app"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="445px"
+>&lt;/p>
+&lt;h4 id="settings">&lt;code>Settings&lt;/code>
+&lt;/h4>&lt;p>Each widget can be resized and repositioned freely; clicking the settings button in the top right corner allows for editing and configuring options such as widget name, model used, temperature, etc.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/8.png"
+width="2822"
+height="1184"
+srcset="https://KathyKo.github.io/p/partyrock/8_hu8471253244853044642.png 480w, https://KathyKo.github.io/p/partyrock/8_hu9875440457792793842.png 1024w"
+loading="lazy"
+alt="edit widget"
+class="gallery-image"
+data-flex-grow="238"
+data-flex-basis="572px"
+>&lt;/p>
+&lt;p>Also, you can click the &amp;lsquo;Create Widget&amp;rsquo; on the canva to create new widgets.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/9.png"
+width="2778"
+height="1026"
+srcset="https://KathyKo.github.io/p/partyrock/9_hu8388214661488789147.png 480w, https://KathyKo.github.io/p/partyrock/9_hu13749372198998205212.png 1024w"
+loading="lazy"
+alt="create widget"
+class="gallery-image"
+data-flex-grow="270"
+data-flex-basis="649px"
+>&lt;/p>
+&lt;p>I putted &lt;code>@Workout Duration&lt;/code> into the prompt, allowing the LLM to dynamically read the user&amp;rsquo;s input. Additionally, I set the &lt;code>temp&lt;/code> to 0.5, hoping to maintain a certain degree of flexibility in the LLM&amp;rsquo;s responses.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/10.png"
+width="2844"
+height="1282"
+srcset="https://KathyKo.github.io/p/partyrock/10_hu10152382042271919460.png 480w, https://KathyKo.github.io/p/partyrock/10_hu9848982844895579592.png 1024w"
+loading="lazy"
+alt="settings"
+class="gallery-image"
+data-flex-grow="221"
+data-flex-basis="532px"
+>&lt;/p>
+&lt;ul>
+&lt;li>What is temperature?
+&lt;ul>
+&lt;li>A setting used to control the randomness of the responses generated by the model.&lt;/li>
+&lt;li>Low Temperature (e.g., closer to 0): The AI&amp;rsquo;s responses are more predictable,confident, and less varied. The model sticks closely to the most likely words and phrases based on its training.&lt;/li>
+&lt;li>High Temperature (e.g., closer to 1): The AI&amp;rsquo;s responses are more random and diverse. It might produce more creative or unusual outputs, as it’s more willing to choose less likely words and phrases.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Why use temperature?
+&lt;ul>
+&lt;li>Temperature allows you to balance between creativity and accuracy.&lt;/li>
+&lt;li>Adjusting the temperature setting in an AI model helps to tune how &amp;ldquo;safe&amp;rdquo; or &amp;ldquo;adventurous&amp;rdquo; the AI&amp;rsquo;s responses should be, depending on what you need it for.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>After completing the edits, you can click &lt;code>Make Public and Share&lt;/code> in the top right corner of the page to publish your created app!&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/11.png"
+width="1068"
+height="376"
+srcset="https://KathyKo.github.io/p/partyrock/11_hu7371058087536099985.png 480w, https://KathyKo.github.io/p/partyrock/11_hu5985583529033422491.png 1024w"
+loading="lazy"
+alt="make public &amp; share"
+class="gallery-image"
+data-flex-grow="284"
+data-flex-basis="681px"
+> &lt;img src="https://KathyKo.github.io/p/partyrock/12.png"
+width="1534"
+height="792"
+srcset="https://KathyKo.github.io/p/partyrock/12_hu5943183711813883203.png 480w, https://KathyKo.github.io/p/partyrock/12_hu3782076213689478934.png 1024w"
+loading="lazy"
+alt="publish"
+class="gallery-image"
+data-flex-grow="193"
+data-flex-basis="464px"
+>&lt;/p></description></item><item><title>Google OCR</title><link>https://KathyKo.github.io/p/test/</link><pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/test/</guid><description>&lt;img src="https://KathyKo.github.io/p/test/cover.jpg" alt="Featured image of post Google OCR" />&lt;h3 id="introduction">Introduction
+&lt;/h3>&lt;p>Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.&lt;/p>
+&lt;p>1.Document Processing:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Document AI API:&lt;br>
+Document AI API focuses on processing structured documents, such as PDFs and OCR
+documents. Its primary functionalities include text extraction, table recognition
+page identification, entity recognition (e.g., identifying dates and amounts in
+contracts), and more. This makes it suitable for handling business documents like
+contracts, invoices, reports, and others.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Vision API:
+Vision API specializes in processing images and pictures. It can recognize
+objects, faces, scenes, text, and more within images. Its main applications
+include image classification, facial recognition, OCR text recognition, and more.
+This makes it suitable for image processing applications like image search, facial
+recognition, and automated image analysis.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>2.Application Scenario:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Document AI API:
+The Document AI API is suitable for business scenarios that involve processing a
+large volume of structured documents, such as contracts, invoices, and medical
+records.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Vision API:
+The Vision API is well-suited for applications that require processing images and
+photos, such as image analysis and image search.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h3 id="code-demo">Code Demo
+&lt;/h3>&lt;p>☁️ Cloud Vision&lt;/p>
+&lt;ul>
+&lt;li>Recognize text in pictures&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Detect online images&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">google.cloud&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">vision&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">detect_document_text_uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">uri&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Detects document text in the file located in Google Cloud Storage or on the Web.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ImageAnnotatorClient&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Image&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_uri&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">uri&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">document_text_detection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">document&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">full_text_annotation&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">document&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">raise&lt;/span> &lt;span class="ne">Exception&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">For more info on error messages, check: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;https://cloud.google.com/apis/design/errors&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">detect_document_text_uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://i.redd.it/2aby2h2mhtpb1.jpg&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Detect local images&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">detect_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">path&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Detects text in the file.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">from&lt;/span> &lt;span class="nn">google.cloud&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">vision&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ImageAnnotatorClient&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;rb&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">image_file&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">image_file&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Image&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text_detection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">texts&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text_annotations&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">texts&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">texts&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">description&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">detect_text&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;profile path&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Click ▶ to expand the examples&lt;/p>
+&lt;details>
+&lt;summary>Example &amp; Result (online images)&lt;/summary>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/test/1.png"
+width="720"
+height="634"
+srcset="https://KathyKo.github.io/p/test/1_hu14880587481080219583.png 480w, https://KathyKo.github.io/p/test/1_hu7816898864194575257.png 1024w"
+loading="lazy"
+alt="input file"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="272px"
+> &lt;img src="https://KathyKo.github.io/p/test/2.png"
+width="298"
+height="59"
+srcset="https://KathyKo.github.io/p/test/2_hu1702812876146975488.png 480w, https://KathyKo.github.io/p/test/2_hu2868148301987005572.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="505"
+data-flex-basis="1212px"
+>&lt;/p>
+&lt;/details>
+&lt;details>
+&lt;summary>Example &amp; Result (local images)&lt;/summary>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/test/3.jpeg"
+width="858"
+height="1001"
+srcset="https://KathyKo.github.io/p/test/3_hu11928683179802236405.jpeg 480w, https://KathyKo.github.io/p/test/3_hu8208145683097875209.jpeg 1024w"
+loading="lazy"
+alt="input file"
+class="gallery-image"
+data-flex-grow="85"
+data-flex-basis="205px"
+> &lt;img src="https://KathyKo.github.io/p/test/4.png"
+width="2000"
+height="1211"
+srcset="https://KathyKo.github.io/p/test/4_hu13412982834388927473.png 480w, https://KathyKo.github.io/p/test/4_hu14701111870083575590.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="165"
+data-flex-basis="396px"
+>&lt;/p>
+&lt;/details>
+&lt;ul>
+&lt;li>Recognize handwriting in pictures&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#Detect text in online images&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">detect_document_uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">uri&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Detects document features in the file located at the given URL.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">from&lt;/span> &lt;span class="nn">google.cloud&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">vision_v1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision_v1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ImageAnnotatorClient&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">vision_v1&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Image&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">source&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">image_uri&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">uri&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">response&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">document_text_detection&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">image&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">page&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">full_text_annotation&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">pages&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">block&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">page&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">blocks&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">paragraph&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">block&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">paragraphs&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="n">word&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">paragraph&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">words&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">word_text&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">join&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">symbol&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text&lt;/span> &lt;span class="k">for&lt;/span> &lt;span class="n">symbol&lt;/span> &lt;span class="ow">in&lt;/span> &lt;span class="n">word&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">symbols&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">word_text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">raise&lt;/span> &lt;span class="ne">Exception&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">{}&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s2">For more info on error messages, check: &amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;https://cloud.google.com/apis/design/errors&amp;#34;&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">format&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">response&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">message&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">detect_document_uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;https://ocr-demo.abtosoftware.com/uploads/handwritten3.jpg&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;details>
+&lt;summary>Example &amp; Result (local images)&lt;/summary>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/test/5.png"
+width="1937"
+height="763"
+srcset="https://KathyKo.github.io/p/test/5_hu9179018414699710464.png 480w, https://KathyKo.github.io/p/test/5_hu12724223333303114003.png 1024w"
+loading="lazy"
+alt="input file"
+class="gallery-image"
+data-flex-grow="253"
+data-flex-basis="609px"
+> &lt;img src="https://KathyKo.github.io/p/test/6.png"
+width="155"
+height="218"
+srcset="https://KathyKo.github.io/p/test/6_hu15888088006775495723.png 480w, https://KathyKo.github.io/p/test/6_hu11394853717449945346.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="71"
+data-flex-basis="170px"
+>&lt;/p>
+&lt;/details>
+&lt;details>
+&lt;summary>Example &amp; Result (online images)&lt;/summary>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/test/7.png"
+width="800"
+height="550"
+srcset="https://KathyKo.github.io/p/test/7_hu7621974492285365525.png 480w, https://KathyKo.github.io/p/test/7_hu15515564006536514259.png 1024w"
+loading="lazy"
+alt="input file"
+class="gallery-image"
+data-flex-grow="145"
+data-flex-basis="349px"
+> &lt;img src="https://KathyKo.github.io/p/test/8.png"
+width="2000"
+height="3807"
+srcset="https://KathyKo.github.io/p/test/8_hu5359987469765002024.png 480w, https://KathyKo.github.io/p/test/8_hu3956340952120346171.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="52"
+data-flex-basis="126px"
+>&lt;/p>
+&lt;/details>
+&lt;p>📃 Document AI&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">typing&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">Optional&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">google.api_core.client_options&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">ClientOptions&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">from&lt;/span> &lt;span class="nn">google.cloud&lt;/span> &lt;span class="kn">import&lt;/span> &lt;span class="n">documentai&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">process_document_sample&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="kc">None&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Specify Google Cloud ID &amp;amp; other parameters&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">project_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;your project id&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">location&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;us&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">processor_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;your processor id&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mime_type&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;application/pdf&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">field_mask&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s2">&amp;#34;text,entities,pages.pageNumber&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">processor_version_id&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">None&lt;/span> &lt;span class="c1"># Do not use a specific processor version&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">#Input file path&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">file_path&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">input&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Please enter the path to the PDF file you want to process: &amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># Initialize Document AI client&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">client&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">documentai&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">DocumentProcessorServiceClient&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">processor_version_id&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">processor_version_path&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">project&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">project_id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">location&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">location&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">processor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">processor_id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">processor_version&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">processor_version_id&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">processor_path&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">project&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">project_id&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">location&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">location&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">processor&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">processor_id&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">with&lt;/span> &lt;span class="nb">open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">file_path&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;rb&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">image&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">image_content&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">image&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">read&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">raw_document&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">documentai&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">RawDocument&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">content&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">image_content&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">mime_type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">mime_type&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">request&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">documentai&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">ProcessRequest&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">raw_document&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">raw_document&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">field_mask&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">field_mask&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">result&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">client&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">process_document&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">request&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">request&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">document&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">result&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">document&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">document&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="vm">__name__&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="s2">&amp;#34;__main__&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">process_document_sample&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>Through exploring these APIs, I learned about their
+specific applications in handling structured documents and images, and the
+potential for automating tasks in business and image analysis contexts.
+Looking ahead, these insights could be applied in developing more efficient
+document management systems, enhancing data extraction from documents, and
+improving image-based search and analysis in various industries.&lt;/p>
+&lt;/blockquote></description></item></channel></rss>
