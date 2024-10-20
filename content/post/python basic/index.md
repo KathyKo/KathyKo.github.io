@@ -16,6 +16,7 @@ Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁�
 
 程式碼的可讀性高，語法接近英文，相較其它的程式語言，例如：C++或Java，Python 指令撰寫較簡潔，可以用更少的程式碼即能達到同樣的結果  
 (當然Java, C都有其存在的必要性)
+![](use.jpg) ![](c.png)
 
 同時Python應用範圍非常廣泛，也是市場上工作機會需求最大的程式語言之一。
 ![應用及工作需求統計](3.png)
@@ -45,6 +46,7 @@ Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁�
 # 變數
 ![](https://i0.wp.com/utrustcorp.com/wp-content/uploads/2023/07/%E8%AE%8A%E6%95%B8%E6%A6%82%E5%BF%B5.png?resize=1024%2C576&ssl=1)
 > 1. 程式語言中**等號**的意思是，將等號右邊的值傳給左邊的變數。
+> 
 > 比方說，牛排=160，就是把 160 這個數字放進 牛排 這個箱子裡。
 
 當我們給變數賦值時，電腦會在記憶體裡找到一個位置來存放這個值，並且會將這個位置與變數名稱關聯起來。這樣當我們在程式中提到變數名稱的時候，電腦就能夠快速找到記憶體中的對應位置，然後取出我們存放的資料。
@@ -69,7 +71,8 @@ Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁�
 >   語法：**print(要輸出的內容)**
 > * 輸入：使用 input() 函數來讓使用者輸入資料。
 > 
->   語法：變數 = **input(提示文字)**。 input() 函數會等待使用者輸入資料，並將其存儲在變數中。
+>   語法：**變數 = input(提示文字)**。   
+input() 函數會等待使用者輸入資料，並將其存儲在變數中。
 
 ```python
 print("Hello, World!")
@@ -141,13 +144,13 @@ song = 'Just the way you are'
 print(song)
 print(type(song))
 ```
-Just the way you are
+Just the way you are  
 <class 'str'>
 
 ```python
 print(" "Espresso" is a song by Sabrina Carpenter.")
 ```
-SyntaxError: invalid syntax
+SyntaxError: invalid syntax  
 其中把“Espresso”這首歌括號起來，會使 Python 認為要印出的字串為 “ “(空字串)、以及” is a song by Sabrina Carpenter.”，因而出現error。
 
 ```python
@@ -156,7 +159,7 @@ print('"Espresso" is a song by Sabrina Carpenter.')
 "Espresso" is a song by Sabrina Carpenter.
 
 #### **字串的處理**
-1. 字串相加
+**(1) 字串相加**
 ```python
 str1 = "Girl, you're amazing."
 str2 = "Just the way you are"
@@ -164,7 +167,7 @@ print(str1 + str2)
 ```
 Girl, you're amazing.Just the way you are
 
-2. 重複印出字串
+**(2) 重複印出字串**
 
 輸入字串與 * 再加上想要重複印出的字串即可
 ```python
@@ -172,7 +175,7 @@ str = "Hello"
 print(str*5)
 ```
 
-3. 計算字串長度
+**(3) 計算字串長度**
 
 利用 len() 這個函式會回傳字串的長度
 ```python
@@ -180,7 +183,7 @@ str = "asdfghjklzxcvbnmqwertyuiop"
 print(str)
 print(len(str))
 ```
-4. 取得字串中的某個字符
+**(4) 取得字串中的某個字符**
 ```python
 word = "Python"
 print(word[0])  # 第一個字元
@@ -264,21 +267,20 @@ print("科學記號法表示：%e" % large_number)
 
 ## **容器型態(Container Datatypes)**
 Python 的容器型態，也就是能夠用來存放多個資料的結構。  
-這些結構讓我們可以更方便地組織和管理大量的數據。主要有四種常見容器型態：  
+這些結構讓我們可以更方便地組織和管理大量的數據。  
+主要有四種常見容器型態：  
 * List(串列)
 * Tuple(元組)
 * Set(集合)
 * Dictionary(字典)
 
 ### **List(列表)**
+列表可以儲存很多不同的東西，像是數字、字串，甚至是其他列表。  
+它的特點是有順序，也就是說，可以依據編號（索引）來取出列表中每個元素。  
+索引從 0 開始，意味著列表的第一個元素索引是 0，第二個是 1，以此類推。  
+
 * list是一個值可變、可重複、存放**有順序性**的資料結構。使用 [ ] 表示
 * index從0開始。列表中的元素可以被修改、添加或刪除
-
-> 列表可以儲存很多不同的東西，像是數字、字串，甚至是其他列表。
-> 
-> 它的特點是有順序，也就是說，可以依據編號（索引）來取出列表中每個元素。
-> 
-> 索引從 0 開始，意味著列表的第一個元素索引是 0，第二個是 1，以此類推。
 
 ```python
 # 布林值轉換成整數（True 為 1，False 為 0）
@@ -374,7 +376,7 @@ animals = ['bear', 'cat', 'dog', 'elephant', 'cat', "Cat"]
 print(animals.count('cat')) #cat總共出現幾次
 ```
 2  
-cat和Cat為不同元素
+其中cat和Cat為不同元素
 
 ### **Tuple (元組)**
 Tuple是一個值不可變、可重複、存放有順序性的資料結構。使用 ( ) 表示    
@@ -443,8 +445,7 @@ print("最小值: %d " %min(set2)) #最小值
 Dictionary的特色是用 key 和 value 的方式來存儲資料，可以把它想像成一個電話簿，key 是名字，value 是對應的電話號碼。
 
 * Dictionary是一個值可變、可重複、存放使用唯一識別Key的資料結構。
-* 以大括號{}存放元素，每個元素是由一對「鍵值(key):元素值(value)」組合而成。  
-{key1:value1, key2:value2}
+* 以大括號{}存放元素，每個元素是由一對「鍵值(key):元素值(value)」組合而成。  {key1:value1, key2:value2}
 * key是唯一值，如果有重複，後面的資料會覆蓋前面的資料
 
 ```python
@@ -794,8 +795,9 @@ Python常見的錯誤類型:
 * TypeError：當不同類型之間進行非法操作時。
 * IndexError：當試圖訪問超出範圍的列表索引時。
 * KeyError：當在字典中查找不存在的鍵時。  
-基本語法結構：
+
 ```python
+# 基本語法結構：
 try:
     # 可能會發生錯誤的code
 except:
@@ -816,7 +818,7 @@ except ValueError:
 錯誤：除數不能為 0
 
 ## **finally - 確保一定會執行的代碼**
-finally 區塊中的代碼會無論是否發生錯誤都會被執行，用於釋放資源或清理工作。
+finally 區塊中的code無論是否發生錯誤都會被執行，用於釋放資源或清理工作。
 ```python
 try:
     # 嘗試執行的code
@@ -838,11 +840,11 @@ except ZeroDivisionError:
 except ValueError:
     print("錯誤：請輸入有效的數字")
 finally:
-    print("無論是否發生錯誤，這段代碼都會執行。，謝謝使用")
+    print("無論是否發生錯誤，這段代碼都會執行。謝謝使用")
 ```
 請輸入第一個數字：cool  
 錯誤：請輸入有效的數字  
-無論是否發生錯誤，這段代碼都會執行。
+無論是否發生錯誤，這段代碼都會執行。謝謝使用
 
 # **迴圈**
 ## **For Loop**
@@ -860,7 +862,7 @@ fruits = ["apple", "banana", "cherry"]
 for i in fruits:
     print(i)
 ```
-有一個裝有水果名稱的列表 ["apple", "banana", "cherry"]。我們希望能夠一次輸出這些水果的名稱。  
+一個裝有水果名稱的列表 ["apple", "banana", "cherry"]。我們希望能夠一次輸出這些水果的名稱。  
 i就是迴圈中的一個臨時變數。每次迴圈從 fruits 列表中取出一個水果，把這個水果的值存進 i 這個變數裡，然後印出來。第一圈時，fruit 是 "apple"，第二圈時是 "banana"，最後一圈是 "cherry"。
 
 ```python
@@ -879,6 +881,7 @@ n
 ```python
 for i in range(5):  # 產生 0 到 4 的數字
     print(i)
+
 # 告訴迴圈，對於 range(5) 生成的每一個數字，都把它賦值給 i，然後印出來。
 # 所以這個程式會從 0 一直印到 4。
 ```
@@ -953,7 +956,8 @@ for i in range (60):
 1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,
 
 ## **While Loop**
-while 迴圈的作用是「當某個條件成立的時候，就一直進行某種操作」。這個條件必須是一個布林值（True 或 False），當條件變為 False 時，while 迴圈就會停止，不再繼續執行。也就是說，while 迴圈每次運行都會先檢查這個條件，只有當條件為 True 時，才會進入迴圈，否則就跳過它。  
+while 迴圈的作用是「當某個條件成立的時候，就一直進行某種操作」。  
+這個條件必須是一個布林值（True 或 False），當條件變為 False 時，while 迴圈就會停止，不再繼續執行。也就是說，while 迴圈每次運行都會先檢查這個條件，只有當條件為 True 時，才會進入迴圈，否則就跳過它。  
 **一定要確定會停止!!!避免無窮迴圈!!!**
 
 基本語法：
@@ -974,6 +978,7 @@ while count < 5:
 目前計數：2  
 目前計數：3  
 目前計數：4  
+
 設定了一個變數 count，初始值是 0。然後我們告訴程式：只要 count 小於 5，就一直執行 while 迴圈，並且每次執行時，count 的值會自動增加 1。當 count 到達 5 時，條件變成 False，迴圈就停止了。
 
 ### **While Loop進階應用**
@@ -999,6 +1004,8 @@ while number < 10:
 4  
 5  
 
+這個程式會從 0 開始計數，當 number 遞增到 5 時，if 條件會成立，執行 break，結束迴圈。你會看到迴圈並沒有執行到 9，就在 number 等於 5 的時候停止了。
+
 ```python
 # continue
 number = 0
@@ -1013,6 +1020,8 @@ while number < 5:
 1  
 3  
 4  
+
+每次執行時，當 number 等於 2 時會跳過當前迭代，並且直接進入下一次迴圈。你會發現 2 並沒有被印出來，因為在 continue 之後，print() 就不會被執行了。
 
 ### **Loop 課堂練習1**
 
@@ -1041,6 +1050,11 @@ print(f"{n}! = {factorial}")
 ```
 請輸入 n: 7  
 7! = 5040
+
+
+* factorial 是用來存放最終的階乘結果，並且我們每次都讓它乘以目前的 count 值。
+* 當 count 小於等於 n 時，我們就一直運算，直到 count 大於 n 為止。
+
 
 ### **Loop 課堂練習2**
 
@@ -1084,3 +1098,8 @@ else:
     # 如果 5 次內沒猜對
     print(f"很遺憾，正確答案是 {secret_number}")
 ```
+
+* random.randint(1, 100) 用來生成一個隨機的數字，並儲存在變數 secret_number 中。
+* 使用 for 迴圈來限制猜測次數，最多只能猜 5 次。
+* 每次猜測後，會比較你輸入的數字和 secret_number 的大小，並且提供「太大了」或「太小了」的提示。
+* 如果猜對了，就會跳出迴圈，並告訴正確答案；如果 5 次內沒猜中，則顯示正確答案。
