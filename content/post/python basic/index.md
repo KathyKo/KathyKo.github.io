@@ -1106,3 +1106,155 @@ else:
 * 使用 for 迴圈來限制猜測次數，最多只能猜 5 次。
 * 每次猜測後，會比較你輸入的數字和 secret_number 的大小，並且提供「太大了」或「太小了」的提示。
 * 如果猜對了，就會跳出迴圈，並告訴正確答案；如果 5 次內沒猜中，則顯示正確答案。
+
+# **函數def**
+>
+> 函數是一段可以重複執行的程式碼，透過一個名稱來呼叫他，就不用重複寫同樣的程式碼。函數可以接收輸入（參數），並在執行後回傳結果。
+>
+> 函數的主要優點是可以讓程式更具結構性、可讀性，並減少重複程式碼。
+>
+> Q: 為什麼要使用函數？
+> 
+> * 減少重複：可以避免多次書寫相同的程式碼。
+> * 提高可讀性：讓程式結構更加清晰明瞭。
+> * 便於修改和擴展：當函數內部邏輯變更時，只需修改一處，不需要在程式中的每個地方進行更改。
+
+## ****基本函數**
+函數的基本語法結構：
+
+```
+def 函數名稱(參數1,參數2,...):
+    # 函數內容
+    return 回傳值
+
+```
+範例1
+```python
+def say_hello():
+    print("Hello, 你好!")
+
+say_hello()
+
+# 這是一個不需要參數的函數，只要呼叫它，就會執行其中的程式碼
+```
+Hello, 你好!
+
+##  **帶有參數的函數**
+
+函數可以接收參數，這些參數就像是給函數的額外資訊，來讓它執行不同的任務，可以讓函數變得更加靈活
+
+```python
+def greet(name):
+    print(f"Hello, {name}! 你好！")
+
+greet("DAC")
+```
+Hello, DAC! 你好！
+
+
+函數 greet() 接收一個參數 name，當呼叫 greet("Stan") 時，我們把 "Stan" 作為參數傳遞給函數，
+
+函數內的程式碼 print(f"Hello, {name}! 你好！") 就會執行，結果會輸出 Hello, Stan! 你好！
+
+## **返回值 (return)**
+函數執行後可以透過 return 將結果返回，讓呼叫該函數的地方得到結果。return 後的程式碼不會再執行。
+
+```python
+def add(x, y):
+    return x + y
+
+result = add(5, 10)
+print(result)
+```
+15
+
+函數 add(x, y) 接收兩個參數 x 和 y，它將這兩個參數加在一起，並透過 return 返回結果。
+
+當我們呼叫 add(5, 10) 時，Python會將5 和 10傳遞給 x 和 y，然後計算出 5 + 10 = 15，並將結果儲存在 result 中，最後輸出結果。
+
+```python
+def square(number):
+    return number * number
+
+result = square(35)
+print(result)
+```
+1225
+
+* def square(number)：定義了一個函數 square，它接收一個參數 number。
+* return number * number：這個 return 語句將 number * number 的計算結果返回。比如當 number = 5 時，5 * 5 = 25，這個結果會被返回。
+* result = square(5)：呼叫函數 square(5)，並將返回的結果（即 25）存儲到變數 result 中。
+* print(result)：最後，print 會輸出 result，即 25。
+
+
+```python
+def calculate_square_and_cube(number):
+    square = number * number
+    cube = number * number * number
+    return square, cube
+
+result_square, result_cube = calculate_square_and_cube(3)
+print(f"平方是: {result_square}, 立方是: {result_cube}")
+```
+平方是: 9, 立方是: 27
+
+##  **無返回值**
+
+如果函數內沒有 return ，或者沒有指定返回值，函數會默認返回 None。
+
+
+```python
+def say_hello():
+    print("Hello!")
+
+result = say_hello()
+print(result)
+```
+Hello!
+None
+
+
+* def say_hello()：這裡定義了一個沒有參數的函數 say_hello。
+* print("Hello!")：這個函數只做一件事情，就是輸出 "Hello!"。它不會返回任何值。
+* result = say_hello()：呼叫函數 say_hello()，因為這個函數沒有返回值，所以 result 會儲存為 None。
+* print(result)：最後，print(result) 會輸出 None，因為函數 say_hello() 並沒有返回任何東西。
+
+
+## **def 課堂練習**
+> 簡單計算器
+> 需求：
+> * 請定義一個函數 calculator，該函數接收兩個數字和一個運算符號（+, -, *, /），並根據運算符號進行對應的計算。
+> * 使用者透過 input() 函數輸入兩個數字和運算符號，然後呼叫 calculator 函數來進行計算。
+
+```python
+def calculator(num1, num2, operator):
+    if operator == "+":
+        return num1 + num2
+    elif operator == "-":
+        return num1 - num2
+    elif operator == "*":
+        return num1 * num2
+    elif operator == "/":
+        if num2 != 0:
+            return num1 / num2
+        else:
+            return "錯誤: 除數不能為 0"
+    else:
+        return "無效的運算符號"
+
+# 使用者輸入
+num1 = float(input("請輸入第一個數字: "))
+num2 = float(input("請輸入第二個數字: "))
+operator = input("請輸入運算符號 (+, -, *, /): ")
+
+# 呼叫函數進行計算並輸出結果
+result = calculator(num1, num2, operator)
+print(f"計算結果是: {result}")
+```
+
+
+
+
+
+
+
