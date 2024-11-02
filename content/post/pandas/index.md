@@ -29,6 +29,7 @@ weight: 1  # You can add weight to some posts to override the default sorting (d
 ![](2.png)
 
 **Start Pandas**
+
 會先需要安裝套件，安裝後import pandas 並命名為pd
 ```python
 pip install pandas
@@ -53,12 +54,33 @@ print(s)
 ```
 輸出結果看起來就像是一個標籤和數據的對應關係。
 
-Anthony     31
-Benedict    29
-Collin      24
-Daphne      22
+Anthony     31  
+Benedict    29  
+Collin      24  
+Daphne      22  
 dtype: int64
 
+**常見的 Series 操作**
+
+**選取數據**：可以透過索引名稱或位置來選取數據。比如你可以選取 s['Anthony'] 或 s[0]，兩者都會返回 31。
+
+```python
+print(s['Anthony'])     # 選取索引 'Anthony' 的數據，結果為 31
+print(s[0])      # 選取第一個數據，結果為 31
+```
+31  
+31
+
+**數據運算**：Series 支援加減乘除等運算，你可以對整個 Series 進行數值運算，Pandas 會自動保留對應的索引。例如，s + 2 會讓每個數據值都加上 2。
+> s + 2       每個數據加 2  
+> s.median()   計算中位數  
+> s.max()        找到最大值  
+
+## **DataFrame**
+
+> DataFrame 是 Pandas 中的二維度數據結構，類似於完整的試算表資料，有欄和列。
+>
+> 與 Series 不同，DataFrame 可以有多個列，每一列都可以有不同的數據類型。DataFrame 是由行和列組成的，每個行和列都有自己的標籤。
 
 
 
