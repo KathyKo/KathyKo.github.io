@@ -1,7 +1,7 @@
 ---
 title: Pandas Basic For Data Analysis
 description: Introduction and practice for Python  - Pandas🐼
-slug: Python Basic
+slug: Pandas Basic
 date: 2024-10-25 00:00:00+0000
 image: pandas.png
 categories:
