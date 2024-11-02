@@ -8,7 +8,7 @@ categories:
     - Python
 tags:
     - Python
-weight: 8  # You can add weight to some posts to override the default sorting (date descending)
+weight: 9  # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 ### `Conceptualization`

@@ -8,7 +8,7 @@ categories:
     - Python
 tags:
     - Python
-weight: 1  # You can add weight to some posts to override the default sorting (date descending)
+weight: 2  # You can add weight to some posts to override the default sorting (date descending)
 ---
 
 # **WHAT IS PYTHON**
@@ -1119,7 +1119,7 @@ else:
 > * 提高可讀性：讓程式結構更加清晰明瞭。
 > * 便於修改和擴展：當函數內部邏輯變更時，只需修改一處，不需要在程式中的每個地方進行更改。
 
-## ****基本函數**
+## **基本函數**
 函數的基本語法結構：
 
 ```
