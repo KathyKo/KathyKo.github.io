@@ -81,6 +81,106 @@ print(s[0])      # 選取第一個數據，結果為 31
 > DataFrame 是 Pandas 中的二維度數據結構，類似於完整的試算表資料，有欄和列。
 >
 > 與 Series 不同，DataFrame 可以有多個列，每一列都可以有不同的數據類型。DataFrame 是由行和列組成的，每個行和列都有自己的標籤。
+>
+> **pd.DataFrame(字典) ，以字典的資料為底，建立dataframe**
 
 
+```python
+import pandas as pd
 
+data = { 'Name': ['Anthony', 'Benedict', 'Collin', 'Daphne'],
+        'Age': [31,29,24,22],
+        'Salary': [75000,72000,60000,54000] }
+
+df = pd.DataFrame(data)
+print(df)
+```
+       Name  Age  Salary  
+0   Anthony   31   75000  
+1  Benedict   29   72000  
+2    Collin   24   60000  
+3    Daphne   22   54000  
+創建了一個 DataFrame，包含了三個欄位：Name，Age 和 Salary。每一列數據都可以有不同的類型，比如 Age 是整數，而 Name 是字串
+
+要選取 DataFrame 中的數據，我們可以使用列的名稱來選取特定的數據。  
+舉個例子：  
+我們用 `df['Name']` 選取了 DataFrame 中的 `Name` 列  
+這就像是提取 Excel 表中的某一列。你可以選取多列，使用 `df[['Name', 'Salary']]` 選取 
+
+新增一列的方法很簡單，只需要指定列名，然後為每一行賦值  
+* 新增列
+```python
+df['Bonus'] = [5000, 6000, 7000 ,8000]
+print(df)
+```
+      Name  Age  Salary   Bonus  
+0   Anthony   31   75000   5000  
+1  Benedict   29   72000   6000  
+2    Collin   24   60000   7000  
+3    Daphne   22   54000   8000  
+
+* 新增行資料，使用 pd.concat()
+```python
+# Pandas 1.4.0 版本之後，append() 方法已被棄用
+new_row = pd.DataFrame({
+    "Name": ["Ella"],
+    "Age": [25],
+    "Salary": [64500],
+    "Bonus": [1000]
+})
+
+df = pd.concat([df, new_row], ignore_index=True) # pd.concat()：將原本的 DataFrame 與新增的資料行結合在一起。ignore_index=True 用於重新索引，使新行的索引從 0 開始連續排列。
+print(df)
+```
+      Name   Age   Salary  Bonus  
+0   Anthony   31   75000   5000  
+1  Benedict   29   72000   6000  
+2    Collin   24   60000   7000  
+3    Daphne   22   54000   8000  
+4      Ella   25   64500   1000  
+
+* 刪除列
+```python
+df1 = df.drop (columns=['Bonus'] )
+print(df1)
+```
+      Name   Age  Salary  
+0   Anthony   31   75000  
+1  Benedict   29   72000  
+2    Collin   24   60000  
+3    Daphne   22   54000  
+4      Ella   25   64500  
+
+基本上不會刪除到原始資料，若要顯示出刪除後的結果，需要宣告新變數來存取執行結果
+
+
+# **資料集實戰練功**
+
+## **匯入實戰資料**
+
+*出來吧 神奇寶貝!*
+![](https://static0.gamerantimages.com/wordpress/wp-content/uploads/Pokemon-banner.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5)
+
+[Pokemon DataSet](https://www.kaggle.com/datasets/rounakbanik/pokemon)
+
+**匯入資料**
+* pd.read_csv()：用來匯入 CSV 格式的資料
+* pd.read_excel()：用來匯入 Excel 格式的資料
+
+```python
+import pandas as pd
+df = pd.read_csv("檔案路徑")
+```
+
+## **檢索資料**
+
+* df.info()：顯示 DataFrame 的基本資訊，包括列數、欄數和每個欄位的數據類型，查看資料的資訊，包括欄位、數據型態、缺失值等
+* df.head()：取得最前面的n筆資料
+* df.tail()：取得最後面的n筆資料
+* df.columns：列出欄位名稱
+* df.describe()：產生統計摘要，如平均值、最大值、標準差等。
+* df.shape：返回資料的行數與列數，了解資料的大小
+
+```python
+df.info()
+```
