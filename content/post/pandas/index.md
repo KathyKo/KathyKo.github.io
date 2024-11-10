@@ -54,11 +54,13 @@ print(s)
 ```
 輸出結果看起來就像是一個標籤和數據的對應關係。
 
+```
 Anthony     31  
 Benedict    29  
 Collin      24  
 Daphne      22  
 dtype: int64
+```
 
 **常見的 Series 操作**
 
@@ -84,8 +86,9 @@ print(s[0])      # 選取第一個數據，結果為 31
 >
 > **pd.DataFrame(字典) ，以字典的資料為底，建立dataframe**
 
-![](5.png)
 ![](6.png)
+
+![](7.png)
 
 ```python
 import pandas as pd
