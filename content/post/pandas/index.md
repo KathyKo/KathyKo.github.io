@@ -198,3 +198,68 @@ df = pd.read_csv("檔案路徑")
 ```python
 df.info()
 ```
+
+```
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 800 entries, 0 to 799
+Data columns (total 13 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   #           800 non-null    int64 
+ 1   Name        800 non-null    object
+ 2   Type 1      800 non-null    object
+ 3   Type 2      414 non-null    object
+ 4   Total       800 non-null    int64 
+ 5   HP          800 non-null    int64 
+ 6   Attack      800 non-null    int64 
+ 7   Defense     800 non-null    int64 
+ 8   Sp. Atk     800 non-null    int64 
+ 9   Sp. Def     800 non-null    int64 
+ 10  Speed       800 non-null    int64 
+ 11  Generation  800 non-null    int64 
+ 12  Legendary   800 non-null    bool  
+dtypes: bool(1), int64(9), object(3)
+memory usage: 75.9+ KB
+```
+
+```python
+print(df.describe())
+```
+
+```
+                #      Total          HP      Attack     Defense     Sp. Atk  \
+count  800.000000  800.00000  800.000000  800.000000  800.000000  800.000000   
+mean   362.813750  435.10250   69.258750   79.001250   73.842500   72.820000   
+std    208.343798  119.96304   25.534669   32.457366   31.183501   32.722294   
+min      1.000000  180.00000    1.000000    5.000000    5.000000   10.000000   
+25%    184.750000  330.00000   50.000000   55.000000   50.000000   49.750000   
+50%    364.500000  450.00000   65.000000   75.000000   70.000000   65.000000   
+75%    539.250000  515.00000   80.000000  100.000000   90.000000   95.000000   
+max    721.000000  780.00000  255.000000  190.000000  230.000000  194.000000   
+
+          Sp. Def       Speed  Generation  
+count  800.000000  800.000000   800.00000  
+mean    71.902500   68.277500     3.32375  
+std     27.828916   29.060474     1.66129  
+min     20.000000    5.000000     1.00000  
+25%     50.000000   45.000000     2.00000  
+50%     70.000000   65.000000     3.00000  
+75%     90.000000   90.000000     5.00000  
+max    230.000000  180.000000     6.00000
+```
+
+```python
+#檢視欄位
+print(df.columns)
+```
+
+```
+Index(['#', 'Name', 'Type 1', 'Type 2', 'Total', 'HP', 'Attack', 'Defense',
+       'Sp. Atk', 'Sp. Def', 'Speed', 'Generation', 'Legendary'],
+      dtype='object')
+```
+
+```python
+#檢視前10筆資料
+df.head(n=10)
+```
