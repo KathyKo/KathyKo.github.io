@@ -84,6 +84,8 @@ print(s[0])      # 選取第一個數據，結果為 31
 >
 > **pd.DataFrame(字典) ，以字典的資料為底，建立dataframe**
 
+![](5.png)
+![](6.png)
 
 ```python
 import pandas as pd
@@ -95,11 +97,14 @@ data = { 'Name': ['Anthony', 'Benedict', 'Collin', 'Daphne'],
 df = pd.DataFrame(data)
 print(df)
 ```
-       Name  Age  Salary  
-0   Anthony   31   75000  
-1  Benedict   29   72000  
-2    Collin   24   60000  
-3    Daphne   22   54000  
+|       |   Name    | Age | Salary |
+|-------|-----------|-----|--------|
+|   0   | Anthony   |  31 | 75000  |
+|   1   | Benedict  |  29 | 72000  |
+|   2   | Collin    |  24 | 60000  |
+|   3   | Daphne    |  22 | 54000  |
+
+
 創建了一個 DataFrame，包含了三個欄位：Name，Age 和 Salary。每一列數據都可以有不同的類型，比如 Age 是整數，而 Name 是字串
 
 要選取 DataFrame 中的數據，我們可以使用列的名稱來選取特定的數據。  
@@ -113,11 +118,13 @@ print(df)
 df['Bonus'] = [5000, 6000, 7000 ,8000]
 print(df)
 ```
-      Name  Age  Salary   Bonus  
-0   Anthony   31   75000   5000  
-1  Benedict   29   72000   6000  
-2    Collin   24   60000   7000  
-3    Daphne   22   54000   8000  
+|       |   Name    | Age | Salary | Bonus |
+|-------|-----------|-----|--------|-------|
+|   0   | Anthony   |  31 | 75000  |  5000 |
+|   1   | Benedict  |  29 | 72000  |  6000 |
+|   2   | Collin    |  24 | 60000  |  7000 |
+|   3   | Daphne    |  22 | 54000  |  8000 |
+
 
 * 新增行資料，使用 pd.concat()
 ```python
@@ -132,27 +139,31 @@ new_row = pd.DataFrame({
 df = pd.concat([df, new_row], ignore_index=True) # pd.concat()：將原本的 DataFrame 與新增的資料行結合在一起。ignore_index=True 用於重新索引，使新行的索引從 0 開始連續排列。
 print(df)
 ```
-      Name   Age   Salary  Bonus  
-0   Anthony   31   75000   5000  
-1  Benedict   29   72000   6000  
-2    Collin   24   60000   7000  
-3    Daphne   22   54000   8000  
-4      Ella   25   64500   1000  
+|       |   Name    | Age | Salary | Bonus |
+|-------|-----------|-----|--------|-------|
+|   0   | Anthony   |  31 | 75000  |  5000 |
+|   1   | Benedict  |  29 | 72000  |  6000 |
+|   2   | Collin    |  24 | 60000  |  7000 |
+|   3   | Daphne    |  22 | 54000  |  8000 |
+
 
 * 刪除列
 ```python
 df1 = df.drop (columns=['Bonus'] )
 print(df1)
 ```
-      Name   Age  Salary  
-0   Anthony   31   75000  
-1  Benedict   29   72000  
-2    Collin   24   60000  
-3    Daphne   22   54000  
-4      Ella   25   64500  
+|       |   Name    | Age | Salary |
+|-------|-----------|-----|--------|
+|   0   | Anthony   |  31 | 75000  |
+|   1   | Benedict  |  29 | 72000  |
+|   2   | Collin    |  24 | 60000  |
+|   3   | Daphne    |  22 | 54000  |
+|   4   | Ella      |  25 | 64500  |
+ 
 
 基本上不會刪除到原始資料，若要顯示出刪除後的結果，需要宣告新變數來存取執行結果
 
+![Series與DataFrame比較](8.png)
 
 # **資料集實戰練功**
 
