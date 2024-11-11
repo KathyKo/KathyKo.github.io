@@ -263,3 +263,241 @@ Index(['#', 'Name', 'Type 1', 'Type 2', 'Total', 'HP', 'Attack', 'Defense',
 #檢視前10筆資料
 df.head(n=10)
 ```
+
+### **檢視單個欄位資料**
+查看某個特定欄位（例如 Name 或 Type 1）的所有值
+
+```python
+# 查看 'Name' 欄位的所有資料
+print(df['Name'])
+```
+
+```
+0                  Bulbasaur
+1                    Ivysaur
+2                   Venusaur
+3      VenusaurMega Venusaur
+4                 Charmander
+               ...          
+795                  Diancie
+796      DiancieMega Diancie
+797      HoopaHoopa Confined
+798       HoopaHoopa Unbound
+799                Volcanion
+Name: Name, Length: 800, dtype: object
+```
+
+```python
+# 查看 'Type 1' 欄位的所有資料
+print(df['Type 1'])
+```
+
+```
+0        Grass
+1        Grass
+2        Grass
+3        Grass
+4         Fire
+        ...   
+795       Rock
+796       Rock
+797    Psychic
+798    Psychic
+799       Fire
+Name: Type 1, Length: 800, dtype: object
+```
+
+### **檢視單個欄位資料**
+可以同時查看多個欄位，選取數個你感興趣的欄位作為子集
+
+```python
+# 查看多個欄位的資料
+print(df[['Name', 'HP', 'Attack']])
+```
+
+```
+                      Name  HP  Attack
+0                Bulbasaur  45      49
+1                  Ivysaur  60      62
+2                 Venusaur  80      82
+3    VenusaurMega Venusaur  80     100
+4               Charmander  39      52
+..                     ...  ..     ...
+795                Diancie  50     100
+796    DiancieMega Diancie  50     160
+797    HoopaHoopa Confined  80     110
+798     HoopaHoopa Unbound  80     160
+799              Volcanion  80     110
+
+[800 rows x 3 columns]
+```
+### **檢視單個欄位資料**
+可以透過行號來檢視某一特定行的所有資料
+
+```python
+# 查看第 15 行的所有資料
+print(df.iloc[15])
+```
+
+```
+#                     12
+Name          Butterfree
+Type 1               Bug
+Type 2            Flying
+Total                395
+HP                    60
+Attack                45
+Defense               50
+Sp. Atk               90
+Sp. Def               80
+Speed                 70
+Generation             1
+Legendary          False
+Name: 15, dtype: object
+```
+
+
+```python
+# 查看指定範圍的行
+print(df.iloc[0:5])  # 顯示第 0 到第 4 行
+```
+
+```
+   #                   Name Type 1  Type 2  Total  HP  Attack  Defense  \
+0  1              Bulbasaur  Grass  Poison    318  45      49       49   
+1  2                Ivysaur  Grass  Poison    405  60      62       63   
+2  3               Venusaur  Grass  Poison    525  80      82       83   
+3  3  VenusaurMega Venusaur  Grass  Poison    625  80     100      123   
+4  4             Charmander   Fire     NaN    309  39      52       43   
+
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  
+0       65       65     45           1      False  
+1       80       80     60           1      False  
+2      100      100     80           1      False  
+3      122      120     80           1      False  
+4       60       50     65           1      False  
+```
+
+### **根據條件篩選資料（查看子集）**
+可以根據某個欄位的值來篩選符合條件的行，例如查看所有屬性為 "Legendary" 的 Pokémon
+
+```python
+
+df[df['Legendary']==True].head(15)  #Showing the legendary pokemons
+```
+
+### **查看特定欄位的統計資訊**
+除了 df.describe()，也可以對單個欄位執行統計操作，如查看 Attack 欄位的平均值、最大值等
+
+```python
+# 計算 'Attack' 欄位的平均值
+print(df['Attack'].mean())
+
+# 查看 'Defense' 欄位的最大值
+print(df['Defense'].max())
+```
+79.00125  
+230
+
+
+### **檢視唯一值**
+查看某個欄位中有哪些唯一值，這對於分類資料（如 Type 2）有幫助
+
+```python
+# 查看 'Type 2' 欄位的所有唯一值
+
+type2_unique = df['Type 2'].unique()
+print(type2_unique)
+```
+['Poison' nan 'Flying' 'Dragon' 'Ground' 'Fairy' 'Grass' 'Fighting'
+ 'Psychic' 'Steel' 'Ice' 'Rock' 'Dark' 'Water' 'Electric' 'Fire' 'Ghost'
+ 'Bug' 'Normal']
+
+ 
+### **計算每個分類的出現頻率**
+可以計算每個分類（如 Type 1）在資料集中出現的頻率
+
+```python
+# 計算 'Type 1' 每個分類的出現次數
+
+type1_counts = df['Type 1'].value_counts()
+print(type1_counts)
+```
+
+```
+# 計算 'Type 1' 每個分類的出現次數
+
+type1_counts = df['Type 1'].value_counts()
+print(type1_counts)
+Type 1
+Water       112
+Normal       98
+Grass        70
+Bug          69
+Psychic      57
+Fire         52
+Electric     44
+Rock         44
+Dragon       32
+Ground       32
+Ghost        32
+Dark         31
+Poison       28
+Steel        27
+Fighting     27
+Ice          24
+Fairy        17
+Flying        4
+Name: count, dtype: int64
+```
+
+#### **檢視資料摘要（groupby）**
+想查看特定分類的統計摘要，可以使用 **groupby()** 來進行分組總結
+
+```python
+# 按 'Type 1' 分組，並查看每個屬性的平均攻擊力
+
+grouped_data = df.groupby('Type 1')['Attack'].mean()
+print(grouped_data)
+```
+
+```
+Type 1
+Bug          70.971014
+Dark         88.387097
+Dragon      112.125000
+Electric     69.090909
+Fairy        61.529412
+Fighting     96.777778
+Fire         84.769231
+Flying       78.750000
+Ghost        73.781250
+Grass        73.214286
+Ground       95.750000
+Ice          72.750000
+Normal       73.469388
+Poison       74.678571
+Psychic      71.456140
+Rock         92.863636
+Steel        92.703704
+Water        74.151786
+Name: Attack, dtype: float64
+```
+
+
+## **清理資料（Cleaning DataFrame）**
+
+* df.isnull().sum()：檢查資料集中每個欄位有多少缺失值，幫助找出需要清理的部分
+* df.dropna()：刪除包含缺失值的行，適用於缺失數據較少的情況
+* df.fillna(0)：將缺失值以指定的數值（如 0）填充，適用於缺失值較多且無法刪除的情況
+* df.duplicated().sum()：檢查是否有重複的資料行，避免數據重複影響分析結果
+* df.drop_duplicates()：刪除所有重複行，保留唯一的數據
+
+
+
+
+
+
+
+
+
