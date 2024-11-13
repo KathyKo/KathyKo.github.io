@@ -1,0 +1,1002 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Introduction and practice for Basic Python 💻"><title>Python Basic For Everyone</title>
+<link rel=canonical href=https://KathyKo.github.io/p/python-basic/><link rel=stylesheet href=/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css><meta property='og:title' content="Python Basic For Everyone"><meta property='og:description' content="Introduction and practice for Basic Python 💻"><meta property='og:url' content='https://KathyKo.github.io/p/python-basic/'><meta property='og:site_name' content="Kathy's Portfolio"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='Python'><meta property='article:published_time' content='2024-10-18T00:00:00+00:00'><meta property='article:modified_time' content='2024-10-18T00:00:00+00:00'><meta property='og:image' content='https://KathyKo.github.io/p/python-basic/python%20basic.png'><meta name=twitter:title content="Python Basic For Everyone"><meta name=twitter:description content="Introduction and practice for Basic Python 💻"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://KathyKo.github.io/p/python-basic/python%20basic.png'><link rel="shortcut icon" href=/favicon.png><script async src="https://www.googletagmanager.com/gtag/js?id=G-TCJ698BSGK"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-TCJ698BSGK")}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/kc_hu17564218102799437695.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Kathy's Portfolio</a></h1><h2 class=site-description>Welcome to my space 🫧 A twist in the tale, from Taiwanese lit. to data's midst, also AI join the list. Life's too short for the usual gist, why not let norms be dismissed :)</h2></div></header><ol class=menu-social><li><a href=https://github.com/KathyKo target=_blank title=GitHub rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://www.linkedin.com/in/hungchiko/ target=_blank title=LinkedIn rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 00-4 0"/></svg></a></li><li><a href=mailto:%20kohchi921@gmail.com target=_blank title=Mail rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#數值資料型態-number><strong>數值資料型態 （Number）</strong></a><ol><li><a href=#字串字元資料型態-stringcharacter-data-types><strong>字串/字元資料型態 String/Character Data Types</strong></a><ol><li><a href=#1-字串-string-str><strong>1. 字串 string (str)</strong></a></li><li><a href=#字串的處理><strong>字串的處理</strong></a></li><li><a href=#2-字元-character-chr><strong>2. 字元 character (chr)</strong></a></li></ol></li></ol></li><li><a href=#容器型態container-datatypes><strong>容器型態(Container Datatypes)</strong></a><ol><li><a href=#list列表><strong>List(列表)</strong></a><ol><li><a href=#新增刪除修改list的值><strong>新增/刪除/修改list的值</strong></a></li><li><a href=#取得長度><strong>取得長度</strong></a></li><li><a href=#常用位置函數><strong>常用位置函數</strong></a></li></ol></li><li><a href=#tuple-元組><strong>Tuple (元組)</strong></a></li><li><a href=#set-集合><strong>Set (集合)</strong></a><ol><li><a href=#常用函數><strong>常用函數</strong></a></li></ol></li><li><a href=#dictionary-字典><strong>Dictionary (字典)</strong></a></li><li><a href=#綜合比較><strong>綜合比較</strong></a></li><li><a href=#資料型態綜合練習><strong>資料型態綜合練習</strong></a></li></ol></li></ol><ol><li><a href=#數值運算子><strong>數值運算子</strong></a></li><li><a href=#關係運算子><strong>關係運算子</strong></a></li><li><a href=#複合指定運算子><strong>複合指定運算子</strong></a></li><li><a href=#數值運算與關係運算的綜合應用><strong>數值運算與關係運算的綜合應用</strong></a></li><li><a href=#數值和關係運算綜合練習><strong>數值和關係運算綜合練習</strong></a></li></ol><ol><li><a href=#邏輯運算子><strong>邏輯運算子</strong></a></li><li><a href=#if-else條件判斷><strong>If-Else條件判斷</strong></a></li><li><a href=#多條件判斷><strong>多條件判斷</strong></a></li><li><a href=#巢狀條件判斷><strong>巢狀條件判斷</strong></a></li><li><a href=#條件表達式三元運算子><strong>條件表達式（三元運算子）</strong></a></li><li><a href=#邏輯判斷綜合練習><strong>邏輯判斷綜合練習</strong></a></li></ol><ol><li><a href=#try-except>Try-Except</a></li><li><a href=#finally---確保一定會執行的代碼><strong>finally - 確保一定會執行的代碼</strong></a></li></ol><ol><li><a href=#for-loop><strong>For Loop</strong></a><ol><li><a href=#巢狀迴圈-nested-for-loop><strong>巢狀迴圈 Nested For Loop</strong></a></li><li><a href=#for-loop進階應用--break><strong>For Loop進階應用- Break</strong></a></li><li><a href=#for-loop進階應用--continue><strong>For Loop進階應用- Continue</strong></a></li></ol></li><li><a href=#while-loop><strong>While Loop</strong></a><ol><li><a href=#while-loop進階應用><strong>While Loop進階應用</strong></a></li><li><a href=#loop-課堂練習1><strong>Loop 課堂練習1</strong></a></li><li><a href=#loop-課堂練習2><strong>Loop 課堂練習2</strong></a></li></ol></li></ol><ol><li><a href=#基本函數><strong>基本函數</strong></a><ol><li><a href=#帶有參數的函數><strong>帶有參數的函數</strong></a></li><li><a href=#返回值-return><strong>返回值 (return)</strong></a></li><li><a href=#無返回值><strong>無返回值</strong></a></li><li><a href=#def-課堂練習><strong>def 課堂練習</strong></a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/python-basic/><img src=/p/python-basic/python%20basic_hu13526909589324749273.png srcset="/p/python-basic/python%20basic_hu13526909589324749273.png 800w, /p/python-basic/python%20basic_hu14272008471319895271.png 1600w" width=800 height=450 loading=lazy alt="Featured image of post Python Basic For Everyone"></a></div><div class=article-details><header class=article-category><a href=/categories/python/>Python</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/python-basic/>Python Basic For Everyone</a></h2><h3 class=article-subtitle>Introduction and practice for Basic Python 💻</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 18, 2024</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>14 minute read</time></div></footer></div></header><section class=article-content><h1 id=what-is-python><strong>WHAT IS PYTHON</strong></h1><p>Python是非常受歡迎的程式語言，因為容易閱讀和理解，且擁有龐大的開發者社群提供各種函式庫、框架以及教學課程，相對容易學習上手，適合新手入門學習的程式語言。</p><p>程式碼的可讀性高，語法接近英文，相較其它的程式語言，例如：C++或Java，Python 指令撰寫較簡潔，可以用更少的程式碼即能達到同樣的結果<br>(當然Java, C都有其存在的必要性)</p><p><img src=/p/python-basic/use.jpg width=232 height=218 srcset="/p/python-basic/use_hu6269382797120081226.jpg 480w, /p/python-basic/use_hu5752060162650362412.jpg 1024w" loading=lazy alt="i use python" class=gallery-image data-flex-grow=106 data-flex-basis=255px> <img src=/p/python-basic/c.png width=704 height=636 srcset="/p/python-basic/c_hu3453503048056035632.png 480w, /p/python-basic/c_hu12562938683189584296.png 1024w" loading=lazy alt="hello world" class=gallery-image data-flex-grow=110 data-flex-basis=265px></p><p>同時Python應用範圍非常廣泛，也是市場上工作機會需求最大的程式語言之一。
+<img src=/p/python-basic/3.png width=1920 height=1080 srcset="/p/python-basic/3_hu14292080874390012350.png 480w, /p/python-basic/3_hu18025285440781058666.png 1024w" loading=lazy alt=應用及工作需求統計 class=gallery-image data-flex-grow=177 data-flex-basis=426px></p><h1 id=python-自學資源><strong>Python 自學資源</strong></h1><blockquote><ul><li>Python 官方文檔</li><li>‍Learn Python：給非技術背景初學者入門的網站</li><li>DataCamp：側重於數據科學的Python教學</li><li>FreeCodecamp：4小時的英文初學者教程，有中文字幕</li><li>Google：Google’s Python Class</li><li>IBM：Python for Data Science, AI & Development</li><li>Youtube影片</li></ul></blockquote><h1 id=有了ai為何還要學python><strong>有了AI，為何還要學python?</strong></h1><blockquote><p>在資料分析的過程中，的確有很多工具可以幫助我們進行數據處理、分析和視覺化，
+甚至透過AI，可以不需要寫程式，只靠指令就能達到目的。</p><p>Python作為資料分析領域中最常用的程式語言之一，今天不僅僅是學一個工具，學習過程一種 <strong>「思考和解決問題的方式」</strong>。
+當你用 Python 進行資料分析時，實際上是在鍛煉自己的邏輯思維和問題拆解能力。AI 可能能幫你建立模型，但只有人能找出為什麼模型結果不如預期，或者數據處理出現錯誤的根本原因。</p><p>我們需要的不是更多的工具，而是對數據和邏輯的深入理解，並有能力去拆解問題、排查錯誤，找到解決辦法。
+Python 幫助你透過程式碼來一步一步進行分析、偵錯，這是一個 AI 無法完全取代的過程。</p><p>我會認為學習不論是Python或是其他的工具， 並不是為了讓你比 AI 工具更強，而是為了讓你能在面對錯誤、困境時，有能力拆解問題，還有切入問題的方式和工具，找到解決方案💪</p></blockquote><h1 id=變數>變數</h1><p><img src="https://i0.wp.com/utrustcorp.com/wp-content/uploads/2023/07/%E8%AE%8A%E6%95%B8%E6%A6%82%E5%BF%B5.png?resize=1024%2C576&amp;ssl=1" loading=lazy></p><blockquote><ol><li>程式語言中<strong>等號</strong>的意思是，將等號右邊的值傳給左邊的變數。</li></ol><p>比方說，牛排=160，就是把 160 這個數字放進 牛排 這個箱子裡。</p></blockquote><p>當我們給變數賦值時，電腦會在記憶體裡找到一個位置來存放這個值，並且會將這個位置與變數名稱關聯起來。這樣當我們在程式中提到變數名稱的時候，電腦就能夠快速找到記憶體中的對應位置，然後取出我們存放的資料。</p><blockquote><ol start=2><li>命名首字需要用英文可搭配數字，基本上命變數還是建議用「 <strong><font color=red>駝峰式命名</font></strong>
+」，在程式碼閱讀上會較為方便，也可以將不同單字用下底線分開ex:DAC_Class，變數名稱不能出現_以外的符號</li></ol><p>** 駝峰式命名: 變數名稱由多個單詞組成，第一個單詞的首字母小寫，後面每個單詞的首字母都大寫，這樣名稱就像駱駝的駝峰一樣。e.g.:TotalScore</p></blockquote><blockquote><p><strong>變數命名規則</strong>：
+在 Python 中，變數名稱有一些基本規則：</p><ul><li>變數名稱可以包含字母、數字和底線（_）。例如：age、student_name</li><li>變數名稱不能以數字開頭。例如：2name 是不合格的變數，但 name2 是合格的</li><li>變數名稱區分大小寫。例如：Age 和 age 是兩個不同的變數</li><li>避免使用 Python 的關鍵字作為變數名稱（例如：if、else、for 等）</li></ul></blockquote><p><img src=/p/python-basic/1.png width=581 height=324 srcset="/p/python-basic/1_hu6897910216153921868.png 480w, /p/python-basic/1_hu104447669942050845.png 1024w" loading=lazy alt=避免使用 class=gallery-image data-flex-grow=179 data-flex-basis=430px></p><h1 id=基礎輸入與輸出>基礎輸入與輸出</h1><blockquote><ul><li><p>輸出：使用 print() 函數將訊息顯示在執行結果。</p><p>語法：<strong>print(要輸出的內容)</strong></p></li><li><p>輸入：使用 input() 函數來讓使用者輸入資料。</p><p>語法：<strong>變數 = input(提示文字)</strong>。<br>input() 函數會等待使用者輸入資料，並將其存儲在變數中。</p></li></ul></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello, World!&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Hello, World!</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>name</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的名字：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;你好，&#34;</span> <span class=p>,</span> <span class=n>name</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入你的名字：abc<br>你好，abc</p><h1 id=資料型態>資料型態</h1><p>資料型態大致可以分成三大類，分別是數值型態、字串型態和容器型態。</p><ul><li>數值型態：int, float, bool</li><li>字串型態：str, chr</li><li>容器型態：list, dict, tuple, set</li></ul><h2 id=數值資料型態-number><strong>數值資料型態 （Number）</strong></h2><ul><li>整數（int）：沒有小數點的數字，例如：1、100、-50。</li><li>浮點數（float）：帶有小數點的數字，例如：3.14、-0.001。</li><li>布林值(boolean) : 決定邏輯判斷，<strong>True</strong> 或 <strong>False</strong></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># int 整數</span>
+</span></span><span class=line><span class=cl><span class=n>x</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>x</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>1<br>&lt;class &lsquo;int&rsquo;></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># int 整數</span>
+</span></span><span class=line><span class=cl><span class=c1># float 浮點數</span>
+</span></span><span class=line><span class=cl><span class=n>y</span> <span class=o>=</span> <span class=mf>1.5</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>y</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>y</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>1.5<br>&lt;class &lsquo;float&rsquo;></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># bool 布林值 True False</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>a</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>True
+&lt;class &lsquo;bool&rsquo;></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 布林值通常是一個運算的結果</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span><span class=o>==</span><span class=n>b</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>True<br>其中 a==b 是一個運算結果，會回傳 a 是否等於 b。 因為 a 的值是 1、b的值是 2，所以 a 不會等於 b。 a==b 這個布林值的值就會是 False 。</p><h3 id=字串字元資料型態-stringcharacter-data-types><strong>字串/字元資料型態 String/Character Data Types</strong></h3><h4 id=1-字串-string-str><strong>1. 字串 string (str)</strong></h4><p>字串資料是以單引號 (&rsquo;)或雙引號(")所包起來的文字資料，由一連串字元所組成。
+使用單引號或是雙引號的時機沒有一定， 若是字串中本身就包含單引號或是雙引號，就可以使用另一種引號以利區別。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 布林值通常是一個運算的結果</span>
+</span></span><span class=line><span class=cl><span class=n>song</span> <span class=o>=</span> <span class=s1>&#39;Just the way you are&#39;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>song</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>song</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>Just the way you are<br>&lt;class &lsquo;str&rsquo;></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34; &#34;</span><span class=n>Espresso</span><span class=s2>&#34; is a song by Sabrina Carpenter.&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>SyntaxError: invalid syntax<br>其中把“Espresso”這首歌括號起來，會使 Python 認為要印出的字串為 “ “(空字串)、以及” is a song by Sabrina Carpenter.”，因而出現error。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s1>&#39;&#34;Espresso&#34; is a song by Sabrina Carpenter.&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>&ldquo;Espresso&rdquo; is a song by Sabrina Carpenter.</p><h4 id=字串的處理><strong>字串的處理</strong></h4><p><strong>(1) 字串相加</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>str1</span> <span class=o>=</span> <span class=s2>&#34;Girl, you&#39;re amazing.&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>str2</span> <span class=o>=</span> <span class=s2>&#34;Just the way you are&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>str1</span> <span class=o>+</span> <span class=n>str2</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Girl, you&rsquo;re amazing.Just the way you are</p><p><strong>(2) 重複印出字串</strong></p><p>輸入字串與 * 再加上想要重複印出的字串即可</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>str</span> <span class=o>=</span> <span class=s2>&#34;Hello&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>str</span><span class=o>*</span><span class=mi>5</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>(3) 計算字串長度</strong></p><p>利用 len() 這個函式會回傳字串的長度</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>str</span> <span class=o>=</span> <span class=s2>&#34;asdfghjklzxcvbnmqwertyuiop&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>str</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=nb>str</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p><strong>(4) 取得字串中的某個字符</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>word</span> <span class=o>=</span> <span class=s2>&#34;Python&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>word</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>  <span class=c1># 第一個字元</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>word</span><span class=p>[</span><span class=o>-</span><span class=mi>1</span><span class=p>])</span>  <span class=c1># 最後一個字元</span>
+</span></span></code></pre></td></tr></table></div></div><p>P<br>H</p><h4 id=2-字元-character-chr><strong>2. 字元 character (chr)</strong></h4><p>字元就是組成字串的元素。 例如在字串 Python 中，<br>&lsquo;p&rsquo;, &lsquo;y&rsquo;, &rsquo;t&rsquo;, &lsquo;h&rsquo;, &lsquo;o&rsquo;, &rsquo;n&rsquo; 每個字母都是一個字元。</p><h5 id=型態轉換><strong>型態轉換</strong></h5><p><img src="https://i0.wp.com/utrustcorp.com/wp-content/uploads/2023/07/%E5%9E%8B%E6%85%8B%E8%BD%89%E6%8F%9B.png?resize=1024%2C578&amp;ssl=1" loading=lazy alt=型態轉換關係></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 整數轉換成浮點數</span>
+</span></span><span class=line><span class=cl><span class=n>num_int</span> <span class=o>=</span> <span class=mi>209</span>
+</span></span><span class=line><span class=cl><span class=n>num_float</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=n>num_int</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num_float</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>type</span><span class=p>(</span><span class=n>num_float</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>209.0<br>&lt;class &lsquo;float&rsquo;></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 浮點數轉換成整數（會捨棄小數部分）</span>
+</span></span><span class=line><span class=cl><span class=n>num_float</span> <span class=o>=</span> <span class=mf>3.1415926</span>
+</span></span><span class=line><span class=cl><span class=n>num_int</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>num_float</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num_int</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>3</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 字串轉換成整數或浮點數</span>
+</span></span><span class=line><span class=cl><span class=n>string_1</span> <span class=o>=</span> <span class=s2>&#34;103&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>num_int</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>string_1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>num_float</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=n>string_1</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num_int</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>103</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 布林值轉換成整數（True 為 1，False 為 0）</span>
+</span></span><span class=line><span class=cl><span class=n>bool_value</span> <span class=o>=</span> <span class=kc>False</span>
+</span></span><span class=line><span class=cl><span class=n>num_int</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=n>bool_value</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num_int</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>0</p><h5 id=print的參數格式化><strong>Print的參數格式化</strong></h5><p>在 Python 中，我們有時需要更靈活地控制輸出的內容，讓數字、字串等資料顯示得更符合我們的需求。<br>這時候可以使用 % 進行字串格式化，這種方法就像填空題一樣，把變數的值放進我們設定的格式裡面。</p><p><img src=/p/python-basic/2.png width=664 height=246 srcset="/p/python-basic/2_hu13581847058224104743.png 480w, /p/python-basic/2_hu5957459583890536184.png 1024w" loading=lazy class=gallery-image data-flex-grow=269 data-flex-basis=647px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl> <span class=c1># %%：顯示「%」</span>
+</span></span><span class=line><span class=cl><span class=n>percentage</span> <span class=o>=</span> <span class=s2>&#34;顯示百分比符號：</span><span class=si>%%</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>percentage</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># %d：整數輸出</span>
+</span></span><span class=line><span class=cl><span class=n>age</span> <span class=o>=</span> <span class=mi>25</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我今年 </span><span class=si>%d</span><span class=s2> 歲。&#34;</span> <span class=o>%</span> <span class=n>age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># %f：浮點數輸出</span>
+</span></span><span class=line><span class=cl><span class=n>pi</span> <span class=o>=</span> <span class=mf>3.14159</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;圓周率的近似值是：</span><span class=si>%f</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>pi</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># %s：字串輸出</span>
+</span></span><span class=line><span class=cl><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Alice&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;你好，</span><span class=si>%s</span><span class=s2>！&#34;</span> <span class=o>%</span> <span class=n>name</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># %e：科學記號法輸出</span>
+</span></span><span class=line><span class=cl><span class=n>large_number</span> <span class=o>=</span> <span class=mi>123456789</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;科學記號法表示：</span><span class=si>%e</span><span class=s2>&#34;</span> <span class=o>%</span> <span class=n>large_number</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>顯示百分比符號：%<br>我今年 25 歲。<br>圓周率的近似值是：3.141590<br>你好，Alice！<br>科學記號法表示：1.234568e+08</p><h2 id=容器型態container-datatypes><strong>容器型態(Container Datatypes)</strong></h2><p>Python 的容器型態，也就是能夠用來存放多個資料的結構。<br>這些結構讓我們可以更方便地組織和管理大量的數據。<br>主要有四種常見容器型態：</p><ul><li>List(串列)</li><li>Tuple(元組)</li><li>Set(集合)</li><li>Dictionary(字典)</li></ul><h3 id=list列表><strong>List(列表)</strong></h3><p>列表可以儲存很多不同的東西，像是數字、字串，甚至是其他列表。<br>它的特點是有順序，也就是說，可以依據編號（索引）來取出列表中每個元素。<br>索引從 0 開始，意味著列表的第一個元素索引是 0，第二個是 1，以此類推。</p><ul><li>list是一個值可變、可重複、存放<strong>有順序性</strong>的資料結構。使用 [ ] 表示</li><li>index從0開始。列表中的元素可以被修改、添加或刪除</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 布林值轉換成整數（True 為 1，False 為 0）</span>
+</span></span><span class=line><span class=cl><span class=n>student_name</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;Amy&#34;</span><span class=p>,</span> <span class=s2>&#34;Bill&#34;</span><span class=p>,</span> <span class=s2>&#34;Cony&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>student_score</span> <span class=o>=</span> <span class=p>[</span><span class=mi>100</span><span class=p>,</span> <span class=mi>90</span><span class=p>,</span> <span class=mi>80</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>student_name</span><span class=p>[</span><span class=mi>2</span><span class=p>])</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>student_score</span><span class=p>[</span><span class=mi>0</span><span class=p>])</span>
+</span></span></code></pre></td></tr></table></div></div><p>Cony<br>100</p><h4 id=新增刪除修改list的值><strong>新增/刪除/修改list的值</strong></h4><ul><li>append：從List尾端新增一個元素</li><li>insert：在List的任何位置插入元素</li><li>remove: 將List中某個數值刪除</li><li>pop(): 將List尾端的元素刪除</li><li>del: 將List該位置的值刪除</li></ul><p>建立一個List</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;bear&#34;</span><span class=p>,</span> <span class=s2>&#34;cat&#34;</span><span class=p>,</span> <span class=s2>&#34;dog&#34;</span><span class=p>,</span> <span class=s2>&#34;elephant&#34;</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>append</span><span class=p>(</span><span class=s2>&#34;fox&#34;</span><span class=p>)</span> <span class=c1>#新增一個元素&#34;fox&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>[&lsquo;bear&rsquo;, &lsquo;cat&rsquo;, &lsquo;dog&rsquo;, &rsquo;elephant&rsquo;, &lsquo;fox&rsquo;]</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>pop</span><span class=p>()</span> <span class=c1>#括號內不需放值，會自動刪除最後一個</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>[&lsquo;bear&rsquo;, &lsquo;cat&rsquo;, &lsquo;dog&rsquo;, &rsquo;elephant&rsquo;]</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>insert</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=s2>&#34;panda&#34;</span><span class=p>)</span> <span class=c1>#List的第二個元素在&#34;cat&#34;插入後變成&#34;panda&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>[&lsquo;bear&rsquo;, &lsquo;panda&rsquo;, &lsquo;bird&rsquo;, &lsquo;cat&rsquo;, &lsquo;dog&rsquo;, &rsquo;elephant&rsquo;]</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>remove</span><span class=p>(</span><span class=s2>&#34;dog&#34;</span><span class=p>)</span> <span class=c1># 刪除&#34;dog&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>[&lsquo;bear&rsquo;, &lsquo;bird&rsquo;, &lsquo;bird&rsquo;, &lsquo;cat&rsquo;, &rsquo;elephant&rsquo;]</p><h4 id=取得長度><strong>取得長度</strong></h4><p>使用 <strong>len(list)</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>student</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;Amy&#39;</span><span class=p>,</span> <span class=s1>&#39;Bill&#39;</span><span class=p>,</span> <span class=s1>&#39;Cony&#39;</span><span class=p>,</span> <span class=s1>&#39;Dora&#39;</span><span class=p>,</span> <span class=s2>&#34;Ellie&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=nb>len</span><span class=p>(</span><span class=n>student</span><span class=p>))</span>
+</span></span></code></pre></td></tr></table></div></div><p>5</p><h4 id=常用位置函數><strong>常用位置函數</strong></h4><ul><li>sort()：List排序</li><li>reverse()：反轉List的順序</li><li>index()：某值在List第一次出現的索引位置</li><li>count()：某值在List出現的次數</li></ul><p>建立兩個list</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;bear&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>,</span> <span class=s1>&#39;dog&#39;</span><span class=p>,</span> <span class=s1>&#39;elephant&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=n>num</span> <span class=o>=</span> <span class=p>[</span><span class=mi>21</span><span class=p>,</span> <span class=mi>32</span><span class=p>,</span> <span class=mi>43</span><span class=p>,</span> <span class=mi>54</span><span class=p>,</span> <span class=mi>65</span><span class=p>,</span> <span class=mi>23</span><span class=p>,</span> <span class=mi>34</span><span class=p>,</span> <span class=mi>35</span><span class=p>]</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#在sort中可以加入reverse參數調整升降(默認是升序)</span>
+</span></span><span class=line><span class=cl><span class=c1>#reverse = True 降序， reverse = False 升序</span>
+</span></span><span class=line><span class=cl><span class=c1>#都沒打就是默認reverse = False</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>sort</span><span class=p>()</span> <span class=c1>#排序方法按照字母順序</span>
+</span></span><span class=line><span class=cl><span class=n>num</span><span class=o>.</span><span class=n>sort</span><span class=p>()</span>     <span class=c1>#數字會按照數字小到大</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>animals</span><span class=o>.</span><span class=n>sort</span><span class=p>(</span><span class=n>reverse</span> <span class=o>=</span> <span class=kc>True</span><span class=p>)</span> <span class=c1>#排序方法按照字母順序</span>
+</span></span><span class=line><span class=cl><span class=n>num</span><span class=o>.</span><span class=n>sort</span><span class=p>(</span><span class=n>reverse</span> <span class=o>=</span> <span class=kc>True</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>num</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>[&lsquo;bear&rsquo;, &lsquo;cat&rsquo;, &lsquo;cat&rsquo;, &lsquo;dog&rsquo;, &rsquo;elephant&rsquo;]<br>[21, 23, 32, 34, 35, 43, 54, 65]<br>[&rsquo;elephant&rsquo;, &lsquo;dog&rsquo;, &lsquo;cat&rsquo;, &lsquo;cat&rsquo;, &lsquo;bear&rsquo;]<br>[65, 54, 43, 35, 34, 32, 23, 21]</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span> <span class=o>=</span> <span class=p>[</span><span class=s1>&#39;bear&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>,</span> <span class=s1>&#39;dog&#39;</span><span class=p>,</span> <span class=s1>&#39;elephant&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>,</span> <span class=s2>&#34;Cat&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=o>.</span><span class=n>count</span><span class=p>(</span><span class=s1>&#39;cat&#39;</span><span class=p>))</span> <span class=c1>#cat總共出現幾次</span>
+</span></span></code></pre></td></tr></table></div></div><p>2<br>其中cat和Cat為不同元素</p><h3 id=tuple-元組><strong>Tuple (元組)</strong></h3><p>Tuple是一個值不可變、可重複、存放有順序性的資料結構。使用 ( ) 表示<br>⭢ <strong>給定元素後不能改變</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span> <span class=o>=</span> <span class=p>(</span><span class=s1>&#39;bear&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>,</span> <span class=s1>&#39;dog&#39;</span><span class=p>,</span> <span class=s1>&#39;elephant&#39;</span><span class=p>,</span> <span class=s1>&#39;cat&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>animals</span><span class=p>[</span><span class=mi>1</span><span class=p>])</span>
+</span></span></code></pre></td></tr></table></div></div><p>(&lsquo;bear&rsquo;, &lsquo;cat&rsquo;, &lsquo;dog&rsquo;, &rsquo;elephant&rsquo;, &lsquo;cat&rsquo;)<br>cat</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>animals</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;peoele&#34;</span>
+</span></span></code></pre></td></tr></table></div></div><p>TypeError: &rsquo;tuple&rsquo; object does not support item assignment<br>建立了一個名為 animals 的tuple，和list一樣可以用索引取值，但是不能像list一樣去改變內容。如果嘗試更改tuple的值，會報錯。</p><h3 id=set-集合><strong>Set (集合)</strong></h3><p>Set和List最大的不同在於它<strong>沒有順序</strong>，也<strong>不允許有重複的元素</strong>。<br>這就像是我們在統計數據時，希望去掉重複的部分，只保留獨一無二的資料。</p><ul><li>Set是一個值可變、不可重複、存放沒有順序性的資料結構。用大括號 { } 表示</li><li>值重複時，僅會保留一個</li><li>只有元素值(value)，沒有鍵值(key)。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>set1</span> <span class=o>=</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>,</span> <span class=mi>1</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>set1</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>{1, 2, 3, 4, 5, 6, 7, 8, 9}</p><h4 id=常用函數><strong>常用函數</strong></h4><ul><li>add( )：新增資料</li><li>remove( )：刪除資料</li><li>len( )： 回傳長度</li><li>sum( )： 回傳總和</li><li>max( )： 回傳最大值</li><li>min( )： 回傳最小值</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>set2</span> <span class=o>=</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>,</span> <span class=mi>1</span><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=c1>#新增10, 刪除5</span>
+</span></span><span class=line><span class=cl><span class=n>set2</span><span class=o>.</span><span class=n>add</span><span class=p>(</span><span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>set2</span><span class=o>.</span><span class=n>remove</span><span class=p>(</span><span class=mi>5</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>set2</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>{1, 2, 3, 4, 6, 7, 8, 9, 100}</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>set2</span> <span class=o>=</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>2</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>5</span><span class=p>,</span> <span class=mi>6</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>8</span><span class=p>,</span> <span class=mi>9</span><span class=p>,</span> <span class=mi>11</span><span class=p>,</span> <span class=mi>11</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;長度: </span><span class=si>%d</span><span class=s2> &#34;</span> <span class=o>%</span><span class=nb>len</span><span class=p>(</span><span class=n>set2</span><span class=p>))</span>  <span class=c1>#回傳長度</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;總和: </span><span class=si>%d</span><span class=s2> &#34;</span> <span class=o>%</span><span class=nb>sum</span><span class=p>(</span><span class=n>set2</span><span class=p>))</span>  <span class=c1>#總和</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;最大值: </span><span class=si>%d</span><span class=s2> &#34;</span> <span class=o>%</span><span class=nb>max</span><span class=p>(</span><span class=n>set2</span><span class=p>))</span> <span class=c1>#最大值</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;最小值: </span><span class=si>%d</span><span class=s2> &#34;</span> <span class=o>%</span><span class=nb>min</span><span class=p>(</span><span class=n>set2</span><span class=p>))</span> <span class=c1>#最小值</span>
+</span></span></code></pre></td></tr></table></div></div><p>長度: 10<br>總和: 56<br>最大值: 11<br>最小值: 1</p><h3 id=dictionary-字典><strong>Dictionary (字典)</strong></h3><p>Dictionary的特色是用 key 和 value 的方式來存儲資料，可以把它想像成一個電話簿，key 是名字，value 是對應的電話號碼。</p><ul><li>Dictionary是一個值可變、可重複、存放使用唯一識別Key的資料結構。</li><li>以大括號{}存放元素，每個元素是由一對「鍵值(key):元素值(value)」組合而成。 {key1:value1, key2:value2}</li><li>key是唯一值，如果有重複，後面的資料會覆蓋前面的資料</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 初始化字典</span>
+</span></span><span class=line><span class=cl><span class=n>dict_1</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Gary&#34;</span><span class=p>,</span> <span class=s2>&#34;gender&#34;</span><span class=p>:</span> <span class=s2>&#34;male&#34;</span><span class=p>,</span> <span class=s2>&#34;age&#34;</span><span class=p>:</span> <span class=mi>28</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 1. clear(): 清空字典</span>
+</span></span><span class=line><span class=cl><span class=n>dict_1</span><span class=o>.</span><span class=n>clear</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>dict_1</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>{ }</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>dict</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Gary&#34;</span><span class=p>,</span> <span class=s2>&#34;gender&#34;</span><span class=p>:</span> <span class=s2>&#34;male&#34;</span><span class=p>,</span> <span class=s2>&#34;age&#34;</span><span class=p>:</span> <span class=mi>28</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. copy(): 複製字典</span>
+</span></span><span class=line><span class=cl><span class=n>dict_copy</span> <span class=o>=</span> <span class=nb>dict</span><span class=o>.</span><span class=n>copy</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;複製的字典：&#34;</span><span class=p>,</span> <span class=n>dict_copy</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>複製的字典： {&rsquo;name&rsquo;: &lsquo;Gary&rsquo;, &lsquo;gender&rsquo;: &lsquo;male&rsquo;, &lsquo;age&rsquo;: 28}</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 3. get(): 取得指定 key 的元素值</span>
+</span></span><span class=line><span class=cl><span class=n>age</span> <span class=o>=</span> <span class=nb>dict</span><span class=o>.</span><span class=n>get</span><span class=p>(</span><span class=s2>&#34;age&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;取得的 age 值：&#34;</span><span class=p>,</span> <span class=n>age</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 4. pop(): 移除指定 key 的元素值</span>
+</span></span><span class=line><span class=cl><span class=n>removed_value</span> <span class=o>=</span> <span class=nb>dict</span><span class=o>.</span><span class=n>pop</span><span class=p>(</span><span class=s2>&#34;gender&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;移除的值：&#34;</span><span class=p>,</span> <span class=n>removed_value</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;移除後的字典：&#34;</span><span class=p>,</span> <span class=nb>dict</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>取得的 age 值： 28<br>移除的值： male<br>移除後的字典： {&rsquo;name&rsquo;: &lsquo;Gary&rsquo;, &lsquo;age&rsquo;: 28}</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>dict</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Gary&#34;</span><span class=p>,</span> <span class=s2>&#34;gender&#34;</span><span class=p>:</span> <span class=s2>&#34;male&#34;</span><span class=p>,</span> <span class=s2>&#34;age&#34;</span><span class=p>:</span> <span class=mi>28</span><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 5. update(): 合併字典</span>
+</span></span><span class=line><span class=cl><span class=n>new_info</span> <span class=o>=</span> <span class=p>{</span><span class=s2>&#34;height&#34;</span><span class=p>:</span> <span class=mi>175</span><span class=p>,</span> <span class=s2>&#34;age&#34;</span><span class=p>:</span> <span class=mi>29</span><span class=p>}</span>  <span class=c1># 新的字典，用來合併</span>
+</span></span><span class=line><span class=cl><span class=nb>dict</span><span class=o>.</span><span class=n>update</span><span class=p>(</span><span class=n>new_info</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;合併後的字典：&#34;</span><span class=p>,</span> <span class=nb>dict</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 6. len(): 回傳字典中的 key:value 組數</span>
+</span></span><span class=line><span class=cl><span class=n>length</span> <span class=o>=</span> <span class=nb>len</span><span class=p>(</span><span class=nb>dict</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;字典的長度：&#34;</span><span class=p>,</span> <span class=n>length</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>合併後的字典： {&rsquo;name&rsquo;: &lsquo;Gary&rsquo;, &lsquo;gender&rsquo;: &lsquo;male&rsquo;, &lsquo;age&rsquo;: 29, &lsquo;height&rsquo;: 175}<br>字典的長度： 4</p><h3 id=綜合比較><strong>綜合比較</strong></h3><p><img src=/p/python-basic/4.png width=706 height=228 srcset="/p/python-basic/4_hu12442066128164633612.png 480w, /p/python-basic/4_hu14100477382881419402.png 1024w" loading=lazy class=gallery-image data-flex-grow=309 data-flex-basis=743px></p><h3 id=資料型態綜合練習><strong>資料型態綜合練習</strong></h3><blockquote><p>假設你正在設計一個系統來儲存顧客的基本資訊，請依據以下步驟完成：</p><p>創建一個名為 customer 的字典，使用者會輸入姓名、性別和年齡，並將這些資訊存入一個字典中。</p><ol><li>請使用 input() 函數，讓使用者輸入顧客的城市（city），並將其存入字典中。</li><li>請輸出顧客的所有資訊（使用 print() 輸出整個字典）。</li><li>該字典目前包含多少組 key:value。</li><li>假設顧客搬家了，將顧客的城市更新為新的城市 &ldquo;Taipei&rdquo;。</li><li>移除顧客的性別資訊，並顯示移除後的字典內容</li></ol></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 1. 創建一個名為 customer 的字典，並讓使用者輸入姓名、性別和年齡</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span> <span class=o>=</span> <span class=p>{}</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=p>[</span><span class=s2>&#34;name&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入顧客的姓名：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=p>[</span><span class=s2>&#34;gender&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入顧客的性別：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=p>[</span><span class=s2>&#34;age&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入顧客的年齡：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. 請使用 input() 函數，讓使用者輸入顧客的城市，並將其存入字典中</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=p>[</span><span class=s2>&#34;city&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入顧客的城市：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 3. 輸出顧客的所有資訊</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>顧客的所有資訊：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>customer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 4. 該字典目前包含多少組 key:value</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>字典中的 key:value 組數：&#34;</span><span class=p>,</span> <span class=nb>len</span><span class=p>(</span><span class=n>customer</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 5. 顧客搬家了，將顧客的城市更新為 &#34;Taipei&#34;</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=p>[</span><span class=s2>&#34;city&#34;</span><span class=p>]</span> <span class=o>=</span> <span class=s2>&#34;Taipei&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>更新後的顧客資訊：&#34;</span><span class=p>,</span> <span class=n>customer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>customer</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 6. 移除顧客的性別資訊</span>
+</span></span><span class=line><span class=cl><span class=n>customer</span><span class=o>.</span><span class=n>pop</span><span class=p>(</span><span class=s2>&#34;gender&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;</span><span class=se>\n</span><span class=s2>移除性別後的顧客資訊：&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>customer</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入顧客的姓名：dac<br>請輸入顧客的性別：male<br>請輸入顧客的年齡：4<br>請輸入顧客的城市：tainan</p><p>顧客的所有資訊：<br>{&rsquo;name&rsquo;: &lsquo;dac&rsquo;, &lsquo;gender&rsquo;: &lsquo;male&rsquo;, &lsquo;age&rsquo;: 4, &lsquo;city&rsquo;: &rsquo;tainan&rsquo;}</p><p>字典中的 key:value 組數： 4</p><p>更新後的顧客資訊：<br>{&rsquo;name&rsquo;: &lsquo;dac&rsquo;, &lsquo;gender&rsquo;: &lsquo;male&rsquo;, &lsquo;age&rsquo;: 4, &lsquo;city&rsquo;: &lsquo;Taipei&rsquo;}</p><p>移除性別後的顧客資訊：<br>{&rsquo;name&rsquo;: &lsquo;dac&rsquo;, &lsquo;age&rsquo;: 4, &lsquo;city&rsquo;: &lsquo;Taipei&rsquo;}</p><h1 id=數值和關係運算子><strong>數值和關係運算子</strong></h1><p>Python 支援各種數值運算，這些運算能夠處理整數和浮點數等數字型態。</p><h2 id=數值運算子><strong>數值運算子</strong></h2><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=mi>3</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>+</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 加法</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>-</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 減法</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>*</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 乘法</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>/</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 除法</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>//</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 取整除</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>%</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 取餘數</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=o>**</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 次方</span>
+</span></span></code></pre></td></tr></table></div></div><p>13<br>7<br>30<br>3.3333333333333335<br>3<br>1<br>1000</p><h2 id=關係運算子><strong>關係運算子</strong></h2><p>關係運算子用於比較兩個數值或變數，結果會返回布林值
+<img src=/p/python-basic/6.png width=732 height=277 srcset="/p/python-basic/6_hu12868920993693576694.png 480w, /p/python-basic/6_hu15695120821590248560.png 1024w" loading=lazy class=gallery-image data-flex-grow=264 data-flex-basis=634px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>x</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>y</span> <span class=o>=</span> <span class=mi>20</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>==</span> <span class=n>y</span><span class=p>)</span>  <span class=c1># 等於</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>!=</span> <span class=n>y</span><span class=p>)</span>  <span class=c1># 不等於</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>&gt;</span> <span class=n>y</span><span class=p>)</span>   <span class=c1># 大於</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>&lt;</span> <span class=n>y</span><span class=p>)</span>   <span class=c1># 小於</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>&gt;=</span> <span class=n>y</span><span class=p>)</span>  <span class=c1># 大於或等於</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>x</span> <span class=o>&lt;=</span> <span class=n>y</span><span class=p>)</span>  <span class=c1># 小於或等於</span>
+</span></span></code></pre></td></tr></table></div></div><p>False<br>True<br>False<br>True<br>False<br>True</p><h2 id=複合指定運算子><strong>複合指定運算子</strong></h2><ul><li>複合指定運算子就是為簡化此種敘述產生的運算子，將運算子置於「=」前方來取代重複的變數名稱。</li><li>複合指定運算子同時做了「執行運算」及「指定」兩件工件</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>i</span><span class=o>=</span><span class=mi>10</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>i</span><span class=o>+=</span><span class=mi>5</span> <span class=c1>#即 i=i+5</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>15</p><h2 id=數值運算與關係運算的綜合應用><strong>數值運算與關係運算的綜合應用</strong></h2><p>在實際應用中，常常會將數值運算與關係運算結合起來，對數據進行條件判斷。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 檢查一個數字是否是偶數</span>
+</span></span><span class=line><span class=cl><span class=n>num</span> <span class=o>=</span> <span class=mi>10</span>
+</span></span><span class=line><span class=cl><span class=n>is_even</span> <span class=o>=</span> <span class=p>(</span><span class=n>num</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span>  <span class=c1># 使用取餘數來判斷是否為偶數</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>num</span><span class=si>}</span><span class=s2> 是偶數嗎？</span><span class=si>{</span><span class=n>is_even</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 比較兩個數字的大小</span>
+</span></span><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>5</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=mi>7</span>
+</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=p>(</span><span class=n>a</span> <span class=o>+</span> <span class=mi>3</span> <span class=o>&gt;</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># 進行數學運算後比較</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;a + 3 是否大於 b？</span><span class=si>{</span><span class=n>result</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=數值和關係運算綜合練習><strong>數值和關係運算綜合練習</strong></h2><p>BMI（Body Mass Index）是一個常見的健康指標，用來衡量一個人的體重是否在正常範圍內。</p><p><img src=/p/python-basic/7.png width=318 height=123 srcset="/p/python-basic/7_hu3649778362435363049.png 480w, /p/python-basic/7_hu13473396848362280573.png 1024w" loading=lazy alt=計算公式 class=gallery-image data-flex-grow=258 data-flex-basis=620px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 輸入身高和體重</span>
+</span></span><span class=line><span class=cl><span class=n>weight</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的體重（公斤）：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>height</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的身高（公尺）：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 計算 BMI</span>
+</span></span><span class=line><span class=cl><span class=n>bmi</span> <span class=o>=</span> <span class=n>weight</span> <span class=o>/</span> <span class=p>(</span><span class=n>height</span> <span class=o>**</span> <span class=mi>2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s2>&#34;你的 BMI 是：&#34;</span><span class=p>,</span> <span class=n>bmi</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h1 id=邏輯判斷><strong>邏輯判斷</strong></h1><h2 id=邏輯運算子><strong>邏輯運算子</strong></h2><p>Python 中有三個主要的邏輯運算子，它們用來處理布林值並進行邏輯判斷：
+<img src=/p/python-basic/8.png width=861 height=155 srcset="/p/python-basic/8_hu15263424025204023193.png 480w, /p/python-basic/8_hu3029217768811228058.png 1024w" loading=lazy alt=BMI class=gallery-image data-flex-grow=555 data-flex-basis=1333px></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=kc>True</span>
+</span></span><span class=line><span class=cl><span class=n>b</span> <span class=o>=</span> <span class=kc>False</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=ow>and</span> <span class=n>b</span><span class=p>)</span>  <span class=c1># False</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>a</span> <span class=ow>or</span> <span class=n>b</span><span class=p>)</span>   <span class=c1># True</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=ow>not</span> <span class=n>a</span><span class=p>)</span>    <span class=c1># False</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>a</span> <span class=o>=</span> <span class=mi>3</span>  <span class=c1># 宣告變數a為3，此式不會有產出</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>and</span> <span class=p>(</span><span class=n>a</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>))</span>  <span class=c1>#True and True</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>and</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>5</span><span class=p>))</span>  <span class=c1>#True and False</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>and</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>5</span><span class=p>))</span>  <span class=c1>#False and False</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>or</span> <span class=p>(</span><span class=n>a</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>))</span>   <span class=c1>#True or True</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>or</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>5</span><span class=p>))</span>   <span class=c1>#True or False</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>((</span><span class=n>a</span> <span class=o>&lt;</span> <span class=mi>1</span><span class=p>)</span> <span class=ow>or</span> <span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>5</span><span class=p>))</span>   <span class=c1>#False or False</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=ow>not</span><span class=p>(</span><span class=n>a</span> <span class=o>&gt;</span> <span class=mi>1</span><span class=p>))</span>         <span class=c1>#NOT True</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=if-else條件判斷><strong>If-Else條件判斷</strong></h2><ul><li>if 用來檢查一個條件，如果該條件為 True，就會執行對應的程式碼。</li><li>elif（else if）用來檢查另一個條件（當前面的條件不成立時）。</li><li>else 當所有條件都不成立時，執行預設的動作。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#if</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>price</span> <span class=o>=</span> <span class=mi>120</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>price</span> <span class=o>&lt;</span> <span class=mi>200</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;錢夠購買&#39;</span><span class=p>)</span> <span class=c1>#因為目前的price小於200元，所以會執行if這一行程式</span>
+</span></span></code></pre></td></tr></table></div></div><p>錢夠購買</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#if－else</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>student</span> <span class=o>=</span> <span class=mi>80</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>student</span> <span class=o>&lt;=</span> <span class=mi>70</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;可以加簽&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;人數已滿&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>人數已滿</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span><span class=lnt>9
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#if-elif-else</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>temperature</span> <span class=o>=</span> <span class=mf>36.2</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>temperature</span> <span class=o>&lt;=</span><span class=mi>37</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;體溫正常&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=mf>37.5</span> <span class=o>&lt;=</span> <span class=n>temperature</span> <span class=o>&lt;</span><span class=mi>38</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;輕微發燒&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span> <span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s1>&#39;發燒&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>體溫正常</p><h2 id=多條件判斷><strong>多條件判斷</strong></h2><ul><li>當兩個條件同時成立時，使用 and。</li><li>當其中任一條件成立時，使用 or。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>age</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的年齡：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>age</span> <span class=o>&gt;=</span> <span class=mi>18</span> <span class=ow>and</span> <span class=n>age</span> <span class=o>&lt;</span> <span class=mi>65</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;你是工作年齡段&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>age</span> <span class=o>&gt;=</span> <span class=mi>65</span> <span class=ow>or</span> <span class=n>age</span> <span class=o>&lt;</span> <span class=mi>18</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;你不是工作年齡段&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入你的年齡：23<br>你是工作年齡段</p><h2 id=巢狀條件判斷><strong>巢狀條件判斷</strong></h2><p>巢狀條件判斷允許我們在某些條件成立時進一步檢查更多條件。這在處理多層次的邏輯時非常有用。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>score</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的分數：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>score</span> <span class=o>&gt;=</span> <span class=mi>60</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;恭喜，你及格了！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>score</span> <span class=o>&gt;=</span> <span class=mi>90</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;而且你是高分！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;不過你還可以努力獲得更高分！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;抱歉，你沒有及格。&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/python-basic/11.jpg width=600 height=799 srcset="/p/python-basic/11_hu13346312368091066355.jpg 480w, /p/python-basic/11_hu17246424028664047565.jpg 1024w" loading=lazy alt="score meme" class=gallery-image data-flex-grow=75 data-flex-basis=180px></p><h2 id=條件表達式三元運算子><strong>條件表達式（三元運算子）</strong></h2><ul><li>條件表達式允許我們在一行中寫出簡單的條件判斷</li><li>用法: <strong>值1 if 條件 else 值2</strong></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>age</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入你的年齡：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>status</span> <span class=o>=</span> <span class=s2>&#34;成年人&#34;</span> <span class=k>if</span> <span class=n>age</span> <span class=o>&gt;=</span> <span class=mi>18</span> <span class=k>else</span> <span class=s2>&#34;未成年人&#34;</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>status</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入你的年齡：24<br>成年人</p><h2 id=邏輯判斷綜合練習><strong>邏輯判斷綜合練習</strong></h2><p><strong>調酒推薦系統</strong></p><blockquote><p>設計一個簡單的「調酒推薦系統」，根據使用者的口味偏好，推薦一款適合的調酒：</p><p>使用者會回答三個問題來表達他們的口味偏好：</p><ul><li>基酒選擇：Gin、Whiskey、Vodka</li><li>酒感：輕 or 重
+根據這三個問題的回答，推薦以下調酒：</li><li>Gin Tonic：gin/輕</li><li>Old Fashioned：whiskey/重</li><li>Cosmopolitan：vodka/輕</li><li>Whiskey Sour：whiskey/輕</li><li>Vodka Martini：vodka/重</li><li>Negroni：gin/重
+系統根據使用者的選擇推薦合適的調酒。</li></ul></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 1. 問使用者的偏好</span>
+</span></span><span class=line><span class=cl><span class=n>base_liquor</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;你想要選擇的基酒是什麼？（gin/whiskey/vodka）：&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>strip</span><span class=p>()</span><span class=o>.</span><span class=n>lower</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=n>strength</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;你喜歡酒感輕還是重？（輕/重）：&#34;</span><span class=p>)</span><span class=o>.</span><span class=n>strip</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. 根據偏好進行推薦</span>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;gin&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;輕&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Gin Tonic（琴通寧）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;gin&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;重&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Negroni（尼格羅尼）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;whiskey&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;輕&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Whiskey Sour（威士忌酸酒）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;whiskey&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;重&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Old Fashioned（舊式雞尾酒）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;vodka&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;輕&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Cosmopolitan（柯夢波丹）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>elif</span> <span class=n>base_liquor</span> <span class=o>==</span> <span class=s2>&#34;vodka&#34;</span> <span class=ow>and</span> <span class=n>strength</span> <span class=o>==</span> <span class=s2>&#34;重&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;我們推薦：Moscow Mule（莫斯科騾子）&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;無法提供推薦，請檢查您的輸入。&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><h1 id=try-except-finally><strong>Try-Except-Finally</strong></h1><h2 id=try-except>Try-Except</h2><p>在發生錯誤時提供提示，而不是讓程式崩潰<br>Python常見的錯誤類型:</p><ul><li>ZeroDivisionError：除以零的錯誤。</li><li>ValueError：當變量的類型不符合操作時，例如試圖將字串轉換為數字。</li><li>TypeError：當不同類型之間進行非法操作時。</li><li>IndexError：當試圖訪問超出範圍的列表索引時。</li><li>KeyError：當在字典中查找不存在的鍵時。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 基本語法結構：</span>
+</span></span><span class=line><span class=cl><span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 可能會發生錯誤的code</span>
+</span></span><span class=line><span class=cl><span class=k>except</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 如果發生錯誤，這裡的code會被執行</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>number</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入一個數字：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>result</span> <span class=o>=</span> <span class=mi>10</span> <span class=o>/</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;結果是：</span><span class=si>{</span><span class=n>result</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>except</span> <span class=ne>ZeroDivisionError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;錯誤：除數不能為 0&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>except</span> <span class=ne>ValueError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;錯誤：請輸入有效的數字&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入一個數字：0<br>錯誤：除數不能為 0</p><h2 id=finally---確保一定會執行的代碼><strong>finally - 確保一定會執行的代碼</strong></h2><p>finally 區塊中的code無論是否發生錯誤都會被執行，用於釋放資源或清理工作。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 嘗試執行的code</span>
+</span></span><span class=line><span class=cl><span class=k>except</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 處理錯誤</span>
+</span></span><span class=line><span class=cl><span class=k>finally</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 總是會執行的code</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>try</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 嘗試進行簡單的除法運算</span>
+</span></span><span class=line><span class=cl>    <span class=n>num1</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入第一個數字：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>num2</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入第二個數字：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>result</span> <span class=o>=</span> <span class=n>num1</span> <span class=o>/</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;結果是：</span><span class=si>{</span><span class=n>result</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>except</span> <span class=ne>ZeroDivisionError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;錯誤：除數不能為 0&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>except</span> <span class=ne>ValueError</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;錯誤：請輸入有效的數字&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=k>finally</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;無論是否發生錯誤，這段代碼都會執行。謝謝使用&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入第一個數字：cool<br>錯誤：請輸入有效的數字<br>無論是否發生錯誤，這段代碼都會執行。謝謝使用</p><h1 id=迴圈><strong>迴圈</strong></h1><h2 id=for-loop><strong>For Loop</strong></h2><p>for 迴圈用於遍歷序列（如列表、字串或範圍）。每次迴圈執行時，會依次取得序列中的每個元素，直到所有元素都被處理完畢。</p><p>基本語法：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>for</span> <span class=n>變數</span> <span class=ow>in</span> <span class=n>序列</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 要執行的code</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>fruits</span> <span class=o>=</span> <span class=p>[</span><span class=s2>&#34;apple&#34;</span><span class=p>,</span> <span class=s2>&#34;banana&#34;</span><span class=p>,</span> <span class=s2>&#34;cherry&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=n>fruits</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>一個裝有水果名稱的列表 [&ldquo;apple&rdquo;, &ldquo;banana&rdquo;, &ldquo;cherry&rdquo;]。我們希望能夠一次輸出這些水果的名稱。<br>i就是迴圈中的一個臨時變數。每次迴圈從 fruits 列表中取出一個水果，把這個水果的值存進 i 這個變數裡，然後印出來。第一圈時，fruit 是 &ldquo;apple&rdquo;，第二圈時是 &ldquo;banana&rdquo;，最後一圈是 &ldquo;cherry&rdquo;。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>word</span> <span class=o>=</span> <span class=s2>&#34;python&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>letter</span> <span class=ow>in</span> <span class=n>word</span><span class=p>:</span> <span class=c1>#這邊letter 使用 i 也可以</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>letter</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>p<br>y<br>t<br>h<br>o<br>n</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>5</span><span class=p>):</span>  <span class=c1># 產生 0 到 4 的數字</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 告訴迴圈，對於 range(5) 生成的每一個數字，都把它賦值給 i，然後印出來。</span>
+</span></span><span class=line><span class=cl><span class=c1># 所以這個程式會從 0 一直印到 4。</span>
+</span></span></code></pre></td></tr></table></div></div><p>0<br>1<br>2<br>3<br>4</p><h3 id=巢狀迴圈-nested-for-loop><strong>巢狀迴圈 Nested For Loop</strong></h3><p>aka For loop 中還有 For loop</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=nb>sum</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>n</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>10</span><span class=p>,</span> <span class=mi>20</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>z</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>2</span><span class=p>,</span><span class=mi>3</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>        <span class=n>result</span> <span class=o>=</span> <span class=n>n</span> <span class=o>+</span> <span class=n>z</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s1>&#39;</span><span class=si>{</span><span class=n>n</span><span class=si>}</span><span class=s1> + </span><span class=si>{</span><span class=n>z</span><span class=si>}</span><span class=s1> = </span><span class=si>{</span><span class=n>result</span><span class=si>}</span><span class=s1>&#39;</span><span class=p>)</span>  <span class=c1># 列出每個 n + z 的結果</span>
+</span></span><span class=line><span class=cl>        <span class=nb>sum</span> <span class=o>+=</span> <span class=n>result</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=s1>&#39;數列總和為:&#39;</span><span class=p>,</span> <span class=nb>sum</span><span class=p>)</span>  <span class=c1># 最後列出 sum 的總和</span>
+</span></span></code></pre></td></tr></table></div></div><p>10 + 2 = 12<br>11 + 2 = 13<br>12 + 2 = 14<br>13 + 2 = 15<br>14 + 2 = 16<br>15 + 2 = 17<br>16 + 2 = 18<br>17 + 2 = 19<br>18 + 2 = 20<br>19 + 2 = 21<br>數列總和為: 165</p><p><strong>99乘法表</strong></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 99 乘法表</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>10</span><span class=p>):</span>  <span class=c1># 外層迴圈，控制乘數</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>10</span><span class=p>):</span>  <span class=c1># 內層迴圈，控制被乘數</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>i</span><span class=si>}</span><span class=s2> * </span><span class=si>{</span><span class=n>j</span><span class=si>}</span><span class=s2> = </span><span class=si>{</span><span class=n>i</span> <span class=o>*</span> <span class=n>j</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>,</span> <span class=n>end</span><span class=o>=</span><span class=s2>&#34;</span><span class=se>\t</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>()</span>  <span class=c1># 換行</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/python-basic/9.png width=1009 height=158 srcset="/p/python-basic/9_hu8262439438661442643.png 480w, /p/python-basic/9_hu6645011235710835610.png 1024w" loading=lazy class=gallery-image data-flex-grow=638 data-flex-basis=1532px></p><h3 id=for-loop進階應用--break><strong>For Loop進階應用- Break</strong></h3><ul><li>如果有東西在for loop計算過程中已經滿足了，可以提前結束迴圈</li><li>例如，找資料、計算目標答案等，不想看到7的99乘法表</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 99 乘法表</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>10</span><span class=p>):</span>  <span class=c1># 外層迴圈，控制乘數</span>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>j</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>):</span>  <span class=c1># 內層迴圈，控制被乘數</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>j</span> <span class=o>&gt;</span> <span class=mi>6</span><span class=p>:</span>  <span class=c1># 當被乘數大於6時，跳出內層迴圈</span>
+</span></span><span class=line><span class=cl>            <span class=k>break</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s1>&#39;</span><span class=si>{</span><span class=n>j</span><span class=si>}</span><span class=s1> * </span><span class=si>{</span><span class=n>i</span><span class=si>}</span><span class=s1> = </span><span class=si>{</span><span class=n>i</span> <span class=o>*</span> <span class=n>j</span><span class=si>}</span><span class=s1>&#39;</span><span class=p>,</span> <span class=n>end</span><span class=o>=</span><span class=s1>&#39;</span><span class=se>\t</span><span class=s1>&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><p><img src=/p/python-basic/10.png width=681 height=164 srcset="/p/python-basic/10_hu4417112865633059095.png 480w, /p/python-basic/10_hu4316711144278529452.png 1024w" loading=lazy class=gallery-image data-flex-grow=415 data-flex-basis=996px></p><h3 id=for-loop進階應用--continue><strong>For Loop進階應用- Continue</strong></h3><p>當你的 for loop 要 skip 某些東西的時候可以用</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># 99 乘法表</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>i</span> <span class=ow>in</span> <span class=nb>range</span> <span class=p>(</span><span class=mi>60</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>  <span class=k>if</span> <span class=n>i</span> <span class=o>%</span> <span class=mi>2</span><span class=o>==</span><span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>   <span class=k>continue</span>
+</span></span><span class=line><span class=cl>  <span class=nb>print</span><span class=p>(</span><span class=n>i</span><span class=p>,</span><span class=n>end</span><span class=o>=</span><span class=s1>&#39;,&#39;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 當 i 是偶數時，我們跳過印出的動作，這樣就只會印出奇數。</span>
+</span></span></code></pre></td></tr></table></div></div><p>1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,</p><h2 id=while-loop><strong>While Loop</strong></h2><p>while 迴圈的作用是「當某個條件成立的時候，就一直進行某種操作」。<br>這個條件必須是一個布林值（True 或 False），當條件變為 False 時，while 迴圈就會停止，不再繼續執行。也就是說，while 迴圈每次運行都會先檢查這個條件，只有當條件為 True 時，才會進入迴圈，否則就跳過它。<br><strong>一定要確定會停止!!!避免無窮迴圈!!!</strong></p><p>基本語法：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>while</span> <span class=n>條件</span><span class=p>(</span><span class=n>只有True</span><span class=o>/</span><span class=kc>False</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 要執行的code</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>count</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>count</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;目前計數：</span><span class=si>{</span><span class=n>count</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>count</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span></code></pre></td></tr></table></div></div><p>目前計數：0<br>目前計數：1<br>目前計數：2<br>目前計數：3<br>目前計數：4</p><p>設定了一個變數 count，初始值是 0。然後我們告訴程式：只要 count 小於 5，就一直執行 while 迴圈，並且每次執行時，count 的值會自動增加 1。當 count 到達 5 時，條件變成 False，迴圈就停止了。</p><h3 id=while-loop進階應用><strong>While Loop進階應用</strong></h3><ul><li><p><strong>break</strong>：提前結束迴圈
+當迴圈中遇到break時，迴圈會立刻結束，並跳出迴圈的執行。</p></li><li><p><strong>continue</strong>：跳過本次迴圈，進入下一次迴圈
+當迴圈中遇到continue時，會跳過本次迴圈的剩餘部分，直接進入下一次迴圈。</p></li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># break</span>
+</span></span><span class=line><span class=cl><span class=n>number</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>number</span> <span class=o>&lt;</span> <span class=mi>10</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>number</span> <span class=o>==</span> <span class=mi>5</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span>  <span class=c1># 遇到數字 5 時終止迴圈</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>number</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>number</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span></code></pre></td></tr></table></div></div><p>0<br>1<br>2<br>3<br>4<br>5</p><p>這個程式會從 0 開始計數，當 number 遞增到 5 時，if 條件會成立，執行 break，結束迴圈。你會看到迴圈並沒有執行到 9，就在 number 等於 5 的時候停止了。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span><span class=lnt>8
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1># continue</span>
+</span></span><span class=line><span class=cl><span class=n>number</span> <span class=o>=</span> <span class=mi>0</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>number</span> <span class=o>&lt;</span> <span class=mi>5</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>number</span> <span class=o>==</span> <span class=mi>2</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>number</span> <span class=o>+=</span> <span class=mi>1</span>  <span class=c1># 注意：在 continue 前必須手動更新 number，避免無限迴圈</span>
+</span></span><span class=line><span class=cl>        <span class=k>continue</span>  <span class=c1># 當數字是 2 時跳過這次迴圈</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>number</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>number</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span></code></pre></td></tr></table></div></div><p>0<br>1<br>3<br>4</p><p>每次執行時，當 number 等於 2 時會跳過當前迭代，並且直接進入下一次迴圈。你會發現 2 並沒有被印出來，因為在 continue 之後，print() 就不會被執行了。</p><h3 id=loop-課堂練習1><strong>Loop 課堂練習1</strong></h3><p>練習利用迴圈來計算 n!總和</p><ul><li>輸入:任意數字n</li><li>輸出:n!的結果</li></ul><p>階乘定義：</p><ul><li>階乘（factorial）是所有從 1 到 n 的整數相乘的結果，記作 n!。</li><li>例如：5! = 5 * 4 * 3 * 2 * 1 = 120</li><li>注意：0! = 1</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>n</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入 n: &#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>factorial</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl><span class=n>count</span> <span class=o>=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 使用 while 迴圈計算 n!</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=n>count</span> <span class=o>&lt;=</span> <span class=n>n</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>factorial</span> <span class=o>*=</span> <span class=n>count</span>
+</span></span><span class=line><span class=cl>    <span class=n>count</span> <span class=o>+=</span> <span class=mi>1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 輸出結果</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;</span><span class=si>{</span><span class=n>n</span><span class=si>}</span><span class=s2>! = </span><span class=si>{</span><span class=n>factorial</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>請輸入 n: 7<br>7! = 5040</p><ul><li>factorial 是用來存放最終的階乘結果，並且我們每次都讓它乘以目前的 count 值。</li><li>當 count 小於等於 n 時，我們就一直運算，直到 count 大於 n 為止。</li></ul><h3 id=loop-課堂練習2><strong>Loop 課堂練習2</strong></h3><p><strong>數字猜猜樂</strong></p><p>設計一個數字猜測遊戲，要求如下：</p><ul><li>電腦會隨機生成一個 1 到 100 的數字。</li><li>使用者最多可以猜測 5 次。</li><li>每次猜測時，電腦會提示數字是「太大了」或「太小了」。</li><li>如果使用者猜對了，遊戲立即結束並顯示「猜對了！」。</li><li>如果 5 次都沒猜對，顯示正確答案並結束遊戲。</li></ul><p>hint: 生成隨機數可用套件random</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>import</span> <span class=nn>random</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 1. 生成隨機數</span>
+</span></span><span class=line><span class=cl><span class=n>secret_number</span> <span class=o>=</span> <span class=n>random</span><span class=o>.</span><span class=n>randint</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>100</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 2. 最多猜 5 次</span>
+</span></span><span class=line><span class=cl><span class=k>for</span> <span class=n>attempt</span> <span class=ow>in</span> <span class=nb>range</span><span class=p>(</span><span class=mi>1</span><span class=p>,</span> <span class=mi>6</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 3. 提示使用者輸入數字</span>
+</span></span><span class=line><span class=cl>    <span class=n>guess</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;請輸入你的猜測（第 </span><span class=si>{</span><span class=n>attempt</span><span class=si>}</span><span class=s2> 次，1-100）：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># 4. 使用 while 檢查是否輸入有效範圍內的數字</span>
+</span></span><span class=line><span class=cl>    <span class=k>while</span> <span class=n>guess</span> <span class=o>&lt;</span> <span class=mi>1</span> <span class=ow>or</span> <span class=n>guess</span> <span class=o>&gt;</span> <span class=mi>100</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;數字必須在 1 到 100 之間！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=n>guess</span> <span class=o>=</span> <span class=nb>int</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;請重新輸入你的猜測（第 </span><span class=si>{</span><span class=n>attempt</span><span class=si>}</span><span class=s2> 次，1-100）：&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># 5. 比較使用者的猜測與隨機數</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>guess</span> <span class=o>&lt;</span> <span class=n>secret_number</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;太小了！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>guess</span> <span class=o>&gt;</span> <span class=n>secret_number</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;太大了！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;恭喜你猜對了！答案是 </span><span class=si>{</span><span class=n>secret_number</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=k>break</span>  <span class=c1># 結束迴圈</span>
+</span></span><span class=line><span class=cl><span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># 如果 5 次內沒猜對</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;很遺憾，正確答案是 </span><span class=si>{</span><span class=n>secret_number</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><ul><li>random.randint(1, 100) 用來生成一個隨機的數字，並儲存在變數 secret_number 中。</li><li>使用 for 迴圈來限制猜測次數，最多只能猜 5 次。</li><li>每次猜測後，會比較你輸入的數字和 secret_number 的大小，並且提供「太大了」或「太小了」的提示。</li><li>如果猜對了，就會跳出迴圈，並告訴正確答案；如果 5 次內沒猜中，則顯示正確答案。</li></ul><h1 id=函數def><strong>函數def</strong></h1><blockquote><p>函數是一段可以重複執行的程式碼，透過一個名稱來呼叫他，就不用重複寫同樣的程式碼。函數可以接收輸入（參數），並在執行後回傳結果。</p><p>函數的主要優點是可以讓程式更具結構性、可讀性，並減少重複程式碼。</p><p>Q: 為什麼要使用函數？</p><ul><li>減少重複：可以避免多次書寫相同的程式碼。</li><li>提高可讀性：讓程式結構更加清晰明瞭。</li><li>便於修改和擴展：當函數內部邏輯變更時，只需修改一處，不需要在程式中的每個地方進行更改。</li></ul></blockquote><h2 id=基本函數><strong>基本函數</strong></h2><p>函數的基本語法結構：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>def 函數名稱(參數1,參數2,...):
+</span></span><span class=line><span class=cl>    # 函數內容
+</span></span><span class=line><span class=cl>    return 回傳值
+</span></span></code></pre></td></tr></table></div></div><p>範例1</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>say_hello</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello, 你好!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>say_hello</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 這是一個不需要參數的函數，只要呼叫它，就會執行其中的程式碼</span>
+</span></span></code></pre></td></tr></table></div></div><p>Hello, 你好!</p><h3 id=帶有參數的函數><strong>帶有參數的函數</strong></h3><p>函數可以接收參數，這些參數就像是給函數的額外資訊，來讓它執行不同的任務，可以讓函數變得更加靈活</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>greet</span><span class=p>(</span><span class=n>name</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;Hello, </span><span class=si>{</span><span class=n>name</span><span class=si>}</span><span class=s2>! 你好！&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>greet</span><span class=p>(</span><span class=s2>&#34;DAC&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Hello, DAC! 你好！</p><p>函數 greet() 接收一個參數 name，當呼叫 greet(&ldquo;Stan&rdquo;) 時，我們把 &ldquo;Stan&rdquo; 作為參數傳遞給函數，</p><p>函數內的程式碼 print(f"Hello, {name}! 你好！") 就會執行，結果會輸出 Hello, Stan! 你好！</p><h3 id=返回值-return><strong>返回值 (return)</strong></h3><p>函數執行後可以透過 return 將結果返回，讓呼叫該函數的地方得到結果。return 後的程式碼不會再執行。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>add</span><span class=p>(</span><span class=n>x</span><span class=p>,</span> <span class=n>y</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>x</span> <span class=o>+</span> <span class=n>y</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=n>add</span><span class=p>(</span><span class=mi>5</span><span class=p>,</span> <span class=mi>10</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>result</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>15</p><p>函數 add(x, y) 接收兩個參數 x 和 y，它將這兩個參數加在一起，並透過 return 返回結果。</p><p>當我們呼叫 add(5, 10) 時，Python會將5 和 10傳遞給 x 和 y，然後計算出 5 + 10 = 15，並將結果儲存在 result 中，最後輸出結果。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>square</span><span class=p>(</span><span class=n>number</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>number</span> <span class=o>*</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=n>square</span><span class=p>(</span><span class=mi>35</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>result</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>1225</p><ul><li>def square(number)：定義了一個函數 square，它接收一個參數 number。</li><li>return number * number：這個 return 語句將 number * number 的計算結果返回。比如當 number = 5 時，5 * 5 = 25，這個結果會被返回。</li><li>result = square(5)：呼叫函數 square(5)，並將返回的結果（即 25）存儲到變數 result 中。</li><li>print(result)：最後，print 會輸出 result，即 25。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span><span class=lnt>6
+</span><span class=lnt>7
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>calculate_square_and_cube</span><span class=p>(</span><span class=n>number</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=n>square</span> <span class=o>=</span> <span class=n>number</span> <span class=o>*</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>    <span class=n>cube</span> <span class=o>=</span> <span class=n>number</span> <span class=o>*</span> <span class=n>number</span> <span class=o>*</span> <span class=n>number</span>
+</span></span><span class=line><span class=cl>    <span class=k>return</span> <span class=n>square</span><span class=p>,</span> <span class=n>cube</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>result_square</span><span class=p>,</span> <span class=n>result_cube</span> <span class=o>=</span> <span class=n>calculate_square_and_cube</span><span class=p>(</span><span class=mi>3</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;平方是: </span><span class=si>{</span><span class=n>result_square</span><span class=si>}</span><span class=s2>, 立方是: </span><span class=si>{</span><span class=n>result_cube</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>平方是: 9, 立方是: 27</p><h3 id=無返回值><strong>無返回值</strong></h3><p>如果函數內沒有 return ，或者沒有指定返回值，函數會默認返回 None。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span><span class=lnt>2
+</span><span class=lnt>3
+</span><span class=lnt>4
+</span><span class=lnt>5
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>say_hello</span><span class=p>():</span>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=s2>&#34;Hello!&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=n>say_hello</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=n>result</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Hello!
+None</p><ul><li>def say_hello()：這裡定義了一個沒有參數的函數 say_hello。</li><li>print(&ldquo;Hello!")：這個函數只做一件事情，就是輸出 &ldquo;Hello!"。它不會返回任何值。</li><li>result = say_hello()：呼叫函數 say_hello()，因為這個函數沒有返回值，所以 result 會儲存為 None。</li><li>print(result)：最後，print(result) 會輸出 None，因為函數 say_hello() 並沒有返回任何東西。</li></ul><h3 id=def-課堂練習><strong>def 課堂練習</strong></h3><blockquote><p>簡單計算器
+需求：</p><ul><li>請定義一個函數 calculator，該函數接收兩個數字和一個運算符號（+, -, *, /），並根據運算符號進行對應的計算。</li><li>使用者透過 input() 函數輸入兩個數字和運算符號，然後呼叫 calculator 函數來進行計算。</li></ul></blockquote><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=k>def</span> <span class=nf>calculator</span><span class=p>(</span><span class=n>num1</span><span class=p>,</span> <span class=n>num2</span><span class=p>,</span> <span class=n>operator</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>operator</span> <span class=o>==</span> <span class=s2>&#34;+&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>num1</span> <span class=o>+</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>operator</span> <span class=o>==</span> <span class=s2>&#34;-&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>num1</span> <span class=o>-</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>operator</span> <span class=o>==</span> <span class=s2>&#34;*&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>num1</span> <span class=o>*</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>    <span class=k>elif</span> <span class=n>operator</span> <span class=o>==</span> <span class=s2>&#34;/&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=n>num2</span> <span class=o>!=</span> <span class=mi>0</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>num1</span> <span class=o>/</span> <span class=n>num2</span>
+</span></span><span class=line><span class=cl>        <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=s2>&#34;錯誤: 除數不能為 0&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=s2>&#34;無效的運算符號&#34;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 使用者輸入</span>
+</span></span><span class=line><span class=cl><span class=n>num1</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入第一個數字: &#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>num2</span> <span class=o>=</span> <span class=nb>float</span><span class=p>(</span><span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入第二個數字: &#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl><span class=n>operator</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;請輸入運算符號 (+, -, *, /): &#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1># 呼叫函數進行計算並輸出結果</span>
+</span></span><span class=line><span class=cl><span class=n>result</span> <span class=o>=</span> <span class=n>calculator</span><span class=p>(</span><span class=n>num1</span><span class=p>,</span> <span class=n>num2</span><span class=p>,</span> <span class=n>operator</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=nb>print</span><span class=p>(</span><span class=sa>f</span><span class=s2>&#34;計算結果是: </span><span class=si>{</span><span class=n>result</span><span class=si>}</span><span class=s2>&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-tags><a href=/tags/python/>Python</a></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Last updated on Oct 18, 2024 00:00 UTC</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/pandas-basic/><div class=article-image><img src=/p/pandas-basic/Pandas.77b2274979e7b0531fc902238954959c_hu4740324302063612218.png width=250 height=150 loading=lazy alt="Featured image of post Pandas Basic For Data Analysis" data-key="Pandas Basic" data-hash="md5-d7InSXnnsFMfyQIjiVSVnA=="></div><div class=article-details><h2 class=article-title>Pandas Basic For Data Analysis</h2></div></a></article><article class=has-image><a href=/p/lyric-translator/><div class=article-image><img src=/p/lyric-translator/egg.2ce4fcd03d86151f27c6926da779893f_hu15157335778772965497.png width=250 height=150 loading=lazy alt="Featured image of post Taiwanese-Chinese Lyric Translator" data-key="Lyric Translator" data-hash="md5-LOT80D2GFR8nxpJtp3mJPw=="></div><div class=article-details><h2 class=article-title>Taiwanese-Chinese Lyric Translator</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2022 -
+2024 Kathy's Portfolio</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

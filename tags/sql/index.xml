@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SQL on Kathy's Portfolio</title><link>https://KathyKo.github.io/tags/sql/</link><description>Recent content in SQL on Kathy's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 06 Jun 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://KathyKo.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml"/><item><title>Text to SQL</title><link>https://KathyKo.github.io/p/text2sql/</link><pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/text2sql/</guid><description>&lt;img src="https://KathyKo.github.io/p/text2sql/text2sql.png" alt="Featured image of post Text to SQL" />&lt;p>Text-to-SQL is a task in natural language processing (NLP) where the goal is to automatically generate SQL queries from natural language text. The task involves converting the text input into a structured representation and then using this representation to generate a semantically correct SQL query that can be executed on a database.&lt;/p></description></item><item><title>Wren AI</title><link>https://KathyKo.github.io/p/wren-ai/</link><pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/wren-ai/</guid><description>&lt;img src="https://KathyKo.github.io/p/wren-ai/wrenai.png" alt="Featured image of post Wren AI" />&lt;h3 id="introducing-wrenai">Introducing WrenAI
+&lt;/h3>&lt;p>Support with popular databases, data warehouses, and analytics tools!&lt;/p>
+&lt;h4 id="about-wrenai">About WrenAI
+&lt;/h4>&lt;ul>
+&lt;li>&lt;code>Interactive Experience&lt;/code>: Designed to engage users in a dialogue, clarifying queries and refining results in real time. This interactivity ensures that the generated SQL queries accurately reflect the user&amp;rsquo;s intent, making the data querying process more intuitive and user-friendly.&lt;/li>
+&lt;li>&lt;code>Explainability&lt;/code>: It ensures every SQL query generated in natural language is accurate, concise, and reliable.&lt;/li>
+&lt;li>&lt;code>Interoperability&lt;/code>: It enables users to query data from multiple sources without dealing with the complexities of different data formats and dialects, providing a standard interface across different sources.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/wren-ai/1.png"
+width="1516"
+height="1072"
+srcset="https://KathyKo.github.io/p/wren-ai/1_hu15489920638117545129.png 480w, https://KathyKo.github.io/p/wren-ai/1_hu2920333563828509978.png 1024w"
+loading="lazy"
+alt="core design philosophies"
+class="gallery-image"
+data-flex-grow="141"
+data-flex-basis="339px"
+>&lt;/p>
+&lt;h4 id="how-wrenai-works">How WrenAI works?
+&lt;/h4>&lt;p>WrenAI is consist of three core services&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Wren UI&lt;/code>: An intuitive user interface for asking questions, defining data relationships, and integrating data sources within WrenAI&amp;rsquo;s framework.&lt;/li>
+&lt;li>&lt;code>Wren AI Service&lt;/code>: Processes queries using a vector database for context retrieval, guiding LLMs to produce precise SQL outputs.&lt;/li>
+&lt;li>&lt;code>Wren Engine&lt;/code>: Serves as the platform&amp;rsquo;s backbone, managing metadata and connecting to data sources, while preparing for future application integrations.&lt;/li>
+&lt;/ul>
+&lt;h3 id="getting-start">Getting Start!
+&lt;/h3>&lt;h4 id="installation">Installation
+&lt;/h4>&lt;p>&lt;code>Prerequisites&lt;/code>&lt;/p>
+&lt;ol>
+&lt;li>Install Docker Desktop on local computer&lt;/li>
+&lt;li>Prepare an OpenAI API key&lt;/li>
+&lt;/ol>
+&lt;p>&lt;code>Using WrenAI Launcher&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>Mac OSX
+Execute following commands in the terminal&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">curl -L https://github.com/Canner/WrenAI/releases/latest/download/wren-launcher-darwin.tar.gz &lt;span class="p">|&lt;/span> tar -xz &lt;span class="o">&amp;amp;&amp;amp;&lt;/span> ./wren-launcher-darwin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>Run the program&lt;/li>
+&lt;li>Enter OpenAI API key&lt;/li>
+&lt;li>Wait for the installation to finish.
+Program will setup docker containers for you and open the application URL in the browser for you after installation.&lt;/li>
+&lt;li>Open &lt;a class="link" href="http://localhost:3000" target="_blank" rel="noopener"
+>localhost:3000&lt;/a> to start using if the launcher program doesn&amp;rsquo;t open the URL&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/wren-ai/start.png"
+width="1672"
+height="1156"
+srcset="https://KathyKo.github.io/p/wren-ai/start_hu14429547873141156515.png 480w, https://KathyKo.github.io/p/wren-ai/start_hu14807814947834040687.png 1024w"
+loading="lazy"
+alt="getting start"
+class="gallery-image"
+data-flex-grow="144"
+data-flex-basis="347px"
+>&lt;/p>
+&lt;h4 id="start-with-sample-data">Start with sample data
+&lt;/h4>&lt;p>Wren AI offers 2 sample datasets:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" rel="noopener"
+>E-commerce&lt;/a>&lt;/li>
+&lt;li>NBA (2022 NBA playoff games)&lt;/li>
+&lt;/ul>
+&lt;p>Take E-commerce dataset for example to show following steps:&lt;/p>
+&lt;ol>
+&lt;li>Click on the E-commerce option
+&lt;img src="https://KathyKo.github.io/p/wren-ai/2.png"
+width="1522"
+height="759"
+srcset="https://KathyKo.github.io/p/wren-ai/2_hu5979419214566837058.png 480w, https://KathyKo.github.io/p/wren-ai/2_hu3812947475251106039.png 1024w"
+loading="lazy"
+alt="start"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="481px"
+>&lt;/li>
+&lt;li>Ask a question
+Ask any questions related to the dataset, Wren AI will provide 1~3 results from the dataset that best answer the question.&lt;/li>
+&lt;/ol>
+&lt;p>(a) Try a sample question:
+Choose &amp;ldquo;What is the average score of reviews submitted for orders placed by customers in each city?&amp;rdquo;
+&lt;img src="https://KathyKo.github.io/p/wren-ai/3.png"
+width="2458"
+height="1352"
+srcset="https://KathyKo.github.io/p/wren-ai/3_hu1027511593443476239.png 480w, https://KathyKo.github.io/p/wren-ai/3_hu4986271488622446906.png 1024w"
+loading="lazy"
+alt="sample question"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="436px"
+>&lt;/p>
+&lt;p>(b)Choose a Result
+&lt;img src="https://KathyKo.github.io/p/wren-ai/4.png"
+width="2868"
+height="1548"
+srcset="https://KathyKo.github.io/p/wren-ai/4_hu3611284288247629209.png 480w, https://KathyKo.github.io/p/wren-ai/4_hu6950827615368068414.png 1024w"
+loading="lazy"
+alt="choose the 1st result"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+>&lt;/p>
+&lt;p>(c)
+View the SQL plan description, data preview and the SQL statements in each step based on the selected result
+&lt;img src="https://KathyKo.github.io/p/wren-ai/5.png"
+width="2868"
+height="1548"
+srcset="https://KathyKo.github.io/p/wren-ai/5_hu8555935315848825911.png 480w, https://KathyKo.github.io/p/wren-ai/5_hu3412907777073788704.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+>
+&lt;img src="https://KathyKo.github.io/p/wren-ai/6.png"
+width="2868"
+height="1548"
+srcset="https://KathyKo.github.io/p/wren-ai/6_hu16021579108418977437.png 480w, https://KathyKo.github.io/p/wren-ai/6_hu3014841420587590999.png 1024w"
+loading="lazy"
+alt="result"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="444px"
+>&lt;/p></description></item></channel></rss>

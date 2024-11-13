@@ -1,0 +1,258 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Introduction and implementation of the Google Cloud Document AI API and the Google Cloud Vision API."><title>Google OCR</title>
+<link rel=canonical href=https://KathyKo.github.io/p/test/><link rel=stylesheet href=/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css><meta property='og:title' content="Google OCR"><meta property='og:description' content="Introduction and implementation of the Google Cloud Document AI API and the Google Cloud Vision API."><meta property='og:url' content='https://KathyKo.github.io/p/test/'><meta property='og:site_name' content="Kathy's Portfolio"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='AI'><meta property='article:tag' content='OCR'><meta property='article:published_time' content='2023-10-02T00:00:00+00:00'><meta property='article:modified_time' content='2023-10-02T00:00:00+00:00'><meta property='og:image' content='https://KathyKo.github.io/p/test/cover.jpg'><meta name=twitter:title content="Google OCR"><meta name=twitter:description content="Introduction and implementation of the Google Cloud Document AI API and the Google Cloud Vision API."><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content='https://KathyKo.github.io/p/test/cover.jpg'><link rel="shortcut icon" href=/favicon.png><script async src="https://www.googletagmanager.com/gtag/js?id=G-TCJ698BSGK"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-TCJ698BSGK")}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/kc_hu17564218102799437695.png width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Kathy's Portfolio</a></h1><h2 class=site-description>Welcome to my space 🫧 A twist in the tale, from Taiwanese lit. to data's midst, also AI join the list. Life's too short for the usual gist, why not let norms be dismissed :)</h2></div></header><ol class=menu-social><li><a href=https://github.com/KathyKo target=_blank title=GitHub rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://www.linkedin.com/in/hungchiko/ target=_blank title=LinkedIn rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2z"/><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 00-4 0"/></svg></a></li><li><a href=mailto:%20kohchi921@gmail.com target=_blank title=Mail rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><ol><li><a href=#introduction>Introduction</a></li><li><a href=#code-demo>Code Demo</a></li></ol></li></ol></nav></div></section></aside><main class="main full-width"><article class="has-image main-article"><header class=article-header><div class=article-image><a href=/p/test/><img src=/p/test/cover_hu3298407476281223962.jpg srcset="/p/test/cover_hu3298407476281223962.jpg 800w, /p/test/cover_hu16286904418257745387.jpg 1600w" width=800 height=432 loading=lazy alt="Featured image of post Google OCR"></a></div><div class=article-details><header class=article-category><a href=/categories/ai/ style=background-color:#2a9d8f;color:#fff>AI</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/test/>Google OCR</a></h2><h3 class=article-subtitle>Introduction and implementation of the Google Cloud Document AI API and the Google Cloud Vision API.</h3></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>Oct 02, 2023</time></div><div><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading>4 minute read</time></div></footer></div></header><section class=article-content><h3 id=introduction>Introduction</h3><p>Google Cloud Document AI API and Google Cloud Vision API are both Google Cloud services designed for processing documents and images.</p><p>1.Document Processing:</p><blockquote><ul><li>Document AI API:<br>Document AI API focuses on processing structured documents, such as PDFs and OCR
+documents. Its primary functionalities include text extraction, table recognition
+page identification, entity recognition (e.g., identifying dates and amounts in
+contracts), and more. This makes it suitable for handling business documents like
+contracts, invoices, reports, and others.</li></ul></blockquote><blockquote><ul><li>Vision API:
+Vision API specializes in processing images and pictures. It can recognize
+objects, faces, scenes, text, and more within images. Its main applications
+include image classification, facial recognition, OCR text recognition, and more.
+This makes it suitable for image processing applications like image search, facial
+recognition, and automated image analysis.</li></ul></blockquote><p>2.Application Scenario:</p><blockquote><ul><li>Document AI API:
+The Document AI API is suitable for business scenarios that involve processing a
+large volume of structured documents, such as contracts, invoices, and medical
+records.</li></ul></blockquote><blockquote><ul><li>Vision API:
+The Vision API is well-suited for applications that require processing images and
+photos, such as image analysis and image search.</li></ul></blockquote><h3 id=code-demo>Code Demo</h3><p>☁️ Cloud Vision</p><ul><li>Recognize text in pictures</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#Detect online images</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>google.cloud</span> <span class=kn>import</span> <span class=n>vision</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>detect_document_text_uri</span><span class=p>(</span><span class=n>uri</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;Detects document text in the file located in Google Cloud Storage or on the Web.&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>client</span> <span class=o>=</span> <span class=n>vision</span><span class=o>.</span><span class=n>ImageAnnotatorClient</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>image</span> <span class=o>=</span> <span class=n>vision</span><span class=o>.</span><span class=n>Image</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>image</span><span class=o>.</span><span class=n>source</span><span class=o>.</span><span class=n>image_uri</span> <span class=o>=</span> <span class=n>uri</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>response</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>document_text_detection</span><span class=p>(</span><span class=n>image</span><span class=o>=</span><span class=n>image</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>document</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>full_text_annotation</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>document</span><span class=o>.</span><span class=n>text</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>response</span><span class=o>.</span><span class=n>error</span><span class=o>.</span><span class=n>message</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>raise</span> <span class=ne>Exception</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;</span><span class=si>{}</span><span class=se>\n</span><span class=s2>For more info on error messages, check: &#34;</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;https://cloud.google.com/apis/design/errors&#34;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>error</span><span class=o>.</span><span class=n>message</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>detect_document_text_uri</span><span class=p>(</span><span class=s1>&#39;https://i.redd.it/2aby2h2mhtpb1.jpg&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#Detect local images</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>detect_text</span><span class=p>(</span><span class=n>path</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;Detects text in the file.&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>from</span> <span class=nn>google.cloud</span> <span class=kn>import</span> <span class=n>vision</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>client</span> <span class=o>=</span> <span class=n>vision</span><span class=o>.</span><span class=n>ImageAnnotatorClient</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=n>path</span><span class=p>,</span> <span class=s2>&#34;rb&#34;</span><span class=p>)</span> <span class=k>as</span> <span class=n>image_file</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>content</span> <span class=o>=</span> <span class=n>image_file</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>image</span> <span class=o>=</span> <span class=n>vision</span><span class=o>.</span><span class=n>Image</span><span class=p>(</span><span class=n>content</span><span class=o>=</span><span class=n>content</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>response</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>text_detection</span><span class=p>(</span><span class=n>image</span><span class=o>=</span><span class=n>image</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>texts</span> <span class=o>=</span> <span class=n>response</span><span class=o>.</span><span class=n>text_annotations</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>texts</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=nb>print</span><span class=p>(</span><span class=n>texts</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span><span class=o>.</span><span class=n>description</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>detect_text</span><span class=p>(</span><span class=s2>&#34;profile path&#34;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><p>Click ▶ to expand the examples</p><details><summary>Example & Result (online images)</summary><p><img src=/p/test/1.png width=720 height=634 srcset="/p/test/1_hu14880587481080219583.png 480w, /p/test/1_hu7816898864194575257.png 1024w" loading=lazy alt="input file" class=gallery-image data-flex-grow=113 data-flex-basis=272px> <img src=/p/test/2.png width=298 height=59 srcset="/p/test/2_hu1702812876146975488.png 480w, /p/test/2_hu2868148301987005572.png 1024w" loading=lazy alt=result class=gallery-image data-flex-grow=505 data-flex-basis=1212px></p></details><details><summary>Example & Result (local images)</summary><p><img src=/p/test/3.jpeg width=858 height=1001 srcset="/p/test/3_hu11928683179802236405.jpeg 480w, /p/test/3_hu8208145683097875209.jpeg 1024w" loading=lazy alt="input file" class=gallery-image data-flex-grow=85 data-flex-basis=205px> <img src=/p/test/4.png width=2000 height=1211 srcset="/p/test/4_hu13412982834388927473.png 480w, /p/test/4_hu14701111870083575590.png 1024w" loading=lazy alt=result class=gallery-image data-flex-grow=165 data-flex-basis=396px></p></details><ul><li>Recognize handwriting in pictures</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=c1>#Detect text in online images</span>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>detect_document_uri</span><span class=p>(</span><span class=n>uri</span><span class=p>):</span>
+</span></span><span class=line><span class=cl>    <span class=s2>&#34;&#34;&#34;Detects document features in the file located at the given URL.&#34;&#34;&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=kn>from</span> <span class=nn>google.cloud</span> <span class=kn>import</span> <span class=n>vision_v1</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>client</span> <span class=o>=</span> <span class=n>vision_v1</span><span class=o>.</span><span class=n>ImageAnnotatorClient</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>image</span> <span class=o>=</span> <span class=n>vision_v1</span><span class=o>.</span><span class=n>Image</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    <span class=n>image</span><span class=o>.</span><span class=n>source</span><span class=o>.</span><span class=n>image_uri</span> <span class=o>=</span> <span class=n>uri</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>response</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>document_text_detection</span><span class=p>(</span><span class=n>image</span><span class=o>=</span><span class=n>image</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>for</span> <span class=n>page</span> <span class=ow>in</span> <span class=n>response</span><span class=o>.</span><span class=n>full_text_annotation</span><span class=o>.</span><span class=n>pages</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=n>block</span> <span class=ow>in</span> <span class=n>page</span><span class=o>.</span><span class=n>blocks</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span> <span class=n>paragraph</span> <span class=ow>in</span> <span class=n>block</span><span class=o>.</span><span class=n>paragraphs</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                <span class=k>for</span> <span class=n>word</span> <span class=ow>in</span> <span class=n>paragraph</span><span class=o>.</span><span class=n>words</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>                    <span class=n>word_text</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span><span class=o>.</span><span class=n>join</span><span class=p>([</span><span class=n>symbol</span><span class=o>.</span><span class=n>text</span> <span class=k>for</span> <span class=n>symbol</span> <span class=ow>in</span> <span class=n>word</span><span class=o>.</span><span class=n>symbols</span><span class=p>])</span>
+</span></span><span class=line><span class=cl>                    <span class=nb>print</span><span class=p>(</span><span class=n>word_text</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>response</span><span class=o>.</span><span class=n>error</span><span class=o>.</span><span class=n>message</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=k>raise</span> <span class=ne>Exception</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;</span><span class=si>{}</span><span class=se>\n</span><span class=s2>For more info on error messages, check: &#34;</span>
+</span></span><span class=line><span class=cl>            <span class=s2>&#34;https://cloud.google.com/apis/design/errors&#34;</span><span class=o>.</span><span class=n>format</span><span class=p>(</span><span class=n>response</span><span class=o>.</span><span class=n>error</span><span class=o>.</span><span class=n>message</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>        <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=n>detect_document_uri</span><span class=p>(</span><span class=s1>&#39;https://ocr-demo.abtosoftware.com/uploads/handwritten3.jpg&#39;</span><span class=p>)</span>
+</span></span></code></pre></td></tr></table></div></div><details><summary>Example & Result (local images)</summary><p><img src=/p/test/5.png width=1937 height=763 srcset="/p/test/5_hu9179018414699710464.png 480w, /p/test/5_hu12724223333303114003.png 1024w" loading=lazy alt="input file" class=gallery-image data-flex-grow=253 data-flex-basis=609px> <img src=/p/test/6.png width=155 height=218 srcset="/p/test/6_hu15888088006775495723.png 480w, /p/test/6_hu11394853717449945346.png 1024w" loading=lazy alt=result class=gallery-image data-flex-grow=71 data-flex-basis=170px></p></details><details><summary>Example & Result (online images)</summary><p><img src=/p/test/7.png width=800 height=550 srcset="/p/test/7_hu7621974492285365525.png 480w, /p/test/7_hu15515564006536514259.png 1024w" loading=lazy alt="input file" class=gallery-image data-flex-grow=145 data-flex-basis=349px> <img src=/p/test/8.png width=2000 height=3807 srcset="/p/test/8_hu5359987469765002024.png 480w, /p/test/8_hu3956340952120346171.png 1024w" loading=lazy alt=result class=gallery-image data-flex-grow=52 data-flex-basis=126px></p></details><p>📃 Document AI</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span><span class=lnt>36
+</span><span class=lnt>37
+</span><span class=lnt>38
+</span><span class=lnt>39
+</span><span class=lnt>40
+</span><span class=lnt>41
+</span><span class=lnt>42
+</span><span class=lnt>43
+</span><span class=lnt>44
+</span><span class=lnt>45
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=kn>from</span> <span class=nn>typing</span> <span class=kn>import</span> <span class=n>Optional</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>google.api_core.client_options</span> <span class=kn>import</span> <span class=n>ClientOptions</span>
+</span></span><span class=line><span class=cl><span class=kn>from</span> <span class=nn>google.cloud</span> <span class=kn>import</span> <span class=n>documentai</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>def</span> <span class=nf>process_document_sample</span><span class=p>()</span> <span class=o>-&gt;</span> <span class=kc>None</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=c1># Specify Google Cloud ID &amp; other parameters</span>
+</span></span><span class=line><span class=cl>    <span class=n>project_id</span> <span class=o>=</span> <span class=s2>&#34;your project id&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>location</span> <span class=o>=</span> <span class=s2>&#34;us&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>processor_id</span> <span class=o>=</span> <span class=s2>&#34;your processor id&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>mime_type</span> <span class=o>=</span> <span class=s2>&#34;application/pdf&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=n>field_mask</span> <span class=o>=</span> <span class=s2>&#34;text,entities,pages.pageNumber&#34;</span>  
+</span></span><span class=line><span class=cl>    <span class=n>processor_version_id</span> <span class=o>=</span> <span class=kc>None</span>  <span class=c1># Do not use a specific processor version</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1>#Input file path</span>
+</span></span><span class=line><span class=cl>    <span class=n>file_path</span> <span class=o>=</span> <span class=nb>input</span><span class=p>(</span><span class=s2>&#34;Please enter the path to the PDF file you want to process: &#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=c1># Initialize Document AI client</span>
+</span></span><span class=line><span class=cl>    <span class=n>client</span> <span class=o>=</span> <span class=n>documentai</span><span class=o>.</span><span class=n>DocumentProcessorServiceClient</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=k>if</span> <span class=n>processor_version_id</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>name</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>processor_version_path</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>            <span class=n>project</span><span class=o>=</span><span class=n>project_id</span><span class=p>,</span> <span class=n>location</span><span class=o>=</span><span class=n>location</span><span class=p>,</span> <span class=n>processor</span><span class=o>=</span><span class=n>processor_id</span><span class=p>,</span> <span class=n>processor_version</span><span class=o>=</span><span class=n>processor_version_id</span>
+</span></span><span class=line><span class=cl>        <span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=k>else</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>name</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>processor_path</span><span class=p>(</span><span class=n>project</span><span class=o>=</span><span class=n>project_id</span><span class=p>,</span> <span class=n>location</span><span class=o>=</span><span class=n>location</span><span class=p>,</span> <span class=n>processor</span><span class=o>=</span><span class=n>processor_id</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=k>with</span> <span class=nb>open</span><span class=p>(</span><span class=n>file_path</span><span class=p>,</span> <span class=s2>&#34;rb&#34;</span><span class=p>)</span> <span class=k>as</span> <span class=n>image</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>image_content</span> <span class=o>=</span> <span class=n>image</span><span class=o>.</span><span class=n>read</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=n>raw_document</span> <span class=o>=</span> <span class=n>documentai</span><span class=o>.</span><span class=n>RawDocument</span><span class=p>(</span><span class=n>content</span><span class=o>=</span><span class=n>image_content</span><span class=p>,</span> <span class=n>mime_type</span><span class=o>=</span><span class=n>mime_type</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>request</span> <span class=o>=</span> <span class=n>documentai</span><span class=o>.</span><span class=n>ProcessRequest</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>        <span class=n>name</span><span class=o>=</span><span class=n>name</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=n>raw_document</span><span class=o>=</span><span class=n>raw_document</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>        <span class=n>field_mask</span><span class=o>=</span><span class=n>field_mask</span>
+</span></span><span class=line><span class=cl>    <span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=n>result</span> <span class=o>=</span> <span class=n>client</span><span class=o>.</span><span class=n>process_document</span><span class=p>(</span><span class=n>request</span><span class=o>=</span><span class=n>request</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>document</span> <span class=o>=</span> <span class=n>result</span><span class=o>.</span><span class=n>document</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>    <span class=nb>print</span><span class=p>(</span><span class=n>document</span><span class=o>.</span><span class=n>text</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>if</span> <span class=vm>__name__</span> <span class=o>==</span> <span class=s2>&#34;__main__&#34;</span><span class=p>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>process_document_sample</span><span class=p>()</span>
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>Through exploring these APIs, I learned about their
+specific applications in handling structured documents and images, and the
+potential for automating tasks in business and image analysis contexts.
+Looking ahead, these insights could be applied in developing more efficient
+document management systems, enhancing data extraction from documents, and
+improving image-based search and analysis in various industries.</p></blockquote></section><footer class=article-footer><section class=article-tags><a href=/tags/ai/>AI</a>
+<a href=/tags/ocr/>OCR</a></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Last updated on Oct 02, 2023 00:00 UTC</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article class=has-image><a href=/p/partyrock/><div class=article-image><img src=/p/partyrock/cover.e1a9a6db73fb45b67f7fc54a178adb31_hu9234443997895839552.png width=250 height=150 loading=lazy alt="Featured image of post AWS PartyRock" data-key=PartyRock data-hash="md5-4amm23P7RbZ/f8VKF4rbMQ=="></div><div class=article-details><h2 class=article-title>AWS PartyRock</h2></div></a></article><article class=has-image><a href=/p/text2sql/><div class=article-image><img src=/p/text2sql/text2sql.ae2d6c876ef603c0b5212fc56dd9de0b_hu10286526121026127803.png width=250 height=150 loading=lazy alt="Featured image of post Text to SQL" data-key=Text2SQL data-hash="md5-ri1sh272A8C1IS/FbdneCw=="></div><div class=article-details><h2 class=article-title>Text to SQL</h2></div></a></article><article class=has-image><a href=/p/wren-ai/><div class=article-image><img src=/p/wren-ai/wrenai.897253c1ee854f6f434fa3eb2a75cda9_hu16809544419022353398.png width=250 height=150 loading=lazy alt="Featured image of post Wren AI" data-key="Wren AI" data-hash="md5-iXJTwe6FT29DT6PrKnXNqQ=="></div><div class=article-details><h2 class=article-title>Wren AI</h2></div></a></article><article class=has-image><a href=/p/flowsie-ai/><div class=article-image><img src=/p/flowsie-ai/flowise.ebb59bc9427abeea2e226f467066cc66_hu3653943475525025173.png width=250 height=150 loading=lazy alt="Featured image of post Flowise AI" data-key="Flowsie AI" data-hash="md5-67WbyUJ6vuouIm9GcGbMZg=="></div><div class=article-details><h2 class=article-title>Flowise AI</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy;
+2022 -
+2024 Kathy's Portfolio</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.26.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>

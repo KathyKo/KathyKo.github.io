@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gen AI on Kathy's Portfolio</title><link>https://KathyKo.github.io/tags/gen-ai/</link><description>Recent content in Gen AI on Kathy's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 02 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://KathyKo.github.io/tags/gen-ai/index.xml" rel="self" type="application/rss+xml"/><item><title>AWS PartyRock</title><link>https://KathyKo.github.io/p/partyrock/</link><pubDate>Tue, 02 Apr 2024 00:00:00 +0000</pubDate><guid>https://KathyKo.github.io/p/partyrock/</guid><description>&lt;img src="https://KathyKo.github.io/p/partyrock/cover.png" alt="Featured image of post AWS PartyRock" />&lt;h3 id="introduction">&lt;code>Introduction&lt;/code>
+&lt;/h3>&lt;h4 id="what-is-partyrock">What is PartyRock?
+&lt;/h4>&lt;blockquote>
+&lt;p>Amazon PartyRock is an environment that allows users to experiment with and build
+generative AI-powered applications without any coding, focusing on skills like
+prompt engineering. It’s a fast and fun way to learn about generative AI 🕹️&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="how-to-use-aws-partyrock--how-does-it-works">&lt;code>How to use AWS PartyRock? How does it works?&lt;/code>
+&lt;/h4>&lt;blockquote>
+&lt;p>PartyRock uses foundation models from Amazon Bedrock to turn your ideas into
+working PartyRock apps. The platform then uses this description to create the
+application, providing widgets and tools based on the entered prompt.
+To get the most out of the PartyRock experience, you can do the following:&lt;/p>
+&lt;ol>
+&lt;li>Get started by creating a PartyRock app.&lt;/li>
+&lt;li>Build the app by editing UI elements called widgets. You can change widget
+prompts so that they connect to each other and accomplish different things.&lt;/li>
+&lt;li>Take the next steps and publish your PartyRock app and share it with others.&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/1.png"
+width="1384"
+height="782"
+srcset="https://KathyKo.github.io/p/partyrock/1_hu9856921075343158230.png 480w, https://KathyKo.github.io/p/partyrock/1_hu12700567354456048114.png 1024w"
+loading="lazy"
+alt="apps example"
+class="gallery-image"
+data-flex-grow="176"
+data-flex-basis="424px"
+>&lt;/p>
+&lt;h3 id="building-the-app">&lt;code>Building the app&lt;/code>
+&lt;/h3>&lt;h4 id="how-does-the-partyrock-create-an-app">How does the PartyRock create an app?
+&lt;/h4>&lt;blockquote>
+&lt;p>The app builder is a generative AI tool within PartyRock that can make different
+apps for you through a process called inference.&lt;/p>
+&lt;ul>
+&lt;li>App Creation: PartyRock uses a generative AI tool to create applications based
+on user descriptions, leveraging Amazon Bedrock&amp;rsquo;s foundation models.&lt;/li>
+&lt;li>Widget Assembly: It generates instructions for app construction, detailing
+necessary components and UI elements like text boxes and buttons.&lt;/li>
+&lt;li>Customization: In the app editor, users can customize by adjusting widget sizes
+positions, and functions to fulfill the intended app purpose.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h4 id="what-is-a-widget">&lt;code>What is a widget?&lt;/code>
+&lt;/h4>&lt;blockquote>
+&lt;p>Widgets in PartyRock are UI elements that can interact, display content, and
+process input. They can be linked to create complex outputs, like text or images,
+using AI-driven prompts and data from other widgets. These AI-powered widgets
+leverage foundation models for content generation.&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="types-of-widgets">&lt;code>Types of widgets&lt;/code>
+&lt;/h4>&lt;ul>
+&lt;li>3 AI-powered widgets: Image generation, Chatbot, and Text generation.
+You can edit AI-powered widgets to connect them to other widgets and make their output change.&lt;/li>
+&lt;li>2 other widgets: User input and Static text.
+&lt;ul>
+&lt;li>The user input widget allow users to change output when you connect it to AI-powered widgets.&lt;/li>
+&lt;li>The static text widget provides a place for text descriptions.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/2.png"
+width="2772"
+height="514"
+srcset="https://KathyKo.github.io/p/partyrock/2_hu1914646785867835997.png 480w, https://KathyKo.github.io/p/partyrock/2_hu13346693861347310347.png 1024w"
+loading="lazy"
+alt="widgets"
+class="gallery-image"
+data-flex-grow="539"
+data-flex-basis="1294px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/3.png"
+width="2806"
+height="852"
+srcset="https://KathyKo.github.io/p/partyrock/3_hu16506364187233499226.png 480w, https://KathyKo.github.io/p/partyrock/3_hu14639602409298195747.png 1024w"
+loading="lazy"
+alt="AI-powered widgets"
+class="gallery-image"
+data-flex-grow="329"
+data-flex-basis="790px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/4.png"
+width="1870"
+height="934"
+srcset="https://KathyKo.github.io/p/partyrock/4_hu1974802419824924481.png 480w, https://KathyKo.github.io/p/partyrock/4_hu9635601580904269197.png 1024w"
+loading="lazy"
+alt="2 other widgets"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="480px"
+>&lt;/p>
+&lt;h3 id="lets-start">&lt;code>Let's start!&lt;/code>
+&lt;/h3>&lt;h4 id="enter-the-prompt">&lt;code>Enter the prompt&lt;/code>
+&lt;/h4>&lt;p>Enter the prompt that you want your app to do&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/5.png"
+width="1414"
+height="782"
+srcset="https://KathyKo.github.io/p/partyrock/5_hu579275727677716043.png 480w, https://KathyKo.github.io/p/partyrock/5_hu4792283451623312333.png 1024w"
+loading="lazy"
+alt="start from empty app"
+class="gallery-image"
+data-flex-grow="180"
+data-flex-basis="433px"
+>&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/6.png"
+width="1258"
+height="692"
+srcset="https://KathyKo.github.io/p/partyrock/6_hu14666357234704072831.png 480w, https://KathyKo.github.io/p/partyrock/6_hu15982805401568717623.png 1024w"
+loading="lazy"
+alt="enter the prompt of the app that you wanna create"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="436px"
+>&lt;/p>
+&lt;p>After entering the prompt and clicking &amp;lsquo;Create&amp;rsquo;, you will receive an initial simple app.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/7.png"
+width="2222"
+height="1198"
+srcset="https://KathyKo.github.io/p/partyrock/7_hu13431867856705880103.png 480w, https://KathyKo.github.io/p/partyrock/7_hu14595160630130249142.png 1024w"
+loading="lazy"
+alt="initial app"
+class="gallery-image"
+data-flex-grow="185"
+data-flex-basis="445px"
+>&lt;/p>
+&lt;h4 id="settings">&lt;code>Settings&lt;/code>
+&lt;/h4>&lt;p>Each widget can be resized and repositioned freely; clicking the settings button in the top right corner allows for editing and configuring options such as widget name, model used, temperature, etc.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/8.png"
+width="2822"
+height="1184"
+srcset="https://KathyKo.github.io/p/partyrock/8_hu8471253244853044642.png 480w, https://KathyKo.github.io/p/partyrock/8_hu9875440457792793842.png 1024w"
+loading="lazy"
+alt="edit widget"
+class="gallery-image"
+data-flex-grow="238"
+data-flex-basis="572px"
+>&lt;/p>
+&lt;p>Also, you can click the &amp;lsquo;Create Widget&amp;rsquo; on the canva to create new widgets.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/9.png"
+width="2778"
+height="1026"
+srcset="https://KathyKo.github.io/p/partyrock/9_hu8388214661488789147.png 480w, https://KathyKo.github.io/p/partyrock/9_hu13749372198998205212.png 1024w"
+loading="lazy"
+alt="create widget"
+class="gallery-image"
+data-flex-grow="270"
+data-flex-basis="649px"
+>&lt;/p>
+&lt;p>I putted &lt;code>@Workout Duration&lt;/code> into the prompt, allowing the LLM to dynamically read the user&amp;rsquo;s input. Additionally, I set the &lt;code>temp&lt;/code> to 0.5, hoping to maintain a certain degree of flexibility in the LLM&amp;rsquo;s responses.&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/10.png"
+width="2844"
+height="1282"
+srcset="https://KathyKo.github.io/p/partyrock/10_hu10152382042271919460.png 480w, https://KathyKo.github.io/p/partyrock/10_hu9848982844895579592.png 1024w"
+loading="lazy"
+alt="settings"
+class="gallery-image"
+data-flex-grow="221"
+data-flex-basis="532px"
+>&lt;/p>
+&lt;ul>
+&lt;li>What is temperature?
+&lt;ul>
+&lt;li>A setting used to control the randomness of the responses generated by the model.&lt;/li>
+&lt;li>Low Temperature (e.g., closer to 0): The AI&amp;rsquo;s responses are more predictable,confident, and less varied. The model sticks closely to the most likely words and phrases based on its training.&lt;/li>
+&lt;li>High Temperature (e.g., closer to 1): The AI&amp;rsquo;s responses are more random and diverse. It might produce more creative or unusual outputs, as it’s more willing to choose less likely words and phrases.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Why use temperature?
+&lt;ul>
+&lt;li>Temperature allows you to balance between creativity and accuracy.&lt;/li>
+&lt;li>Adjusting the temperature setting in an AI model helps to tune how &amp;ldquo;safe&amp;rdquo; or &amp;ldquo;adventurous&amp;rdquo; the AI&amp;rsquo;s responses should be, depending on what you need it for.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>After completing the edits, you can click &lt;code>Make Public and Share&lt;/code> in the top right corner of the page to publish your created app!&lt;/p>
+&lt;p>&lt;img src="https://KathyKo.github.io/p/partyrock/11.png"
+width="1068"
+height="376"
+srcset="https://KathyKo.github.io/p/partyrock/11_hu7371058087536099985.png 480w, https://KathyKo.github.io/p/partyrock/11_hu5985583529033422491.png 1024w"
+loading="lazy"
+alt="make public &amp; share"
+class="gallery-image"
+data-flex-grow="284"
+data-flex-basis="681px"
+> &lt;img src="https://KathyKo.github.io/p/partyrock/12.png"
+width="1534"
+height="792"
+srcset="https://KathyKo.github.io/p/partyrock/12_hu5943183711813883203.png 480w, https://KathyKo.github.io/p/partyrock/12_hu3782076213689478934.png 1024w"
+loading="lazy"
+alt="publish"
+class="gallery-image"
+data-flex-grow="193"
+data-flex-basis="464px"
+>&lt;/p></description></item></channel></rss>
