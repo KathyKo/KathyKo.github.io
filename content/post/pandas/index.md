@@ -401,8 +401,8 @@ print(df['Defense'].max())
 
 
 ### **檢視唯一值**
-查看某個欄位中有哪些唯一值，這對於分類資料（如 Type 2）有幫助
-
+查看某個欄位中有哪些唯一值，這對於分類資料（如 Type 2）很有幫助  
+可以使用 unique() 來查看唯一值：
 ```python
 # 查看 'Type 2' 欄位的所有唯一值
 
@@ -415,7 +415,7 @@ print(type2_unique)
 
  
 ### **計算每個分類的出現頻率**
-可以計算每個分類（如 Type 1）在資料集中出現的頻率
+可以計算每個分類在資料集中出現的次數，比如我們想知道 ‘Type 1’ 每個分類的出現頻率：
 
 ```python
 # 計算 'Type 1' 每個分類的出現次數
@@ -484,6 +484,7 @@ Name: Attack, dtype: float64
 
 
 ## **清理資料（Cleaning DataFrame）**
+在資料分析過程中，常常需要處理缺失值或重複資料。以下是幾個常用的清理資料的方法：
 
 * **df.isnull().sum()**：檢查資料集中每個欄位有多少缺失值，幫助找出需要清理的部分
 * **df.dropna()**：刪除包含缺失值的行，適用於缺失數據較少的情況
@@ -613,6 +614,7 @@ print(f"重複行數：{num_duplicates}")
 重複行數：0
 
 ## **篩選資料（Filtering DataFrame）**
+篩選資料是指從一個大的資料集中挑出我們關心的部分，可能是基於特定條件，像是某個欄位的值大於或小於某個數值。這在資料分析中非常重要，因為通常我們只對某些特定條件下的資料感興趣。
 
 * **單一條件篩選**：df[df['欄位'] > 某值]
 * **多重條件篩選**：df[(df['欄位1'] > 某值) & (df['欄位2'] < 某值)]
@@ -620,3 +622,390 @@ print(f"重複行數：{num_duplicates}")
 * **篩選區間**：df[df['欄位'].between(開始值, 結束值)]
 * **篩選缺失值**：df[df['欄位'].isnull()] 或 notnull()
 * **篩選前 N%**：使用 quantile() 來篩選資料的百分比
+
+### **根據單一條件篩選**
+可以根據條件，像這個例子中，我們篩選出 HP 值大於 100 的 Pokémon。
+```python
+# 篩選出 HP 大於 100 的 Pokémon
+high_hp_pokemon = df[df['HP'] > 100]
+print(high_hp_pokemon.head())
+```
+
+```
+   #        Name  Type 1 Type 2  Total   HP  Attack  Defense  Sp. Atk  \
+44    39  Jigglypuff  Normal  Fairy    270  115      45       20       45   
+45    40  Wigglytuff  Normal  Fairy    435  140      70       45       85   
+96    89         Muk  Poison    NaN    500  105     105       75       65   
+120  112      Rhydon  Ground   Rock    485  105     130      120       45   
+121  113     Chansey  Normal    NaN    450  250       5        5       35   
+
+     Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+44        25     20           1      False           False  
+45        50     45           1      False           False  
+96       100     50           1      False            True  
+120       45     40           1      False           False  
+121      105     50           1      False            True  
+```
+
+### **根據多重條件篩選**
+```python
+# 篩選出 HP 大於 100 且 Attack 超過 80 的 Pokémon
+strong_pokemon = df[(df['HP'] > 100) & (df['Attack'] > 80)]
+print(strong_pokemon.head())
+```
+這裡用到的 & 是 “且” 的意思，代表我們要同時滿足兩個條件，兩個條件必須同時成立：HP > 100 且 Attack > 80。
+```
+     #                       Name  Type 1 Type 2  Total   HP  Attack  \
+96    89                        Muk  Poison    NaN    500  105     105   
+120  112                     Rhydon  Ground   Rock    485  105     130   
+123  115                 Kangaskhan  Normal    NaN    490  105      95   
+124  115  KangaskhanMega Kangaskhan  Normal    NaN    590  105     125   
+142  131                     Lapras   Water    Ice    535  130      85   
+
+     Defense  Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+96        75       65      100     50           1      False            True  
+120      120       45       45     40           1      False           False  
+123       80       40       80     90           1      False            True  
+124      100       60      100    100           1      False            True  
+142       80       85       95     60           1      False           False  
+```
+
+### **根據文字內容篩選**
+有時我們想根據文字內容篩選，例如這裡的例子，我們要篩選出 Type 1 為 ‘Fire’ 的 Pokémon。這時我們可以直接使用條件篩選來進行
+```python
+fire_pokemon = df[df['Type 1'] == 'Fire']
+print(fire_pokemon.head())
+```
+
+```
+ #                       Name Type 1  Type 2  Total  HP  Attack  Defense  \
+4  4                 Charmander   Fire     NaN    309  39      52       43   
+5  5                 Charmeleon   Fire     NaN    405  58      64       58   
+6  6                  Charizard   Fire  Flying    534  78      84       78   
+7  6  CharizardMega Charizard X   Fire  Dragon    634  78     130      111   
+8  6  CharizardMega Charizard Y   Fire  Flying    634  78     104       78   
+
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+4       60       50     65           1      False            True  
+5       80       65     80           1      False            True  
+6      109       85    100           1      False           False  
+7      130       85    100           1      False           False  
+8      159      115    100           1      False           False  
+```
+
+### **多個欄位的條件篩選**
+有時候我們需要同時根據多個欄位進行篩選，這些欄位的條件可能不相同。比如我們想篩選出 Type 1 為 ‘Water’ 且 Speed 大於 80 的 Pokémon：
+```python
+fast_water_pokemon = df[(df['Type 1'] == 'Water') & (df['Speed'] > 80)]
+print(fast_water_pokemon.head())
+```
+這裡我們用到了兩個條件：一個是 Type 1 為 ‘Water’，另一個是 Speed 大於 80，並且我們用 & 將兩個條件連接在一起，表示這兩個條件都必須滿足。
+```
+   #        Name Type 1  Type 2  Total  HP  Attack  Defense  Sp. Atk  \
+60    55     Golduck  Water     NaN    500  80      82       78       95   
+65    60     Poliwag  Water     NaN    300  40      50       40       40   
+66    61   Poliwhirl  Water     NaN    385  65      65       65       50   
+79    73  Tentacruel  Water  Poison    515  80      70       65       80   
+126  117      Seadra  Water     NaN    440  55      65       95       95   
+
+     Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+60        80     85           1      False            True  
+65        40     90           1      False            True  
+66        50     90           1      False            True  
+79       120    100           1      False           False  
+126       45     85           1      False            True  
+```
+
+### **篩選特定區間的數值**
+除了篩選固定的數值外，我們還可以篩選區間內的資料。這裡，我們篩選 Attack 值在 50 到 100 之間的 Pokémon：
+
+```python
+mid_attack_pokemon = df[df['Attack'].between(50, 100)]
+print(mid_attack_pokemon.head())
+```
+.between(50, 100) 是一個很方便的函數，它會幫助我們篩選出 Attack 在 50 到 100 之間的資料。
+```
+ #                   Name Type 1  Type 2  Total  HP  Attack  Defense  \
+1  2                Ivysaur  Grass  Poison    405  60      62       63   
+2  3               Venusaur  Grass  Poison    525  80      82       83   
+3  3  VenusaurMega Venusaur  Grass  Poison    625  80     100      123   
+4  4             Charmander   Fire     NaN    309  39      52       43   
+5  5             Charmeleon   Fire     NaN    405  58      64       58   
+
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+1       80       80     60           1      False           False  
+2      100      100     80           1      False           False  
+3      122      120     80           1      False           False  
+4       60       50     65           1      False            True  
+5       80       65     80           1      False            True  
+```
+
+### **篩選出缺失值的資料**
+在真實世界的資料中，經常會遇到缺失值。這時我們可能需要篩選出包含缺失值的資料，像這裡篩選出 Type 2 欄位缺失的 Pokémon：
+```python
+missing_type2_pokemon = df[df['Type 2'].isnull()]
+print(missing_type2_pokemon.head())
+```
+.isnull() 函數會返回一個布林值，True 表示該欄位的值為缺失值，因此我們篩選出來的是 Type 2 欄位為空的資料。
+```
+  #        Name Type 1 Type 2  Total  HP  Attack  Defense  Sp. Atk  Sp. Def  \
+4   4  Charmander   Fire    NaN    309  39      52       43       60       50   
+5   5  Charmeleon   Fire    NaN    405  58      64       58       80       65   
+9   7    Squirtle  Water    NaN    314  44      48       65       50       64   
+10  8   Wartortle  Water    NaN    405  59      63       80       65       80   
+11  9   Blastoise  Water    NaN    530  79      83      100       85      105   
+
+    Speed  Generation  Legendary  Type 2 Missing  
+4      65           1      False            True  
+5      80           1      False            True  
+9      43           1      False            True  
+10     58           1      False            True  
+11     78           1      False            True  
+```
+
+### **根據多個選項篩選**
+可以使用 isin() 函數來篩選出符合多個選項的資料。例如，篩選出屬性為 "Fire" 或 "Water" 的 Pokémon
+
+```python
+fire_water_pokemon = df[df['Type 1'].isin(['Fire', 'Water'])]
+print(fire_water_pokemon.head())
+```
+isin() 函數可以幫助我們在多個選項中進行篩選。這個例子篩選出的是 Type 1 屬於 ‘Fire’ 或 ‘Water’ 的資料。
+```
+ #                       Name Type 1  Type 2  Total  HP  Attack  Defense  \
+4  4                 Charmander   Fire     NaN    309  39      52       43   
+5  5                 Charmeleon   Fire     NaN    405  58      64       58   
+6  6                  Charizard   Fire  Flying    534  78      84       78   
+7  6  CharizardMega Charizard X   Fire  Dragon    634  78     130      111   
+8  6  CharizardMega Charizard Y   Fire  Flying    634  78     104       78   
+
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+4       60       50     65           1      False            True  
+5       80       65     80           1      False            True  
+6      109       85    100           1      False           False  
+7      130       85    100           1      False           False  
+8      159      115    100           1      False           False  
+```
+
+### **根據字串條件篩選**
+有時我們可能需要篩選包含某個字串的資料。例如篩選出名字中包含 ‘Mega’ 的 Pokémon：
+```python
+mega_pokemon = df[df['Name'].str.contains('Mega')]
+print(mega_pokemon.head())
+```
+
+```
+ #                       Name Type 1  Type 2  Total  HP  Attack  Defense  \
+3    3      VenusaurMega Venusaur  Grass  Poison    625  80     100      123   
+7    6  CharizardMega Charizard X   Fire  Dragon    634  78     130      111   
+8    6  CharizardMega Charizard Y   Fire  Flying    634  78     104       78   
+12   9    BlastoiseMega Blastoise  Water     NaN    630  79     103      120   
+19  15      BeedrillMega Beedrill    Bug  Poison    495  65     150       40   
+
+    Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+3       122      120     80           1      False           False  
+7       130       85    100           1      False           False  
+8       159      115    100           1      False           False  
+12      135      115     78           1      False            True  
+19       15       80    145           1      False           False  
+```
+
+### **篩選出資料的前 N%**
+有時可能需要篩選出資料集中數值最高或最低的前幾個百分比。例如，篩選出攻擊力最高的前 10% Pokémon
+
+```python
+top_10_percent_attack = df[df['Attack'] > df['Attack'].quantile(0.9)]
+print(top_10_percent_attack.head())
+```
+quantile() 是 用來計算指定百分比位置數值的函數。這個函數的功能是告訴你一組數據中，在某個百分比對應的數值是多少。比如當你設定 0.9，這表示你想知道數據集中位於前 90% 的臨界值是多少。  
+簡單來說，quantile(0.9) 就是幫你找到數據中排在前 90% 位置的值。
+
+* df['Attack'].quantile(0.9)：計算 Attack 欄位中，位於前 90% 的臨界值。例如，如果 Attack 最大是 150，最小是 20，這個函數可能會告訴我們前 90% 對應的攻擊值是 120。也就是說，攻擊力在 120 以上的寶可夢屬於前 10%。
+* df['Attack'] > df['Attack'].quantile(0.9)：找出那些攻擊力大於剛才計算出來的 90% 臨界值的寶可夢。它會產生一個布林值的 Series，顯示哪一筆資料符合這個條件。
+```
+ #                       Name    Type 1  Type 2  Total   HP  Attack  \
+7      6  CharizardMega Charizard X      Fire  Dragon    634   78     130   
+19    15      BeedrillMega Beedrill       Bug  Poison    495   65     150   
+74    68                    Machamp  Fighting     NaN    505   90     130   
+107   99                    Kingler     Water     NaN    475   55     130   
+120  112                     Rhydon    Ground    Rock    485  105     130   
+
+     Defense  Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+7        111      130       85    100           1      False           False  
+19        40       15       80    145           1      False           False  
+74        80       65       85     55           1      False            True  
+107      115       50       50     75           1      False            True  
+120      120       45       45     40           1      False           False  
+```
+
+## **排序資料（Sorting DataFrame）**
+
+* **df.sort_values('欄位')**：根據指定的欄位進行排序，默認為升序排列。
+***ascending=True**：指定排序方向為升序。若要降序，將 ascending 設為 False
+
+### **根據單一欄位排序**
+
+```python
+# 根據 Attack 欄位進行升序排序
+df_sorted_attack = df.sort_values('Attack', ascending=True)
+print(df_sorted_attack.head())
+```
+```
+       #      Name  Type 1 Type 2  Total   HP  Attack  Defense  Sp. Atk  \
+488  440   Happiny  Normal    NaN    220  100       5        5       15   
+121  113   Chansey  Normal    NaN    450  250       5        5       35   
+230  213   Shuckle     Bug   Rock    505   20      10      230       10   
+261  242   Blissey  Normal    NaN    540  255      10       10       75   
+139  129  Magikarp   Water    NaN    200   20      10       55       15   
+
+     Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+488       65     30           4      False            True  
+121      105     50           1      False            True  
+230      230      5           2      False           False  
+261      135     55           2      False            True  
+139       20     80           1      False            True  
+```
+
+### **根據多個欄位進行排序**
+
+不僅可以根據單一欄位排序，也可以根據多個欄位進行排序。這在分析時是非常有用的。  
+例如，先根據 Pokémon 的攻擊力（Attack）進行升序排序，若攻擊力相同，再根據防禦力（Defense）進行降序排序。
+
+```python
+# 根據 Attack 升序，Defense 降序進行排序
+df_sorted_multi = df.sort_values(['Attack', 'Defense'], ascending=[True, False])
+print(df_sorted_multi.head())
+```
+
+```
+   #      Name  Type 1 Type 2  Total   HP  Attack  Defense  Sp. Atk  \
+121  113   Chansey  Normal    NaN    450  250       5        5       35   
+488  440   Happiny  Normal    NaN    220  100       5        5       15   
+230  213   Shuckle     Bug   Rock    505   20      10      230       10   
+139  129  Magikarp   Water    NaN    200   20      10       55       15   
+261  242   Blissey  Normal    NaN    540  255      10       10       75   
+
+     Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+121      105     50           1      False            True  
+488       65     30           4      False            True  
+230      230      5           2      False           False  
+139       20     80           1      False            True  
+261      135     55           2      False            True  
+```
+
+### **根據索引排序**
+可以根據 DataFrame 的索引（行標籤）進行排序。這有助於根據行索引進行重整或檢查資料順序
+
+```python
+# 根據索引進行升序排序
+df_sorted_index = df.sort_index()
+print(df_sorted_index.head())
+
+# 根據索引降序排序
+df_sorted_index_desc = df.sort_index(ascending=False)
+print(df_sorted_index_desc.head())
+```
+
+```
+   #                   Name Type 1  Type 2  Total  HP  Attack  Defense  \
+0  1              Bulbasaur  Grass  Poison    318  45      49       49   
+1  2                Ivysaur  Grass  Poison    405  60      62       63   
+2  3               Venusaur  Grass  Poison    525  80      82       83   
+3  3  VenusaurMega Venusaur  Grass  Poison    625  80     100      123   
+4  4             Charmander   Fire     NaN    309  39      52       43   
+
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+0       65       65     45           1      False           False  
+1       80       80     60           1      False           False  
+2      100      100     80           1      False           False  
+3      122      120     80           1      False           False  
+4       60       50     65           1      False            True  
+```
+```
+       #                 Name   Type 1 Type 2  Total  HP  Attack  Defense  \
+799  721            Volcanion     Fire  Water    600  80     110      120   
+798  720   HoopaHoopa Unbound  Psychic   Dark    680  80     160       60   
+797  720  HoopaHoopa Confined  Psychic  Ghost    600  80     110       60   
+796  719  DiancieMega Diancie     Rock  Fairy    700  50     160      110   
+795  719              Diancie     Rock  Fairy    600  50     100      150   
+
+     Sp. Atk  Sp. Def  Speed  Generation  Legendary  Type 2 Missing  
+799      130       90     70           6       True           False  
+798      170      130     80           6       True           False  
+797      150      130     70           6       True           False  
+796      160      110    110           6       True           False  
+795      100      150     50           6       True           False  
+```
+
+### **sort_index() 和 sort_values() 的比較**
+
+![](sort.png)
+
+* sort_index() 是用來針對DataFrame 的**索引**進行排序，這在需要按照行或列的**索引順序**（如按時間、ID 等）進行排序時非常有用。它不關注欄位的具體數值，而是針對 DataFrame 的**結構順序**進行操作。
+* sort_values() 是用來根據指定的**欄位內容**進行排序，當你需要根據某個數據欄位（如攻擊力、價格等）來排序資料時，這個函數就很有用。
+
+
+## **輸出資料**
+可以使用 DataFrame.to_csv('檔案名稱')、DataFrame.to_json('檔案名稱')、DataFrame.to_excel('檔案名稱) 和 DataFrame.to_html('檔案名稱') 將資料轉成檔案
+
+> 參數說明：
+> * sep：設定欄位的分隔符，預設為逗號（,）。
+> * index：是否寫入索引列，預設為 True。可以設定為 False，以避免寫入行索引。
+> * header：是否寫入列名稱，預設為 True。可以設定為 False，以避免寫入列名稱。
+> * encoding：設定檔案編碼格式，預設為 utf-8。可以根據需求調整編碼格式。
+> * mode：寫入模式。預設為 'w'（覆蓋寫入）。可以設定為 'a' 以追加模式寫入檔案。
+> * decimal：設定浮點數的小數點分隔符，預設為 .。
+
+### **CSV 格式輸出**
+
+```python
+# 基本用法
+df.to_csv('file_name.csv')
+```
+
+```python
+# 不寫入索引、沒有標題行，並用 UTF-16 編碼保存
+df.to_csv('file_name.csv', index=False, header=False, encoding='utf-16')
+```
+
+### **Excel 格式輸出**
+
+```python
+# 基本用法
+df.to_excel('file_name.xlsx')
+```
+
+```python
+# 輸出到 Excel 並指定工作表名稱
+df.to_excel('file_name.xlsx', sheet_name='Sheet1', index=False)
+```
+
+
+I hope this will help u know more about Pandas, 
+And check out the Pandas AI at next article ~ Byeeee
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
