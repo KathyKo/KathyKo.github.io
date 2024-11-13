@@ -188,12 +188,12 @@ df = pd.read_csv("檔案路徑")
 
 ## **檢索資料**
 
-* df.info()：顯示 DataFrame 的基本資訊，包括列數、欄數和每個欄位的數據類型，查看資料的資訊，包括欄位、數據型態、缺失值等
-* df.head()：取得最前面的n筆資料
-* df.tail()：取得最後面的n筆資料
-* df.columns：列出欄位名稱
-* df.describe()：產生統計摘要，如平均值、最大值、標準差等。
-* df.shape：返回資料的行數與列數，了解資料的大小
+* **df.info()**：顯示 DataFrame 的基本資訊，包括列數、欄數和每個欄位的數據類型，查看資料的資訊，包括欄位、數據型態、缺失值等
+* **df.head()**：取得最前面的n筆資料
+* **df.tail()**：取得最後面的n筆資料
+* **df.column**：列出欄位名稱
+* **df.describe()**：產生統計摘要，如平均值、最大值、標準差等。
+* **df.shape**：返回資料的行數與列數，了解資料的大小
 
 ```python
 df.info()
@@ -425,8 +425,6 @@ print(type1_counts)
 ```
 
 ```
-# 計算 'Type 1' 每個分類的出現次數
-
 type1_counts = df['Type 1'].value_counts()
 print(type1_counts)
 Type 1
@@ -451,7 +449,7 @@ Flying        4
 Name: count, dtype: int64
 ```
 
-#### **檢視資料摘要（groupby）**
+### **檢視資料摘要（groupby）**
 想查看特定分類的統計摘要，可以使用 **groupby()** 來進行分組總結
 
 ```python
@@ -487,17 +485,138 @@ Name: Attack, dtype: float64
 
 ## **清理資料（Cleaning DataFrame）**
 
-* df.isnull().sum()：檢查資料集中每個欄位有多少缺失值，幫助找出需要清理的部分
-* df.dropna()：刪除包含缺失值的行，適用於缺失數據較少的情況
-* df.fillna(0)：將缺失值以指定的數值（如 0）填充，適用於缺失值較多且無法刪除的情況
-* df.duplicated().sum()：檢查是否有重複的資料行，避免數據重複影響分析結果
-* df.drop_duplicates()：刪除所有重複行，保留唯一的數據
+* **df.isnull().sum()**：檢查資料集中每個欄位有多少缺失值，幫助找出需要清理的部分
+* **df.dropna()**：刪除包含缺失值的行，適用於缺失數據較少的情況
+* **df.fillna(0)**：將缺失值以指定的數值（如 0）填充，適用於缺失值較多且無法刪除的情況
+* **df.duplicated().sum()**：檢查是否有重複的資料行，避免數據重複影響分析結果
+* **df.drop_duplicates()**：刪除所有重複行，保留唯一的數據
+
+```python
+# 檢查是否有缺失值
+print(df.isnull().sum())
+```
+
+```
+#               0
+Name            0
+Type 1          0
+Type 2        386
+Total           0
+HP              0
+Attack          0
+Defense         0
+Sp. Atk         0
+Sp. Def         0
+Speed           0
+Generation      0
+Legendary       0
+dtype: int64
+```
+
+### **刪除包含缺失值的行**
+如果缺失的資料很關鍵且無法推測，可以直接刪除這些包含缺失值的行
 
 
+```python
+# 刪除包含缺失值的行
+# 這樣會刪除 Type 2 欄位中缺失值的行，並留下屬性完整的資料
 
+df_cleaned = df.dropna(subset=['Type 2'])
+print(df_cleaned.info())
+```
 
+```
+<class 'pandas.core.frame.DataFrame'>
+Index: 414 entries, 0 to 799
+Data columns (total 13 columns):
+ #   Column      Non-Null Count  Dtype 
+---  ------      --------------  ----- 
+ 0   #           414 non-null    int64 
+ 1   Name        414 non-null    object
+ 2   Type 1      414 non-null    object
+ 3   Type 2      414 non-null    object
+ 4   Total       414 non-null    int64 
+ 5   HP          414 non-null    int64 
+ 6   Attack      414 non-null    int64 
+ 7   Defense     414 non-null    int64 
+ 8   Sp. Atk     414 non-null    int64 
+ 9   Sp. Def     414 non-null    int64 
+ 10  Speed       414 non-null    int64 
+ 11  Generation  414 non-null    int64 
+ 12  Legendary   414 non-null    bool  
+dtypes: bool(1), int64(9), object(3)
+memory usage: 42.5+ KB
+None
+```
 
+### **用特定值填充缺失值**
+若想保留所有的資料，可以用一個合適的值來填充缺失的部分。  
+例如，填充為 'None' 表示這些 Pokémon 沒有第二屬性
 
+```python
+# 使用 'None' 填充缺失的 Type 2 資料
+# 可以保留所有的行，並以 'None' 來表示無第二屬性的 Pokémon
 
+df_filled = df.fillna({'Type 2': 'None'})
+print(df_filled.head())
+```
 
+```
+#                   Name Type 1  Type 2  Total  HP  Attack  Defense  \
+0  1              Bulbasaur  Grass  Poison    318  45      49       49   
+1  2                Ivysaur  Grass  Poison    405  60      62       63   
+2  3               Venusaur  Grass  Poison    525  80      82       83   
+3  3  VenusaurMega Venusaur  Grass  Poison    625  80     100      123   
+4  4             Charmander   Fire    None    309  39      52       43   
 
+   Sp. Atk  Sp. Def  Speed  Generation  Legendary  
+0       65       65     45           1      False  
+1       80       80     60           1      False  
+2      100      100     80           1      False  
+3      122      120     80           1      False  
+4       60       50     65           1      False  
+```
+
+### **使用最常見的值進行填充**
+如果認為缺失值應該是某個常見的屬性，也可以用該屬性的名稱來填充。例如，填充為最常見的 Type 2 值。
+
+```python
+# 使用 'Type 2' 欄位的最常見值進行填充
+most_common_type2 = df['Type 2'].mode()[0]
+df_filled = df.fillna({'Type 2': most_common_type2})
+print(df_filled.head())
+```
+
+### **保留缺失值並進行標記**
+如果希望保留缺失值，同時也想標記出哪些行有缺失的 Type 2，可以新增一個標記欄位。
+
+```python
+df['Type 2 Missing'] = df['Type 2'].isnull()
+print(df[['Name', 'Type 2', 'Type 2 Missing']].head())
+```
+
+```
+                    Name  Type 2  Type 2 Missing
+0              Bulbasaur  Poison           False
+1                Ivysaur  Poison           False
+2               Venusaur  Poison           False
+3  VenusaurMega Venusaur  Poison           False
+4             Charmander     NaN            True
+```
+
+### **檢查重複值 - df.duplicated().sum()**
+
+```python
+num_duplicates = df.duplicated().sum()
+print(f"重複行數：{num_duplicates}")
+```
+重複行數：0
+
+## **篩選資料（Filtering DataFrame）**
+
+* **單一條件篩選**：df[df['欄位'] > 某值]
+* **多重條件篩選**：df[(df['欄位1'] > 某值) & (df['欄位2'] < 某值)]
+* **文字篩選**：df[df['欄位'] == '某文字'] 或使用 isin()、str.contains()
+* **篩選區間**：df[df['欄位'].between(開始值, 結束值)]
+* **篩選缺失值**：df[df['欄位'].isnull()] 或 notnull()
+* **篩選前 N%**：使用 quantile() 來篩選資料的百分比
