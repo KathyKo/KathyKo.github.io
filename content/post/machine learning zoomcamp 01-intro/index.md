@@ -3,7 +3,7 @@ title: Machine Learning Zoomcamp 01-intro
 description: Learning ML notes 🤖️
 slug: ML
 date: 2025-01-10 00:00:00+0000
-image: 
+image: zoomcamp.jpg
 categories:
     - Python
 tags:
