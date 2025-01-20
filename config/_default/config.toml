@@ -1,4 +1,4 @@
-theme = "hugo-theme-stack"
+# theme = "hugo-theme-stack"
 
 # Change baseurl before deploy
 baseurl = "https://KathyKo.github.io"
