@@ -1,7 +1,7 @@
 ---
 title: "Laravel Usage Guide"
 date: 2026-03-22
-description: A beginner-friendly guide to Laravel: covering MVC architecture, request lifecycle, routing, controllers, Eloquent ORM, jobs, and external API integration. Written from scratch while learning on the job.
+description: "A beginner-friendly guide to Laravel, covering MVC architecture, request lifecycle, routing, controllers, Eloquent ORM, jobs, and external API integration. Written from scratch while learning on the job."
 tags:
   - tech-notes
 draft: false
