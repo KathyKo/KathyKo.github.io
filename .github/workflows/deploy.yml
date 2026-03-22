@@ -1,0 +1,15 @@
+name: Deploy to Netlify
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # Netlify handles the actual deployment via its own GitHub integration.
+  # This workflow exists only to satisfy GitHub Pages' requirement for a
+  # GitHub Actions source, and to prevent Jekyll from auto-building.
+  skip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: No-op
+        run: echo "Deployment is handled by Netlify."
