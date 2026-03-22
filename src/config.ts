@@ -81,7 +81,7 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   // Site Information
-  site: "https://astro-modular.netlify.app", // 之後記得換成你真正的網址
+  site: "https://kathyko.github.io",
   title: "Kathy Ko",
   description: "Personal Portfolio and Blog of Kathy Ko.",
   author: "Kathy Ko",
