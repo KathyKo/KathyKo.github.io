@@ -1,32 +1,10 @@
 {
-  "nodes": [
-    {
-      "id": "test-ai",
-      "type": "post",
-      "title": "Test — AI",
-      "slug": "test-ai",
-      "connections": 0
-    },
-    {
-      "id": "test-field-notes",
-      "type": "post",
-      "title": "Test — Event Minutes",
-      "slug": "test-field-notes",
-      "connections": 0
-    },
-    {
-      "id": "test-musings",
-      "type": "post",
-      "title": "Test — Lifestyle",
-      "slug": "test-musings",
-      "connections": 0
-    }
-  ],
+  "nodes": [],
   "connections": [],
   "metadata": {
-    "totalPosts": 3,
+    "totalPosts": 0,
     "totalConnections": 0,
     "maxNodesApplied": false,
-    "originalNodeCount": 3
+    "originalNodeCount": 0
   }
 }
